@@ -14,6 +14,48 @@ img {
     object-fit: cover;
 }
 
+
+
+
+/**scroll progress**/
+
+.bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(28, 16, 16, 0);
+
+}
+
+.progress-container {
+    width: 100%;
+    height: 10vh;
+    background: #ccc;
+
+}
+
+
+
+
+
+.progress-bar {
+    position: relative;
+    height: 10vh;
+    background: #FEEF3D;
+    /*    width: 0%;*/
+
+
+}
+
+
+
+/**scroll progress**/
+
+#progress {
+    margin-bottom: 20vh;
+}
+
 .img_frame {
     width: 100%;
     overflow: hidden;
