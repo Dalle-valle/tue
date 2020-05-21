@@ -1,7 +1,11 @@
+/*************************************************************************************************************************************************
+Generelt
+**************************************************************************************************************************************************/
 body {
     padding: 0;
     margin: 0;
     background-color: black;
+
 }
 
 img {
@@ -17,8 +21,22 @@ img {
     transform: translate(-50%, -50%);
 }
 
+
+/*************************************************************************************************************************************************
+Billeder på landing page
+**************************************************************************************************************************************************/
+#video {
+    display: none;
+}
+
+.img_wrapper {
+    display: flex;
+
+}
+
 .splashwrapper {
     display: flex;
+    flex-direction: column;
 }
 
 .left {
@@ -29,6 +47,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
 
+
 }
 
 .right {
@@ -38,47 +57,74 @@ img {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
+
+/*************************************************************************************************************************************************
+Knapper på landing page
+**************************************************************************************************************************************************/
 .btn1 {
-    background-color: black;
-    /* Green */
-    border: none;
-    border-radius: 10%;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    position: absolute;
+    border: 2px solid black;
+    height: 8vh;
+    width: 25vw;
+    left: 12vw;
+    bottom: 25vh;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-    transition-duration: 0.4s;
-    position: relative;
-    top: 65vh;
-    left: 5vw;
+
 }
 
 
 .btn2 {
-    background-color: black;
-    /* Green */
-    border: none;
-    color: white;
-    border-radius: 10%;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    position: absolute;
+    border: 2px solid black;
+    height: 8vh;
+    width: 25vw;
+    right: 12vw;
+    bottom: 25vh;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-    transition-duration: 0.4s;
-    top: 65vh;
-    left: 10vw;
-    position: relative;
 }
+
+/*************************************************************************************************************************************************
+Billedserie
+**************************************************************************************************************************************************/
+
+.carousel_wrapper {
+    display: flex;
+}
+
+#img_frame1,
+#img_frame2,
+#img_frame3,
+#img_frame4,
+#img_frame5 {
+    padding: 15px;
+}
+
+.carousel_wrapper img {
+    height: 50vh;
+
+}
+
+/*************************************************************************************************************************************************
+Mediaqueries
+**************************************************************************************************************************************************/
+
+@media only screen and (min-width: 768px) {
+
+    .left,
+    .right {
+        display: none;
+    }
+
+    #video {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 10vw;
+    }

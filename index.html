@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -14,17 +14,19 @@
 
 <body>
 
+    <div class="logo"><img src="billeder/logowhite.svg"></div>
 
-    <header>
-        <nav>
-            <div class="logo"><img src="billeder/logowhite.svg"></div>
 
-        </nav>
-    </header>
-
+    <div class="img_wrapper">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <video autoplay muted loop id="video">
+        <source src="billeder/monkey.mov" type="video/mp4">
+    </video>
     <div class="splashwrapper">
-        <div class="left"><button class="btn1">Shop</button></div>
-        <div class="right"><button class="btn2">Univers</button></div>
+        <a href="shop.html"><button class="btn1">Shop</button></a>
+        <a href="univers.html"><button class="btn2">Univers</button></a>
     </div>
 
     <script src="script.js"></script>
