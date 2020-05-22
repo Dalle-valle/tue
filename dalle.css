@@ -38,6 +38,9 @@ header {
 
 section {
     padding: 2vh;
+    max-width: 1400px;
+
+    margin: 0 auto;
 
 
 }
@@ -109,16 +112,22 @@ Knapper på landing page
 /*************************************************************************************************************************************************
 Billedserie
 **************************************************************************************************************************************************/
+#hero {}
 
-.section_grid {
-    max-width: 100%;
-    display: grid;
-    grid-gap: 10px;
-    overflow: hidden;
-    grid-template-areas:
-        "img1 img2 img3 img4 img5"
-        "content content content content content"
-        "footer footer footer footer footer";
+.imgwrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10vh;
+
+}
+
+.image {
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 
 }
 
@@ -129,75 +138,42 @@ Billedserie
 #hero_img5,
 #hero_img6,
 #hero_img7 {
-    height: 40vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 0.5px solid white;
-    width: 21vw;
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
+#hero_img6,
+#hero_img7 {
+    display: none;
+}
 
 #hero_img1 {
-    position: absolute;
-    top: 25vh;
-    left: -5vw;
-    grid-area: img1;
+    margin: 40px 4px 4px 0px;
 }
 
 #hero_img2 {
-    position: absolute;
-    top: 22vh;
-    left: 18vw;
-    grid-area: img2;
+    margin: 20px 4px 4px 4px;
 }
 
 #hero_img3 {
-    position: absolute;
-    top: 20vh;
-    left: 41vw;
-    grid-area: img3;
+    margin: 4px;
 }
 
 #hero_img4 {
-    position: absolute;
-    top: 22vh;
-    left: 64vw;
-    grid-area: img4;
+    margin: 20px 4px 20px 4px;
 }
 
 #hero_img5 {
-    position: absolute;
-    top: 25vh;
-    left: 87vw;
-    grid-area: img5;
-    max-width: 13vw
+    margin: 40px 0px 5px 4px;
 }
 
 #hero_img6 {
-    position: absolute;
-    top: 20vh;
-    left: -5vw;
-
-    display: none;
-    grid-area: img6;
+    margin: 4px;
 }
 
 #hero_img7 {
-    position: absolute;
-    top: 20vh;
-    left: -5vw;
-
-    display: none;
-    grid-area: img7;
+    margin: 4px;
 }
-
-
-#hero {
-    height: 60vh;
-
-}
-
-
 
 
 /* Gray Scale */
@@ -218,11 +194,7 @@ Mediaqueries ipad
 **************************************************************************************************************************************************/
 
 @media only screen and (min-width: 768px) {
-    section {
-        max-width: 1600px;
-
-        margin: 0 auto;
-    }
+    section {}
 
     .left,
     .right {
@@ -240,78 +212,37 @@ Mediaqueries ipad
         width: 10vw;
     }
 
-    .section_grid {
-        grid-template-areas:
-            "img1 img2 img3 img4 img5 img6 img7"
-            "content content content content content content content"
-            "footer footer footer footer footer footer footer";
 
-    }
-
-    #hero_img1,
-    #hero_img2,
-    #hero_img3,
-    #hero_img4,
-    #hero_img5,
-    #hero_img6,
-    #hero_img7 {
-        width: 12vw;
-    }
 
     #hero_img1 {
-
-        top: 25vh;
-        left: 5vw;
-
+        margin: 40px 4px 4px 4px;
     }
 
     #hero_img2 {
-
-        top: 22vh;
-        left: 18vw;
-
+        margin: 20px 4px 4px 4px;
     }
 
     #hero_img3 {
-
-        top: 20vh;
-        left: 31vw;
-
+        margin: 4px;
     }
 
     #hero_img4 {
-
-        top: 18vh;
-        left: 44vw;
-
+        margin: 20px 4px 20px 4px;
     }
 
     #hero_img5 {
-
-        top: 20vh;
-        left: 57vw;
-
-
+        margin: 40px 4px 4px 4px;
     }
 
     #hero_img6 {
-
-        top: 22vh;
-        left: 70vw;
-
         display: block;
-
+        margin: 20px 4px 20px 4px;
     }
 
     #hero_img7 {
-
-        top: 25vh;
-        left: 83.2vw;
         display: block;
-
-
+        margin: 4px;
     }
-
 
 
 }
@@ -319,150 +250,20 @@ Mediaqueries ipad
 /*************************************************************************************************************************************************
 Mediaqueries laptop
 **************************************************************************************************************************************************/
-@media only screen and (min-width: 1024px) {
-
-    #hero_img1,
-    #hero_img2,
-    #hero_img3,
-    #hero_img4,
-    #hero_img5,
-    #hero_img6,
-    #hero_img7 {
-        Height: 65vh;
-        width: 12vw;
-    }
-
-    #hero_img1 {
-
-        top: 25vh;
-
-
-
-    }
-
-    #hero_img2 {
-
-        top: 22vh;
-
-
-    }
-
-    #hero_img3 {
-
-        top: 20vh;
-
-
-    }
-
-    #hero_img4 {
-
-        top: 18vh;
-
-
-    }
-
-    #hero_img5 {
-
-        top: 20vh;
-
-
-
-    }
-
-    #hero_img6 {
-
-        top: 22vh;
-
-
-    }
-
-    #hero_img7 {
-
-        top: 25vh;
+@media only screen and (min-width: 1024px) {}
 
 
 
 
-    }
-}
+
+
+
+
 
 /*************************************************************************************************************************************************
 Mediaqueries desktop
 **************************************************************************************************************************************************/
-@media only screen and (min-width: 1400px) {
-
-    #hero_img1,
-    #hero_img2,
-    #hero_img3,
-    #hero_img4,
-    #hero_img5,
-    #hero_img6,
-    #hero_img7 {
-        Height: 65vh;
-        max-width: 12vw;
-
-    }
-
-    #hero_img1 {
-        position: relative;
-        top: 25vh;
-        left: 1vw;
-
-
-
-    }
-
-    #hero_img2 {
-        position: relative;
-        top: 22vh;
-        left: 1.24vw;
-
-
-    }
-
-    #hero_img3 {
-        position: relative;
-        top: 20vh;
-        left: 0.7vw;
-
-
-    }
-
-    #hero_img4 {
-        position: relative;
-        top: 18vh;
-        left: 0;
-
-
-    }
-
-    #hero_img5 {
-        position: relative;
-        top: 20vh;
-        left: -0.7vw;
-
-
-
-    }
-
-    #hero_img6 {
-        position: relative;
-        top: 22vh;
-        left: -1.5vw;
-
-
-    }
-
-    #hero_img7 {
-        position: relative;
-        top: 25vh;
-        left: -2.3vw;
-
-
-
-
-    }
-}
+@media only screen and (min-width: 1400px) {}
 
 /*************************************************************************************************************************************************
 Mediaqueries desktop store skærme
