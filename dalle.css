@@ -4,7 +4,7 @@ Generelt
 body {
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-image: url(billeder/tue_background_black.png);
 
 }
 
@@ -29,6 +29,7 @@ p {
 h1 {
     color: white;
     padding: 15px;
+    text-align: center;
 }
 
 header {
@@ -37,7 +38,7 @@ header {
 }
 
 section {
-    padding: 2vh;
+
     max-width: 1400px;
 
     margin: 0 auto;
@@ -112,7 +113,15 @@ Knapper på landing page
 /*************************************************************************************************************************************************
 Billedserie
 **************************************************************************************************************************************************/
-#hero {}
+.sectionwrapper {
+
+    /*
+    background-image: url(billeder/banananana.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+*/
+
+}
 
 .imgwrapper {
     display: flex;
@@ -140,6 +149,9 @@ Billedserie
 #hero_img7 {
     flex-grow: 1;
     flex-basis: 200px;
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+
+
 }
 
 #hero_img6,
@@ -156,7 +168,7 @@ Billedserie
 }
 
 #hero_img3 {
-    margin: 4px;
+    margin: 4px 4px 4px 4px;
 }
 
 #hero_img4 {
@@ -177,16 +189,42 @@ Billedserie
 
 
 /* Gray Scale */
-.hover08 figure img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
 
-.hover08 figure:hover img {
+#hero_img1:hover,
+#hero_img2:hover,
+#hero_img3:hover,
+#hero_img4:hover,
+#hero_img5:hover,
+#hero_img6:hover,
+#hero_img7:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+/*************************************************************************************************************************************************
+Shop
+**************************************************************************************************************************************************/
+
+#index article {
+    /*    border: 1px solid #000;*/
+    height: auto;
+    padding: 8px;
+    background-color: #ede3d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+#index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 0;
+
 }
 
 /*************************************************************************************************************************************************
@@ -212,36 +250,66 @@ Mediaqueries ipad
         width: 10vw;
     }
 
-
+    .image {
+        height: 45vh;
+    }
 
     #hero_img1 {
-        margin: 40px 4px 4px 4px;
+        margin: 40px 4px 4px 10px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #hero_img2 {
         margin: 20px 4px 4px 4px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #hero_img3 {
-        margin: 4px;
+        margin: -20px 4px 4px 4px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #hero_img4 {
-        margin: 20px 4px 20px 4px;
+        margin: -50px 4px 20px 4px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #hero_img5 {
-        margin: 40px 4px 4px 4px;
+        margin: -20px 4px 4px 4px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #hero_img6 {
         display: block;
-        margin: 20px 4px 20px 4px;
+        margin: 20px 4px 4px 4px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     #hero_img7 {
         display: block;
-        margin: 4px;
+        margin: 40px 10px 4px 4px;
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
 
@@ -250,9 +318,52 @@ Mediaqueries ipad
 /*************************************************************************************************************************************************
 Mediaqueries laptop
 **************************************************************************************************************************************************/
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
 
+    .image {
+        height: 55vh;
+    }
 
+    #hero_img1 {
+        margin: 40px 20px 4px 15px;
+    }
+
+    #hero_img2 {
+        margin: 10px 20px 4px 4px;
+    }
+
+    #hero_img3 {
+        margin: -30px 20px 4px 4px;
+    }
+
+    #hero_img4 {
+        margin: -60px 20px 4px 4px;
+    }
+
+    #hero_img5 {
+        margin: -30px 20px 4px 4px;
+    }
+
+    #hero_img6 {
+        margin: 10px 20px 4px 4px;
+    }
+
+    #hero_img7 {
+        margin: 40px 15px 4px 4px;
+    }
+}
+
+#hero_img1,
+#hero_img2,
+#hero_img3,
+#hero_img4,
+#hero_img5,
+#hero_img6,
+#hero_img7 {
+    flex-grow: 1;
+    flex-basis: 200px;
+
+}
 
 
 

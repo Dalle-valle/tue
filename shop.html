@@ -27,10 +27,83 @@
 
         </nav>
     </header>
+    <section id="shop"></section>
+    <template>
+        <article class="shop_all">
+            <h2 class="type"></h2>
+
+            <div class="img_frame">
+                <div class="overlay">quick view</div>
+                <img class="overview" src="" alt="">
+            </div>
+            <p class="beskrivelse"></p>
+        </article>
+    </template>
 
 
 
-    <script src="script.js"></script>
+    <script>
+        let allePaintings;
+        let filter = "alle";
+        const url = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/painting";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentPaintings();
+        }
+
+        async function hentPaintings() {
+            const response = await fetch(url);
+            console.log(response);
+            allePaintings = await response.json();
+            console.log(allePaintings);
+            visPaintings();
+        }
+
+        function visPaintings() {
+            console.log(allePaintings)
+            const container = document.querySelector("#shop");
+            container.innerHTML = "";
+            const paintingTemplate = document.querySelector("template");
+            allePaintings.forEach(painting => {
+                if (filter == "alle" || filter == painting.title.rendered) {
+
+                    let klon = paintingTemplate.cloneNode(true).content;
+                    klon.querySelector("img").src = painting.billede.guid;
+                    //                    klon.querySelector("img").alt = kaffe.gsx$billede.$t;
+                    klon.querySelector("h2").textContent = painting.title.rendered;
+                    klon.querySelector("p").innerHTML += painting.content.rendered;
+                    //                    klon.querySelector("article").addEventListener("click", () => visDetail(kaffe))
+                    // klon.querySelector("article").addEventListener("click", fjernClass);
+
+                    container.appendChild(klon);
+                }
+            })
+
+        }
+
+        //function visKaffer() {
+        // console.log(alleKaffer)
+        // const container = document.querySelector("#index");
+        // container.innerHTML = "";
+        // const kafferTemplate = document.querySelector("template");
+        // alleKaffer.feed.entry.forEach(kaffe => {
+        // if (filter == "alle" || filter == kaffe.gsx$kategori.$t) {
+        // let klon = kafferTemplate.cloneNode(true).content;
+        // klon.querySelector("img").src = `billeder/small/${kaffe.gsx$billede.$t}-sm.jpg`;
+        // klon.querySelector("img").alt = kaffe.gsx$billede.$t;
+        // klon.querySelector("h2").textContent = `${kaffe.gsx$navn.$t}`;
+        // klon.querySelector("p").textContent += `${kaffe.gsx$kort.$t}`;
+        // klon.querySelector("article").addEventListener("click", () => visDetail(kaffe))
+        // klon.querySelector("article").addEventListener("click", fjernClass);
+        //
+        // container.appendChild(klon);
+        // }
+        // })
+        //}
+
+    </script>
 </body>
 
 </html>
