@@ -194,8 +194,7 @@ Billedserie
 
 #hero {
     height: 60vh;
-    max-width: 100vw;
-    overflow: hidden;
+
 }
 
 
@@ -215,10 +214,15 @@ Billedserie
 }
 
 /*************************************************************************************************************************************************
-Mediaqueries
+Mediaqueries ipad
 **************************************************************************************************************************************************/
 
 @media only screen and (min-width: 768px) {
+    section {
+        max-width: 1600px;
+
+        margin: 0 auto;
+    }
 
     .left,
     .right {
@@ -240,7 +244,7 @@ Mediaqueries
         grid-template-areas:
             "img1 img2 img3 img4 img5 img6 img7"
             "content content content content content content content"
-            "footer footer footer footer footer footer footer"
+            "footer footer footer footer footer footer footer";
 
     }
 
@@ -251,49 +255,49 @@ Mediaqueries
     #hero_img5,
     #hero_img6,
     #hero_img7 {
-        width: 14vw;
+        width: 12vw;
     }
 
     #hero_img1 {
 
         top: 25vh;
-        left: -5vw;
+        left: 5vw;
 
     }
 
     #hero_img2 {
 
         top: 22vh;
-        left: 11vw;
+        left: 18vw;
 
     }
 
     #hero_img3 {
 
         top: 20vh;
-        left: 27vw;
+        left: 31vw;
 
     }
 
     #hero_img4 {
 
-        top: 22vh;
-        left: 43vw;
+        top: 18vh;
+        left: 44vw;
 
     }
 
     #hero_img5 {
 
-        top: 25vh;
-        left: 59vw;
+        top: 20vh;
+        left: 57vw;
 
 
     }
 
     #hero_img6 {
 
-        top: 30vh;
-        left: 74vw;
+        top: 22vh;
+        left: 70vw;
 
         display: block;
 
@@ -301,10 +305,10 @@ Mediaqueries
 
     #hero_img7 {
 
-        top: 30vh;
-        left: 90vw;
+        top: 25vh;
+        left: 83.2vw;
         display: block;
-        max-width: 9vw;
+
 
     }
 
@@ -312,4 +316,155 @@ Mediaqueries
 
 }
 
-@media only screen and (min-width: 1024px) {}
+/*************************************************************************************************************************************************
+Mediaqueries laptop
+**************************************************************************************************************************************************/
+@media only screen and (min-width: 1024px) {
+
+    #hero_img1,
+    #hero_img2,
+    #hero_img3,
+    #hero_img4,
+    #hero_img5,
+    #hero_img6,
+    #hero_img7 {
+        Height: 65vh;
+        width: 12vw;
+    }
+
+    #hero_img1 {
+
+        top: 25vh;
+
+
+
+    }
+
+    #hero_img2 {
+
+        top: 22vh;
+
+
+    }
+
+    #hero_img3 {
+
+        top: 20vh;
+
+
+    }
+
+    #hero_img4 {
+
+        top: 18vh;
+
+
+    }
+
+    #hero_img5 {
+
+        top: 20vh;
+
+
+
+    }
+
+    #hero_img6 {
+
+        top: 22vh;
+
+
+    }
+
+    #hero_img7 {
+
+        top: 25vh;
+
+
+
+
+    }
+}
+
+/*************************************************************************************************************************************************
+Mediaqueries desktop
+**************************************************************************************************************************************************/
+@media only screen and (min-width: 1400px) {
+
+    #hero_img1,
+    #hero_img2,
+    #hero_img3,
+    #hero_img4,
+    #hero_img5,
+    #hero_img6,
+    #hero_img7 {
+        Height: 65vh;
+        max-width: 12vw;
+
+    }
+
+    #hero_img1 {
+        position: relative;
+        top: 25vh;
+        left: 1vw;
+
+
+
+    }
+
+    #hero_img2 {
+        position: relative;
+        top: 22vh;
+        left: 1.24vw;
+
+
+    }
+
+    #hero_img3 {
+        position: relative;
+        top: 20vh;
+        left: 0.7vw;
+
+
+    }
+
+    #hero_img4 {
+        position: relative;
+        top: 18vh;
+        left: 0;
+
+
+    }
+
+    #hero_img5 {
+        position: relative;
+        top: 20vh;
+        left: -0.7vw;
+
+
+
+    }
+
+    #hero_img6 {
+        position: relative;
+        top: 22vh;
+        left: -1.5vw;
+
+
+    }
+
+    #hero_img7 {
+        position: relative;
+        top: 25vh;
+        left: -2.3vw;
+
+
+
+
+    }
+}
+
+/*************************************************************************************************************************************************
+Mediaqueries desktop store skærme
+**************************************************************************************************************************************************/
+@media only screen and (min-width: 1500px) {}
