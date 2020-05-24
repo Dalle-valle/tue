@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="dalle.css">
 </head>
 
-<body>
+<body class="shop">
 
 
     <header>
@@ -33,10 +33,10 @@
             <h2 class="type"></h2>
 
             <div class="img_frame">
-                <div class="overlay">quick view</div>
+                <div class="overlay"></div>
                 <img class="overview" src="" alt="">
             </div>
-            <p class="beskrivelse"></p>
+
         </article>
     </template>
 
@@ -73,7 +73,7 @@
                     klon.querySelector("img").src = painting.billede.guid;
                     //                    klon.querySelector("img").alt = kaffe.gsx$billede.$t;
                     klon.querySelector("h2").textContent = painting.title.rendered;
-                    klon.querySelector("p").innerHTML += painting.content.rendered;
+                    //                    klon.querySelector("p").innerHTML += painting.content.rendered;
                     //                    klon.querySelector("article").addEventListener("click", () => visDetail(kaffe))
                     // klon.querySelector("article").addEventListener("click", fjernClass);
 
@@ -102,8 +102,5 @@
         // }
         // })
         //}
-
     </script>
-</body>
-
-</html>
+</body></html>

@@ -4,8 +4,14 @@ Generelt
 body {
     padding: 0;
     margin: 0;
-    background-image: url(billeder/tue_background_black.png);
+}
 
+.univers {
+    background-image: url(billeder/tue_background_black.png);
+}
+
+.shop {
+    background-image: url(billeder/tue_background_grey.png);
 }
 
 img {
@@ -115,11 +121,13 @@ Billedserie
 **************************************************************************************************************************************************/
 .sectionwrapper {
 
+
     /*
     background-image: url(billeder/banananana.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
 */
+
 
 }
 
@@ -138,6 +146,7 @@ Billedserie
 
 
 
+
 }
 
 #hero_img1,
@@ -149,7 +158,10 @@ Billedserie
 #hero_img7 {
     flex-grow: 1;
     flex-basis: 200px;
-    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+
+
+/*    background-attachment: fixed;*/
+
 
 
 }
@@ -200,27 +212,30 @@ Billedserie
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
     transform: scale(1.2);
+
+
 }
+
 
 /*************************************************************************************************************************************************
 Shop
 **************************************************************************************************************************************************/
 
-#index article {
+#shop article {
     /*    border: 1px solid #000;*/
     height: auto;
     padding: 8px;
-    background-color: #ede3d8;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     position: relative;
 }
 
-#index {
+#shop {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
     max-width: 1300px;
     margin: 0 auto;
     padding-top: 0;
