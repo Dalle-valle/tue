@@ -4,18 +4,25 @@ Generelt
 body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .univers {
     background-image: url(billeder/tue_background_black.png);
+
 }
 
 .shop {
     background-image: url(billeder/tue_background_grey.png);
 }
 
+.galleri {
+    background-image: url(billeder/tue_background_black.png);
+}
+
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 .logo {
@@ -23,7 +30,7 @@ img {
     height: 50px;
     width: 50px;
     left: 50%;
-    top: 25px;
+    top: 50px;
     transform: translate(-50%, -50%);
 }
 
@@ -40,7 +47,7 @@ h1 {
 
 header {
     height: 8vh;
-    width: 100%;
+    width: 0;
 }
 
 section {
@@ -116,6 +123,50 @@ Knapper på landing page
     cursor: pointer;
 }
 
+
+
+/*************************************************************************************************************************************************
+Bananabar
+**************************************************************************************************************************************************/
+.bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(28, 16, 16, 0);
+
+}
+
+.progress-container {
+    width: 100%;
+    height: 1vh;
+    background: #ccc;
+
+
+}
+
+
+
+
+.progress-bar {
+    position: relative;
+    height: 1vh;
+    background: #FEEF3D;
+    width: 100%;
+
+
+
+}
+
+
+
+
+
+#progress {
+    margin-bottom: 20vh;
+}
+
+
 /*************************************************************************************************************************************************
 Billedserie
 **************************************************************************************************************************************************/
@@ -147,6 +198,23 @@ Billedserie
 
 
 
+
+}
+
+.img_frame {
+    flex-grow: 1;
+    flex-basis: 200px;
+    /*    overflow: hidden;*/
+}
+
+
+
+.img_frame:nth-child(6) {
+    display: none;
+}
+
+.img_frame:nth-child(7) {
+    display: none;
 }
 
 #hero_img1,
@@ -160,11 +228,14 @@ Billedserie
     flex-basis: 200px;
 
 
-/*    background-attachment: fixed;*/
+
+    /*    background-attachment: fixed;*/
 
 
 
 }
+
+
 
 #hero_img6,
 #hero_img7 {
@@ -172,7 +243,10 @@ Billedserie
 }
 
 #hero_img1 {
-    margin: 40px 4px 4px 0px;
+        margin: 40px 4px 4px 0px;
+    background-position: 50% 90%;
+
+
 }
 
 #hero_img2 {
@@ -241,6 +315,77 @@ Shop
     padding-top: 0;
 
 }
+
+/*************************************************************************************************************************************************
+Galleri
+**************************************************************************************************************************************************/
+
+
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "square1 high1"
+        "square2 high1"
+        "skinny1 skinny1"
+        "skinny2 skinny2"
+        "high2 square3"
+        "high2 square4";
+}
+
+.square1 {
+    grid-area: square1;
+
+}
+
+.high1 {
+    grid-area: high1;
+    height: 100%;
+}
+
+.square2 {
+    grid-area: square2;
+
+}
+
+.skinny1 {
+    grid-area: skinny1;
+}
+
+.skinny2 {
+    grid-area: skinny2;
+}
+
+.high2 {
+    grid-area: high2;
+
+}
+
+.square3 {
+    grid-area: square3;
+}
+
+.square4 {
+    grid-area: square4;
+}
+
+.high3 {
+    display: none;
+    grid-area: high3;
+}
+
+.high4 {
+    display: none;
+    grid-area: high4;
+}
+
+.high img {
+    height: 100%;
+}
+
+
+
 
 /*************************************************************************************************************************************************
 Mediaqueries ipad
@@ -328,6 +473,38 @@ Mediaqueries ipad
     }
 
 
+
+    .grid-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        grid-template-areas:
+            "high1 square1 high2"
+            "high1 high3 high2"
+            "square2 high3 square3"
+            "skinny1 skinny1 high4"
+            "skinny2 skinny2 high4";
+
+    }
+
+    .high3 {
+        display: block;
+    }
+
+    .high4 {
+        display: block;
+    }
+
+    .square4 {
+        display: none;
+    }
+
+    .img_frame:nth-child(6) {
+        display: block;
+    }
+
+    .img_frame:nth-child(7) {
+        display: block;
+    }
 }
 
 /*************************************************************************************************************************************************
@@ -366,25 +543,22 @@ Mediaqueries laptop
     #hero_img7 {
         margin: 40px 15px 4px 4px;
     }
+
+
+    #hero_img1,
+    #hero_img2,
+    #hero_img3,
+    #hero_img4,
+    #hero_img5,
+    #hero_img6,
+    #hero_img7 {
+        flex-grow: 1;
+        flex-basis: 200px;
+
+    }
+
+
 }
-
-#hero_img1,
-#hero_img2,
-#hero_img3,
-#hero_img4,
-#hero_img5,
-#hero_img6,
-#hero_img7 {
-    flex-grow: 1;
-    flex-basis: 200px;
-
-}
-
-
-
-
-
-
 
 /*************************************************************************************************************************************************
 Mediaqueries desktop
