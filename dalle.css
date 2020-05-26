@@ -8,16 +8,16 @@ body {
 }
 
 .univers {
-    background-image: url(billeder/tue_background_black.png);
+    background-color: #F4F4F4;
 
 }
 
 .shop {
-    background-image: url(billeder/tue_background_grey.png);
+    background-color: #F4F4F4;
 }
 
 .galleri {
-    background-image: url(billeder/tue_background_black.png);
+    background-color: #F4F4F4;
 }
 
 img {
@@ -30,19 +30,31 @@ img {
     height: 50px;
     width: 50px;
     left: 50%;
-    top: 50px;
+    top: 25px;
     transform: translate(-50%, -50%);
 }
 
 p {
-    color: white;
+    color: black;
     padding: 15px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-h1 {
-    color: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
     padding: 15px;
     text-align: center;
+    font-size: 3rem;
 }
 
 header {
@@ -251,26 +263,37 @@ Billedserie
 
 #hero_img1 {
     margin: 40px 4px 4px 0px;
-    background-position: 50% 90%;
+    background-position: 40% 90%;
+    background-image: url(billeder/forside_1.jpg);
 
 
 }
 
 #hero_img2 {
     margin: 20px 4px 4px 4px;
+    background-position: 40% 90%;
+    background-image: url(billeder/forside_2.jpg);
+
 
 }
 
 #hero_img3 {
     margin: 4px 4px 4px 4px;
+    background-position: 70% 90%;
+    background-image: url(billeder/forside_3.jpg);
+
 }
 
 #hero_img4 {
     margin: 20px 4px 20px 4px;
+    background-position: 75% 90%;
+    background-image: url(billeder/forside_4.jpg);
 }
 
 #hero_img5 {
     margin: 40px 0px 5px 4px;
+    background-position: 30% 90%;
+    background-image: url(billeder/forside_5.jpg);
 }
 
 #hero_img6 {
@@ -425,61 +448,47 @@ Mediaqueries ipad
     }
 
     #hero_img1 {
+
         margin: 40px 4px 4px 10px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_6.jpg);
+        background-position: 52% 90%;
     }
 
     #hero_img2 {
         margin: 20px 4px 4px 4px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_1.jpg);
+        background-position: 30% 90%;
     }
 
     #hero_img3 {
         margin: -20px 4px 4px 4px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_2.jpg);
+        background-position: 52% 90%;
     }
 
     #hero_img4 {
         margin: -50px 4px 20px 4px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_3.jpg);
     }
 
     #hero_img5 {
         margin: -20px 4px 4px 4px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_4.jpg);
+        background-position: 82% 90%;
     }
 
     #hero_img6 {
         display: block;
         margin: 20px 4px 4px 4px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_5.jpg);
+        background-position: 52% 90%;
     }
 
     #hero_img7 {
         display: block;
         margin: 40px 10px 4px 4px;
-        -webkit-filter: sepia(100%);
-        filter: sepia(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        background-image: url(billeder/forside_7.jpg);
+        background-position: 25% 90%;
     }
 
 
