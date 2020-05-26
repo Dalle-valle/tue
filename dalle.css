@@ -25,21 +25,16 @@ img {
     object-fit: cover;
 }
 
-.logo {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    top: 25px;
-    transform: translate(-50%, -50%);
-}
+
 
 p {
+
     color: black;
     padding: 15px;
     font-family: source-sans-pro, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
+    font-size: 1.2rem;
 }
 
 h1,
@@ -54,13 +49,10 @@ h6 {
     color: black;
     padding: 15px;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
-header {
-    height: 8vh;
-    width: 0;
-}
+
 
 section {
 
@@ -69,6 +61,97 @@ section {
     margin: 0 auto;
 
 
+}
+
+/*************************************************************************************************************************************************
+Navigation
+**************************************************************************************************************************************************/
+
+.nav_wrapper {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    top: 0;
+    background-color: #F4F4F4;
+    z-index: 1000;
+
+
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    left: 25px;
+    top: 25px;
+    transform: translate(-50%, -50%);
+}
+
+.c_baskin {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: 80%;
+    top: -12px;
+    transform: translate(-50%, -50%);
+}
+
+.burger_menu {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: 93%;
+    top: -40px;
+    transform: translate(-50%, -50%);
+}
+
+/*************************************************************************************************************************************************
+Bananabar
+**************************************************************************************************************************************************/
+.bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(28, 16, 16, 0);
+
+}
+
+.progress-container {
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    height: 1vh;
+    background: #ccc;
+
+
+}
+
+
+
+.progress-bar {
+    position: relative;
+    height: 1vh;
+    background: #FEEF3D;
+    width: 100%;
+    text-align: right;
+
+
+}
+
+.progress-bar::after {
+    content: " ";
+    background-image: url(billeder/bananana.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -18px;
+    top: -10px;
+    background-repeat: no-repeat;
+}
+
+#progress {
+    margin-bottom: 2vh;
 }
 
 /*************************************************************************************************************************************************
@@ -137,53 +220,6 @@ Knapper på landing page
 
 
 
-/*************************************************************************************************************************************************
-Bananabar
-**************************************************************************************************************************************************/
-.bar {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: rgba(28, 16, 16, 0);
-
-}
-
-.progress-container {
-    width: 100%;
-    height: 1vh;
-    /*    background: #ccc;*/
-
-
-}
-
-
-
-.progress-bar {
-    position: relative;
-    height: 1vh;
-    /*    background: #FEEF3D;*/
-
-    width: 100%;
-    text-align: right;
-
-
-}
-
-.progress-bar::after {
-    content: " ";
-    background-image: url(billeder/bananana.svg);
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-repeat: no-repeat;
-}
-
-#progress {
-    margin-bottom: 20vh;
-}
 
 
 /*************************************************************************************************************************************************
@@ -204,7 +240,7 @@ Billedserie
     display: flex;
     justify-content: center;
     /*    flex-direction: row;*/
-    margin-top: 10vh;
+    margin-top: 25vh;
 
 }
 
@@ -307,6 +343,7 @@ Billedserie
 
 /* Gray Scale */
 
+/*
 #hero_img1:hover,
 #hero_img2:hover,
 #hero_img3:hover,
@@ -320,6 +357,123 @@ Billedserie
 
 
 
+
+}
+*/
+
+/*************************************************************************************************************************************************
+Univers
+**************************************************************************************************************************************************/
+
+
+.intro_tekst {
+    text-align: center;
+}
+
+.intro_cta {
+    position: relative;
+    left: 50%;
+    top: 10vh;
+    height: 40px;
+    width: 250px;
+    background-color: black;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+
+}
+
+.intro_cta a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+
+.intro_cta:hover {
+    background-color: #F4F4F4;
+}
+
+.intro_cta a:hover {
+    color: black;
+}
+
+.abe_content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bg {
+    background-image: url(billeder/full_bg.svg);
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    background-repeat: no-repeat;
+    padding: 20vh 0 20vh 0;
+    max-width: none;
+
+
+
+
+}
+
+.intro_cta2 {
+    position: relative;
+    left: 50%;
+    top: 10vh;
+    height: 40px;
+    width: 250px;
+    background-color: white;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+
+}
+
+.intro_cta2 a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+
+.intro_cta2:hover {
+    background-color: #F4F4F4;
+}
+
+.intro_cta2 a:hover {
+    color: white;
+}
+
+
+.bg_wrapper {
+    background-color: black;
+}
+
+
+
+
+.content p,
+    {
+    color: white;
+    padding: 0px 20px 0px 20px;
+}
+
+.abe_content a {
+    color: black;
+}
+
+.abe_content img {
+
+    min-height: 200px;
+    max-height: 700px;
+    width: 100%;
 
 }
 
@@ -418,7 +572,52 @@ Galleri
 }
 
 
+/*************************************************************************************************************************************************
+Footer
+**************************************************************************************************************************************************/
 
+.footer {
+    margin-top: 10vh;
+}
+
+.so_me {
+    display: flex;
+    justify-content: center;
+}
+
+.so_me img {
+    height: 5vh;
+    width: 5vh;
+    margin: 15px;
+}
+
+.footer_items {
+    display: flex;
+    justify-content: center;
+
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+footer ul a {
+    text-decoration: none;
+    padding: 0px 15px 0 15px;
+    font-size: 12px;
+    color: black;
+}
+
+footer li:nth-child(1) {
+    border-right: 2px solid black;
+
+}
+
+footer li:nth-child(2) {
+    border-right: 2px solid black;
+}
 
 /*************************************************************************************************************************************************
 Mediaqueries ipad
@@ -524,6 +723,35 @@ Mediaqueries ipad
     .img_frame:nth-child(7) {
         display: block;
     }
+
+
+    .logo {}
+
+    .c_baskin {
+
+        left: 85%;
+
+    }
+
+    .burger_menu {}
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 3rem;
+    }
+
+    .footer_items {
+        justify-content: center;
+
+    }
+
+    .footer_items a {
+        font-size: 20px;
+    }
 }
 
 /*************************************************************************************************************************************************
@@ -532,7 +760,7 @@ Mediaqueries laptop
 @media only screen and (min-width: 1024px) {
 
     .image {
-        height: 55vh;
+        height: 45vh;
     }
 
     #hero_img1 {
@@ -576,7 +804,25 @@ Mediaqueries laptop
 
     }
 
+    .logo {
+        height: 50px;
+        width: 50px;
+        top: 40px;
+    }
 
+    .c_baskin {
+
+
+        height: 40px;
+        width: 40px;
+        top: 0;
+    }
+
+    .burger_menu {
+        height: 40px;
+        width: 40px;
+        top: -40px;
+    }
 }
 
 /*************************************************************************************************************************************************
