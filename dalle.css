@@ -54,13 +54,12 @@ h6 {
 
 
 
-section {
-
-    max-width: 1400px;
-
-    margin: 0 auto;
 
 
+
+
+header {
+    margin-bottom: 20vh;
 }
 
 /*************************************************************************************************************************************************
@@ -373,25 +372,7 @@ Billedserie
 }
 
 
-/* Gray Scale */
 
-/*
-#hero_img1:hover,
-#hero_img2:hover,
-#hero_img3:hover,
-#hero_img4:hover,
-#hero_img5:hover,
-#hero_img6:hover,
-#hero_img7:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-    transform: scale(1.2);
-
-
-
-
-}
-*/
 
 /*************************************************************************************************************************************************
 Univers
@@ -438,11 +419,11 @@ Univers
     margin: 0 auto;
 }
 
-.bg {
+.bg_univers {
     background-image: url(billeder/full_bg.svg);
     background-size: cover;
     background-position: center;
-    height: 120vh;
+    height: 100%;
     background-repeat: no-repeat;
     padding: 20vh 0 20vh 0;
     max-width: none;
@@ -539,69 +520,69 @@ Shop
 Galleri
 **************************************************************************************************************************************************/
 
-
-
-.grid-container {
+.grid_container {
+    position: relative;
+    top: 30vh;
+    left: 0;
     display: grid;
-    grid-gap: 10px;
-    grid-template-areas:
-        "square1 high1"
-        "square2 high1"
-        "skinny1 skinny1"
-        "skinny2 skinny2"
-        "high2 square3"
-        "high2 square4";
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+    background-color: black;
 }
 
-.square1 {
-    grid-area: square1;
-
-}
-
-.high1 {
-    grid-area: high1;
+.bg_black {
+    background-image: url(billeder/test_bg.svg);
+    background-size: cover;
+    background-position: center;
     height: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 60vh;
+    max-width: none;
 }
 
-.square2 {
-    grid-area: square2;
-
-}
-
-.skinny1 {
-    grid-area: skinny1;
-}
-
-.skinny2 {
-    grid-area: skinny2;
-}
-
-.high2 {
-    grid-area: high2;
-
-}
-
-.square3 {
-    grid-area: square3;
-}
-
-.square4 {
-    grid-area: square4;
-}
-
-.high3 {
-    display: none;
-    grid-area: high3;
-}
-
-.high4 {
-    display: none;
-    grid-area: high4;
-}
-
-.high img {
+.bg_white {
+    background-image: url(billeder/bg_white.svg);
+    background-size: cover;
     height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: none;
+    padding-bottom: 20vh;
+
 }
+
+.high {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+#gallery_intro {
+    /*    margin-bottom: 20vh 0 20vh 0;*/
+    height: 20vh;
+
+}
+
+#gallery_intro p {
+    text-align: center;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery img {
+
+    min-height: 200px;
+    max-height: 700px;
+    width: 100%;
+}
+
 
 
 /*************************************************************************************************************************************************
@@ -724,29 +705,6 @@ Mediaqueries ipad
 
 
 
-    .grid-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        grid-template-areas:
-            "high1 square1 high2"
-            "high1 high3 high2"
-            "square2 high3 square3"
-            "skinny1 skinny1 high4"
-            "skinny2 skinny2 high4";
-
-    }
-
-    .high3 {
-        display: block;
-    }
-
-    .high4 {
-        display: block;
-    }
-
-    .square4 {
-        display: none;
-    }
 
     .img_frame:nth-child(6) {
         display: block;

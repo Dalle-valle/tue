@@ -25,17 +25,41 @@
 <body class="shop">
 
 
-    <header>
-        <nav>
-            <div class="logo"><img src="billeder/logo_black.png"></div>
-            <a href="#">Forside</a>
-            <a href="#">Galleri</a>
-            <a href="#">Udstillinger</a>
-            <a href="#">Projekter</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Shop</a>
+    <header class="header">
+        <div class="nav_wrapper">
+            <nav>
+                <div class="logo"><img src="billeder/logo_black.png"></div>
+                <div class="c_baskin"><img src="billeder/c_baskin.svg"></div>
+                <div class="burger_menu"><img src="billeder/burger.svg">
+                    <div class="menu_wrapper">
+                        <div class="mylinks">
+                            <a href="#">Forside</a>
+                            <a href="#">Galleri</a>
+                            <a href="#">Udstillinger</a>
+                            <a href="#">Projekter</a>
+                            <a href="#">Kontakt</a>
+                            <a href="#">Shop</a>
 
-        </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="progress">
+
+                    <div class="bar">
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar" id="myBar">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
     </header>
     <section id="shop"></section>
     <template>
@@ -51,7 +75,7 @@
     </template>
 
 
-
+    <script src="script.js"></script>
     <script>
         let allePaintings;
         let filter = "alle";
@@ -112,8 +136,5 @@
         // }
         // })
         //}
-
     </script>
-</body>
-
-</html>
+</body></html>

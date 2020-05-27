@@ -25,17 +25,41 @@
 <body class="galleri">
 
 
-    <header>
-        <nav>
-            <div class="logo"><img src="billeder/logo_black.png"></div>
-            <a href="#">Forside</a>
-            <a href="#">Galleri</a>
-            <a href="#">Udstillinger</a>
-            <a href="#">Projekter</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Shop</a>
+    <header class="header">
+        <div class="nav_wrapper">
+            <nav>
+                <div class="logo"><img src="billeder/logo_black.png"></div>
+                <div class="c_baskin"><img src="billeder/c_baskin.svg"></div>
+                <div class="burger_menu"><img src="billeder/burger.svg">
+                    <div class="menu_wrapper">
+                        <div class="mylinks">
+                            <a href="#">Forside</a>
+                            <a href="#">Galleri</a>
+                            <a href="#">Udstillinger</a>
+                            <a href="#">Projekter</a>
+                            <a href="#">Kontakt</a>
+                            <a href="#">Shop</a>
 
-        </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="progress">
+
+                    <div class="bar">
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar" id="myBar">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
     </header>
 
 
@@ -65,11 +89,50 @@
 -->
 
 
-    <div class="grid_container">
+    <section id="gallery_intro">
+        <div class="bg_white">
+            <h1>Gallery</h1>
+            <p>In the land of a million monkeys there is always something going on.
+                Come on in and meet them all!</p>
+        </div>
+    </section>
+
+
+    <div class="bg_black">
+
+
+        <div class="grid_container gallery">
+            <div class="wide"><img src="billeder/wide1.jpg"></div>
+            <div class="high"><img src="billeder/high1.jpg"></div>
+            <div class="high"><img src="billeder/high2.jpg"></div>
+            <div class="high"><img src="billeder/high3.jpg"></div>
+            <div class="wide"><img src="billeder/wide2.jpg"></div>
+            <div class="wide"><img src="billeder/wide3.jpg"></div>
+            <div class="wide"><img src="billeder/wide4.jpg"></div>
+            <div class="high"><img src="billeder/high4.jpg"></div>
+            <div class="high"><img src="billeder/high5.jpg"></div>
+        </div>
 
     </div>
+    <footer class="footer">
+        <div class="so_me">
+            <img src="billeder/some1.svg" alt="Instagram">
+            <img src="billeder/some2.svg" alt="Youtube">
+            <img src="billeder/some3.svg" alt="Facebook">
+            <img src="billeder/some4.svg" alt="Twitter">
+        </div>
+        <div class="footer_items">
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cookie og handelsbetingelser</a></li>
+                <li><a href="#">kontakt</a></li>
+            </ul>
+        </div>
 
-    <script>
+
+    </footer>
+
+    <script src="script.js">
 
     </script>
 </body></html>
