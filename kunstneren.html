@@ -62,14 +62,10 @@
 
     </header>
     <section id="kunstner">
-
+        <h1 class="wp_title"></h1>
         <div class="sectionwrapper">
 
-            <h1>I can make you a monkey!</h1>
-            <img src="billeder/Amazing-journey-selfie_cropped_tue_volder.jpg" alt="selfie af tue">
-            < <p>
-                </p>
-
+            <div class="wp_content"></div>
 
         </div>
 
@@ -95,7 +91,35 @@
     </footer>
     <script src="script.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", dataStart);
+
+
+
+
+
+
+        const url = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/tueside/162";
+
+        let tekst;
+
+        function dataStart() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(url);
+            tekst = await response.json();
+            visData();
+        }
+
+        function visData() {
+            document.querySelector(".wp_title").innerHTML = tekst.title.rendered;
+            document.querySelector(".wp_content").innerHTML = tekst.content.rendered;
+
+        }
 
     </script>
 
-</body></html>
+</body>
+
+</html>

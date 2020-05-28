@@ -619,20 +619,55 @@ Galleri
 }
 
 
+
 /*************************************************************************************************************************************************
 Kunstneren
 **************************************************************************************************************************************************/
-#kunstner {
-    padding: 15px;
-}
+
 
 #kunstner .sectionwrapper {
     background-color: #f4f4f4;
     margin: 0 auto;
     max-width: 1400px;
+
 }
 
 
+.wp-block-columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wp-block-column {
+
+    color: black;
+    flex-grow: 1;
+    margin: 10px;
+    flex-basis: 600px;
+}
+
+.wide_img {
+    flex-grow: 2;
+}
+
+.wp-block-image {
+    flex-grow: 1;
+    margin: 10px;
+    flex-basis: 600px;
+
+
+
+}
+
+
+.wp-block-video {
+    flex-grow: 2;
+
+
+    margin: 10px;
+}
+
+.video {}
 
 /*************************************************************************************************************************************************
 Footer
