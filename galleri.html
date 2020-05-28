@@ -91,7 +91,7 @@
 
     <section id="gallery_intro">
 
-        <h1>Gallery</h1>
+        <h1>Galleri</h1>
         <p>In the land of a million monkeys there is always something going on.
             Come on in and meet them all!</p>
 
@@ -101,27 +101,21 @@
     <div class="sectionwrapper">
 
         <div class="top_bg"></div>
-        <div class="grid_container gallery">
+        <section id="cloner"></section>
+        <template>
+            <article class="gallery">
 
-            <div class="wide"><img src="billeder/wide1.jpg"></div>
-            <div class="high"><img src="billeder/high1.jpg"></div>
-            <div class="high"><img src="billeder/high2.jpg"></div>
-            <div class="high"><img src="billeder/high3.jpg"></div>
-            <div class="wide"><img src="billeder/wide2.jpg"></div>
-            <div class="wide"><img src="billeder/wide3.jpg"></div>
-            <div class="wide"><img src="billeder/wide4.jpg"></div>
-            <div class="high"><img src="billeder/high4.jpg"></div>
-            <div class="high"><img src="billeder/high5.jpg"></div>
-            <div class="high"><img src="billeder/high6.jpg"></div>
+                <img src="" alt="">
+
+            </article>
+        </template>
 
 
-        </div>
+
+
     </div>
+
     <div class="bottom_bg"></div>
-
-
-
-
 
     <footer class="footer">
         <div class="so_me">
@@ -143,5 +137,126 @@
 
     <script src="script.js">
 
+    </script>
+
+
+    <script>
+        let filter = "alle";
+
+        let allePaintings;
+        document.addEventListener("DOMContentLoaded", start);
+
+        let urlParameter = new URLSearchParams(window.location.search);
+
+        let id = urlParameter.get("id");
+        const url = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/galleri?per_page=100";
+
+
+
+
+
+        function start() {
+
+            hentData();
+
+
+        }
+
+        async function hentData() {
+            const response = await fetch(url);
+            allePaintings = await response.json();
+            visPaintings();
+
+        }
+
+
+        function visPaintings() {
+            const container = document.querySelector("#cloner");
+            container.innerHTML = "";
+            const paintTemplate = document.querySelector("template");
+            allePaintings.forEach(painting => {
+                console.log(painting.format)
+                let klon = paintTemplate.cloneNode(true).content;
+                klon.querySelector("img").src = painting.billede.guid;
+                if (painting.format === "højformat") {
+                    klon.querySelector("article").classList.add("high");
+                } else if (painting.format === "bredformat") {
+                    klon.querySelector("article").classList.add("wide");
+                }
+
+                container.appendChild(klon);
+            })
+        }
+
+
+
+
+
+
+
+        //        function filtrering() {
+        // console.log("FILTER");
+        // filter = this.dataset.format;
+        // visRetter();
+        // document.querySelector("h2").textContent = this.textContent;
+        // document.querySelectorAll(".filter").forEach(elm => {
+        // elm.classList.remove("valgt");
+        //
+        // })
+        //
+        // }
+
+
+
+
+        //
+        // function visRetter() {
+        // const container = document.querySelector("#index");
+        // container.innerHTML = "";
+        // const retterTemplate = document.querySelector("template");
+        // alleRetter.forEach(ret => {
+        // if (filter == "alle" || filter == ret.content.rendered) {
+        // let klon = retterTemplate.cloneNode(true).content;
+        // klon.querySelector("img").src = ret.billede.guid;
+        // klon.querySelector("h2").textContent = ret.title.rendered;
+        // klon.querySelector("p").textContent += ret.content.rendered;
+        // // klon.querySelector("p + p").textContent += `Pris: ${ret.gsx$pris.$t},-`;
+        // klon.querySelector("article").addEventListener("click", () => visDetail(ret))
+        // klon.querySelector("article").addEventListener("click", fjernClass);
+        //
+        // container.appendChild(klon);
+        //
+        // container.lastElementChild.addEventListener("click", () => {
+        // location.href = "single.html?id=" + ret.id;
+        // })
+        // }
+        // })
+        // }
+        //
+        // function klikListeners() {
+        // document.querySelectorAll(".filter").forEach(elm => {
+        // elm.addEventListener("click", filtrering);
+        //
+        // })
+        //
+        //
+        // }
+        //
+        // function filtrering() {
+        // console.log("FILTER");
+        // filter = this.dataset.kategorier;
+        // visRetter();
+        // document.querySelector("h2").textContent = this.textContent;
+        // document.querySelectorAll(".filter").forEach(elm => {
+        // elm.classList.remove("valgt");
+        //
+        // })
+        // this.classList.add("valgt");
+        //
+        // };
+        //
+        // function fjernClass() {
+        // detail.classList.remove("skjul");
+        // }
     </script>
 </body></html>
