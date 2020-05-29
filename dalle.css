@@ -532,36 +532,7 @@ Galleri
     max-width: 100%;
 }
 
-/*
-.bg_black {
 
-
-    background-image: url(billeder/bg_black.svg);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    background-repeat: no-repeat;
-
-
-    max-width: none;
-    background-color: black;
-
-}
-*/
-
-
-/*
-.bg_white {
-    background-image: url(billeder/bg_white.svg);
-    background-size: cover;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: none;
-    padding-bottom: 20vh;
-
-}
-*/
 
 .high {
     grid-row: span 2;
@@ -644,11 +615,22 @@ Kunstneren
     flex-grow: 1;
     margin: 10px;
     flex-basis: 600px;
+
 }
 
 .wide_img {
     flex-grow: 2;
+
 }
+
+.wp-block-column h2,
+p {
+
+    text-align: left;
+}
+
+
+
 
 .wp-block-image {
     flex-grow: 1;
@@ -660,14 +642,111 @@ Kunstneren
 }
 
 
-.wp-block-video {
-    flex-grow: 2;
-
-
-    margin: 10px;
+/*************************************************************************************************************************************************
+Projekter
+**************************************************************************************************************************************************/
+#test {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.video {}
+#project_intro {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+
+}
+
+.project_container {
+    height: 50vh;
+    width: 100vw;
+    /*    background-color: aquamarine;*/
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+
+.project_child1 {
+
+    /*    background-color: aqua;*/
+    padding: 15px;
+    flex-grow: 1;
+    flex-basis: 50vw;
+
+}
+
+.project_child2 {
+
+    /*    background-color: beige;*/
+    padding: 15px;
+    flex-grow: 1;
+    flex-basis: 50vw;
+}
+
+
+.project_child2 img {
+    position: relative;
+    top: 0;
+    left: 50px;
+    width: 50%;
+}
+
+
+.line_top {
+    position: relative;
+    top: -10vh;
+    left: 45.1vw;
+    border-right: 2px solid black;
+    height: 25vh;
+
+
+}
+
+.childwrapper {
+    position: relative;
+    top: 8vh;
+    left: 31vw;
+    width: 35%;
+
+}
+
+.childwrapper p,
+h2 {
+    text-align: left;
+}
+
+.childwrapper h2 {
+    font-size: 1.5rem;
+    position: relative;
+    top: 40px;
+    left: 0;
+}
+
+.childwrapper button {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    position: relative;
+    top: -20px;
+    left: 15px;
+}
+
+.childwrapper span {
+    margin-left: 15px;
+}
+
+.project_container:nth-of-type(even) {
+
+        height: 50vh;
+    width: 100vw;
+        background-color: aquamarine;
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 
 /*************************************************************************************************************************************************
 Footer
