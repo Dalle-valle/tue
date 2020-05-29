@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/kda4gwa.css">
 </head>
 
-<body class="univers">
+<body class="projekter">
 
 
     <header class="header">
@@ -66,72 +66,31 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut aliquip ex ea commodo consequat.</p>
     </section>
     <section id="projects"></section>
+    <template>
+        <section class="single_project">
+            <div class="project_container">
+                <div class="line_top"></div>
+                <div class="project_child1">
+                    <div class="childwrapper">
+                        <h2>Børnebog “Tues A.b.e”</h2>
+                        <p>Klik her for at læse mere om mit børnebogs projekt.</p>
+                        <a href=#><button>Læs mere <span>&gt</span></button></a>
+                    </div>
+                </div>
 
+                <div class="project_child2">
 
-    <div class="project_container">
-        <div class="line_top"></div>
-        <div class="project_child1">
-            <div class="childwrapper">
-                <h2>børnebog “Tues A.b.e”</h2>
-                <p>Klik her for at læse mere om mit børnebogs projekt.</p>
-                <button>Læs mere <span>&gt</span></button>
+                    <div class="framed"> <img src="billeder/projekt1.jpg" alt=""></div>
+                </div>
+
             </div>
-        </div>
-
-        <div class="project_child2">
-
-            <img src="billeder/projekt1.jpg" alt="">
-        </div>
-
-    </div>
 
 
+        </section>
+
+    </template>
 
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="project_container">
-        <div class="line_top"></div>
-        <div class="project_child1">
-            <div class="childwrapper">
-                <h2>børnebog “Tues A.b.e”</h2>
-                <p>Klik her for at læse mere om mit børnebogs projekt.</p>
-                <button>Læs mere <span>&gt</span></button>
-            </div>
-        </div>
-
-        <div class="project_child2">
-
-            <img src="billeder/projekt1.jpg" alt="">
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="project_container">
-        <div class="line_top"></div>
-        <div class="project_child1">
-            <div class="childwrapper">
-                <h2>børnebog “Tues A.b.e”</h2>
-                <p>Klik her for at læse mere om mit børnebogs projekt.</p>
-                <button>Læs mere <span>&gt</span></button>
-            </div>
-        </div>
-
-        <div class="project_child2">
-
-            <img src="billeder/projekt1.jpg" alt="">
-        </div>
-
-    </div>
 
 
     <footer class="footer">
@@ -153,6 +112,118 @@
     </footer>
     <script src="script.js"></script>
     <script>
+        let alleProjekter;
+        document.addEventListener("DOMContentLoaded", projekt);
+
+        let urlParameter = new URLSearchParams(window.location.search);
+
+        let id = urlParameter.get("id");
+        const urlP = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/projekt?per_page=100";
+
+
+
+
+
+        function projekt() {
+
+            hentProjekter();
+
+
+        }
+
+        async function hentProjekter() {
+            const responseP = await fetch(urlP);
+            alleProjekter = await responseP.json();
+            visProjekter();
+
+        }
+
+
+        function visProjekter() {
+            const containerP = document.querySelector("#projects");
+            containerP.innerHTML = "";
+            const projektTemplate = document.querySelector("template");
+            alleProjekter.forEach(projekt => {
+                console.log(projekt.navn)
+                let klonP = projektTemplate.cloneNode(true).content;
+                klonP.querySelector("img").src = projekt.billede.guid;
+                klonP.querySelector("h2").innerHTML = projekt.navn;
+
+
+                containerP.appendChild(klonP);
+            })
+        }
+
+
+
+
+
+
+
+        //        function filtrering() {
+        // console.log("FILTER");
+        // filter = this.dataset.format;
+        // visRetter();
+        // document.querySelector("h2").textContent = this.textContent;
+        // document.querySelectorAll(".filter").forEach(elm => {
+        // elm.classList.remove("valgt");
+        //
+        // })
+        //
+        // }
+
+
+
+
+        //
+        // function visRetter() {
+        // const container = document.querySelector("#index");
+        // container.innerHTML = "";
+        // const retterTemplate = document.querySelector("template");
+        // alleRetter.forEach(ret => {
+        // if (filter == "alle" || filter == ret.content.rendered) {
+        // let klon = retterTemplate.cloneNode(true).content;
+        // klon.querySelector("img").src = ret.billede.guid;
+        // klon.querySelector("h2").textContent = ret.title.rendered;
+        // klon.querySelector("p").textContent += ret.content.rendered;
+        // // klon.querySelector("p + p").textContent += `Pris: ${ret.gsx$pris.$t},-`;
+        // klon.querySelector("article").addEventListener("click", () => visDetail(ret))
+        // klon.querySelector("article").addEventListener("click", fjernClass);
+        //
+        // container.appendChild(klon);
+        //
+        // container.lastElementChild.addEventListener("click", () => {
+        // location.href = "single.html?id=" + ret.id;
+        // })
+        // }
+        // })
+        // }
+        //
+        // function klikListeners() {
+        // document.querySelectorAll(".filter").forEach(elm => {
+        // elm.addEventListener("click", filtrering);
+        //
+        // })
+        //
+        //
+        // }
+        //
+        // function filtrering() {
+        // console.log("FILTER");
+        // filter = this.dataset.kategorier;
+        // visRetter();
+        // document.querySelector("h2").textContent = this.textContent;
+        // document.querySelectorAll(".filter").forEach(elm => {
+        // elm.classList.remove("valgt");
+        //
+        // })
+        // this.classList.add("valgt");
+        //
+        // };
+        //
+        // function fjernClass() {
+        // detail.classList.remove("skjul");
+        // }
 
     </script>
 
