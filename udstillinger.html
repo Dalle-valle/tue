@@ -115,47 +115,47 @@
 
 
     <script>
-        let alleProjekter;
-        document.addEventListener("DOMContentLoaded", projekt);
-
-        let urlParameter = new URLSearchParams(window.location.search);
-
-        let id = urlParameter.get("id");
-        const urlP = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/projekt?per_page=100";
-
-
-
-
-
-        function projekt() {
-
-            hentProjekter();
-
-
-        }
-
-        async function hentProjekter() {
-            const responseP = await fetch(urlP);
-            alleProjekter = await responseP.json();
-            visProjekter();
-
-        }
-
-
-        function visProjekter() {
-            const containerP = document.querySelector("#projects");
-            containerP.innerHTML = "";
-            const projektTemplate = document.querySelector("template");
-            alleProjekter.forEach(projekt => {
-                console.log(projekt.navn)
-                let klonP = projektTemplate.cloneNode(true).content;
-                klonP.querySelector("img").src = projekt.billede.guid;
-                klonP.querySelector("h2").innerHTML = projekt.navn;
-
-
-                containerP.appendChild(klonP);
-            })
-        }
+//        let alleProjekter;
+// document.addEventListener("DOMContentLoaded", projekt);
+//
+// let urlParameter = new URLSearchParams(window.location.search);
+//
+// let id = urlParameter.get("id");
+// const urlP = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/projekt?per_page=100";
+//
+//
+//
+//
+//
+// function projekt() {
+//
+// hentProjekter();
+//
+//
+// }
+//
+// async function hentProjekter() {
+// const responseP = await fetch(urlP);
+// alleProjekter = await responseP.json();
+// visProjekter();
+//
+// }
+//
+//
+// function visProjekter() {
+// const containerP = document.querySelector("#projects");
+// containerP.innerHTML = "";
+// const projektTemplate = document.querySelector("template");
+// alleProjekter.forEach(projekt => {
+// console.log(projekt.navn)
+// let klonP = projektTemplate.cloneNode(true).content;
+// klonP.querySelector("img").src = projekt.billede.guid;
+// klonP.querySelector("h2").innerHTML = projekt.navn;
+//
+//
+// containerP.appendChild(klonP);
+// })
+// }
 
 
 
