@@ -188,66 +188,13 @@ Bananabar
 /*************************************************************************************************************************************************
 Billeder på landing page
 **************************************************************************************************************************************************/
-#video {
-    display: none;
-}
 
-.img_wrapper {
-    display: flex;
-
-}
-
-.splashwrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.left {
-    width: 50vw;
-    height: 100vh;
-    background-image: url(billeder/left.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-
-
-}
-
-.right {
-    width: 50vw;
-    height: 100vh;
-    background-image: url(billeder/right%20copy.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
 
 
 /*************************************************************************************************************************************************
 Knapper på landing page
 **************************************************************************************************************************************************/
-.btn1 {
-    position: absolute;
-    border: 2px solid black;
-    height: 8vh;
-    width: 25vw;
-    left: 12vw;
-    bottom: 25vh;
-    cursor: pointer;
 
-}
-
-
-.btn2 {
-    position: absolute;
-    border: 2px solid black;
-    height: 8vh;
-    width: 25vw;
-    right: 12vw;
-    bottom: 25vh;
-    cursor: pointer;
-}
 
 
 
@@ -366,8 +313,18 @@ Billedserie
 
 
 /*************************************************************************************************************************************************
-Univers
+Index
 **************************************************************************************************************************************************/
+#tuesabe {
+    background-color: black;
+    padding-bottom: 10vh;
+}
+
+#tuesabe .sectionwrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 
 
 .intro_tekst {
@@ -422,7 +379,7 @@ Univers
     top: 10vh;
     height: 40px;
     width: 250px;
-    background-color: white;
+    background-color: black;
     text-transform: uppercase;
     transform: translate(-50%, -50%);
 
@@ -440,10 +397,16 @@ Univers
 }
 
 .intro_cta2:hover {
-    background-color: #F4F4F4;
+    background-color: white;
+
 }
 
-.intro_cta2 a:hover {
+.intro_cta2:hover a {
+    color: black;
+
+}
+
+.intro_cta2 a {
     color: white;
 }
 
@@ -698,6 +661,92 @@ Projekter
 
 
 /*************************************************************************************************************************************************
+Kontakt
+**************************************************************************************************************************************************/
+#kontakt {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+#kontakt p {
+    margin: 15px;
+    padding: 15px;
+    text-align: left;
+}
+
+.contact_container {
+    padding: 15px;
+    width: 100%;
+}
+
+.navn_wrap {
+    display: flex;
+
+    width: 100%;
+
+}
+
+.navn_wrap input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+}
+
+.resten_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.resten_wrap input {
+    padding: 15px;
+    margin: 15px;
+}
+
+.resten_wrap textarea {
+    padding: 15px;
+    margin: 15px;
+}
+
+input,
+textarea {
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    color: black;
+    padding: 15px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+    outline-color: #FEEF3D;
+}
+
+
+#submit {
+    border: 2px solid black;
+    width: 35vw;
+    align-self: flex-end;
+    background-color: black;
+}
+
+#submit {
+    color: white;
+    padding: 15px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+#submit:hover {
+    background-color: white;
+    color: black;
+
+}
+
+/*************************************************************************************************************************************************
 Footer
 **************************************************************************************************************************************************/
 
@@ -749,23 +798,10 @@ Mediaqueries ipad
 **************************************************************************************************************************************************/
 
 @media only screen and (min-width: 768px) {
-    section {}
 
-    .left,
-    .right {
-        display: none;
-    }
 
-    #video {
-        display: block;
-        height: 100vh;
-        width: 100vw;
-    }
 
-    .btn1,
-    .btn2 {
-        width: 10vw;
-    }
+
 
     .image {
         height: 45vh;
@@ -992,7 +1028,7 @@ Mediaqueries ipad
 
 
     .childwrapper p,
-    h2 {
+        {
         text-align: left;
     }
 
@@ -1036,6 +1072,12 @@ Mediaqueries ipad
         left: 0;
 
     }
+
+    #kontakt {
+        flex-direction: row;
+    }
+
+
 
 
 }
@@ -1108,6 +1150,10 @@ Mediaqueries laptop
         height: 40px;
         width: 40px;
         top: -40px;
+    }
+
+    #submit input {
+        width: 25vw;
     }
 }
 
