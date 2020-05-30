@@ -151,6 +151,7 @@
                 let klonP = projektTemplate.cloneNode(true).content;
                 klonP.querySelector("img").src = projekt.billede.guid;
                 klonP.querySelector("h2").innerHTML = projekt.navn;
+                klonP.querySelector("p").innerHTML = projekt.more;
 
 
                 containerP.appendChild(klonP);
@@ -227,9 +228,6 @@
         // function fjernClass() {
         // detail.classList.remove("skjul");
         // }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
