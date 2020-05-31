@@ -71,24 +71,6 @@
 
 
 
-    <!--
-    <div class="grid-container">
-
-        <div class="square1"><img src="billeder/img_square1.jpg"></div>
-        <div class="square3"><img src="billeder/img_square3.jpg"></div>
-        <div class="square4"><img src="billeder/img_square4.jpg"></div>
-        <div class="square2"><img src="billeder/img_square2.jpg"></div>
-        <div class="high1 high"><img src="billeder/img_high1.jpg"></div>
-        <div class="high2 high"><img src="billeder/img_high2.jpg"></div>
-        <div class="skinny1"><img src="billeder/img_skinny1.jpg"></div>
-        <div class="skinny2"><img src="billeder/img_skinny2.jpg"></div>
-        <div class="high3 high"><img src="billeder/img_high3.jpg"></div>
-        <div class="high4 high"><img src="billeder/img_high4.jpg"></div>
-
-    </div>
--->
-
-
     <section id="gallery_intro">
 
         <h1>Galleri</h1>
@@ -178,6 +160,7 @@
                 console.log(painting.format)
                 let klon = paintTemplate.cloneNode(true).content;
                 klon.querySelector("img").src = painting.billede.guid;
+                klonP.querySelector("img").alt = "abekunst";
                 if (painting.format === "højformat") {
                     klon.querySelector("article").classList.add("high");
                 } else if (painting.format === "bredformat") {
@@ -259,8 +242,5 @@
         // function fjernClass() {
         // detail.classList.remove("skjul");
         // }
-
     </script>
-</body>
-
-</html>
+</body></html>
