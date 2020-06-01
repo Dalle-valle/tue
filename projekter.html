@@ -155,9 +155,10 @@
                 klonP.querySelector("img").src = projekt.billede.guid;
                 klonP.querySelector("h2").innerHTML = projekt.navn;
                 klonP.querySelector("p").innerHTML = projekt.more;
-
-
                 containerP.appendChild(klonP);
+                  containerP.lastElementChild.addEventListener("click", () => {
+                  location.href = "single.html?id=" + projekt.id;
+                  })
             })
         }
 
@@ -231,9 +232,6 @@
         // function fjernClass() {
         // detail.classList.remove("skjul");
         // }
-
     </script>
 
-</body>
-
-</html>
+</body></html>

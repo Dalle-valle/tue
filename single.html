@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univers | Tue Volder</title>
+    <link rel="stylesheet" href="kris.css">
+    <link rel="stylesheet" href="samie.css">
+    <link rel="stylesheet" href="becca.css">
+    <link rel="stylesheet" href="jonas.css">
+    <link rel="stylesheet" href="dalle.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="ikoner/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ikoner/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ikoner/favicon-16x16.png">
+    <link rel="manifest" href="ikoner/site.webmanifest">
+    <link rel="mask-icon" href="ikoner/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="ikoner/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="ikoner/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.typekit.net/kda4gwa.css">
+</head>
+
+<body class="univers">
+
+
+    <header class="header">
+        <div class="nav_wrapper">
+            <nav>
+                <div class="logo"><img src="billeder/logo_black.png"></div>
+                <div class="c_baskin"><img src="billeder/c_baskin.svg"></div>
+                <div class="burger_menu"><img src="billeder/burger.svg">
+                    <div class="menu_wrapper">
+                        <div class="mylinks">
+                            <a href="index.html">Forside</a>
+                            <a href="galleri.html">Galleri</a>
+                            <a href="udstillinger.html">Udstillinger</a>
+                            <a href="projekter.html">Projekter</a>
+                            <a href="kunstneren.html">Kunstneren</a>
+                            <a href="kontakt.html">Kontakt</a>
+                            <a href="shop.html">Shop</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="progress">
+
+                    <div class="bar">
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar" id="myBar">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <section id="single" class="skjul">
+
+        <article class="projekt">
+            <button>&larr;</button>
+            <h1></h1>
+            <div class="wp_content"></div>
+        </article>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="so_me">
+            <img src="billeder/some1.svg" alt="Instagram">
+            <img src="billeder/some2.svg" alt="Youtube">
+            <img src="billeder/some3.svg" alt="Facebook">
+            <img src="billeder/some4.svg" alt="Twitter">
+        </div>
+        <div class="footer_items">
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Cookie og handelsbetingelser</a></li>
+                <li><a href="kontakt.html">kontakt</a></li>
+            </ul>
+        </div>
+
+
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const urlParameter = new URLSearchParams(window.location.search);
+
+        const projektId = urlParameter.get("id");
+
+        const projekter = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/projekt/" + projektId;
+
+
+
+        let projekt;
+        detail = document.querySelector("#single");
+
+
+
+        document.addEventListener("DOMContentLoaded", hentStuff);
+
+
+
+        function hentStuff() {
+            hentData();
+
+            //            detail.classList.add("skjul");
+
+
+        }
+
+        async function hentData() {
+            const responsePr = await fetch(projekter);
+            console.log(responsePr);
+            projekt = await responsePr.json();
+
+            visProjekter();
+        }
+
+
+
+        function visProjekter() {
+
+
+            console.log(projekt);
+
+
+
+            document.querySelector("#single").addEventListener("click", lukDetail);
+
+            document.querySelector("h1").textContent = projekt.title.rendered;
+            document.querySelector(".wp_content").innerHTML = projekt.content.rendered;
+
+            //                    detail.querySelector("img").addEventListener("click", () => detail.classList.add("skjul"));
+            document.querySelector("#single").addEventListener("click", () => detail.classList.add("skjul"));
+
+
+
+
+        }
+
+        function lukDetail() {
+            history.back();
+        }
+
+    </script>
+
+</body>
+
+</html>
