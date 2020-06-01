@@ -159,17 +159,17 @@
             const paintTemplate = document.querySelector("template");
             allePaintings.forEach(painting => {
                 console.log(painting.format)
-                let klon = paintTemplate.cloneNode(true).content;
-                klon.querySelector("img").src = painting.billede.guid;
-                klonP.querySelector("img").alt = "abekunst";
+                let klonp = paintTemplate.cloneNode(true).content;
+                klonp.querySelector("img").src = painting.billede.guid;
+
                 if (painting.format === "højformat") {
-                    klon.querySelector("article").classList.add("high");
+                    klonp.querySelector("article").classList.add("high");
                 } else if (painting.format === "bredformat") {
-                    klon.querySelector("article").classList.add("wide");
+                    klonp.querySelector("article").classList.add("wide");
                 }
                 //                 klon.querySelector("article").addEventListener("click", () => visDetail(painting))
                 // klon.querySelector("article").addEventListener("click", fjernClass);
-                container.appendChild(klon);
+                container.appendChild(klonp);
             })
         }
 
