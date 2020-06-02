@@ -134,6 +134,10 @@ Burger menu
 
 }
 
+.mylinks .active {
+    color: #EDBB00;
+}
+
 .menu_wrapper {}
 
 /*************************************************************************************************************************************************
@@ -163,7 +167,7 @@ Bananabar
 .progress-bar {
     position: relative;
     height: 1vh;
-    background: #FEEF3D;
+    background: #EAC802;
     width: 100%;
     text-align: right;
 
@@ -799,10 +803,6 @@ Mediaqueries ipad
 
 @media only screen and (min-width: 768px) {
 
-
-
-
-
     .image {
         height: 45vh;
     }
@@ -863,15 +863,27 @@ Mediaqueries ipad
     }
 
 
-    .logo {}
+    .logo {
+        height: 70px;
+        width: 70px;
+        top: 40px;
+        left: 40px;
+    }
 
     .c_baskin {
 
         left: 85%;
 
+        height: 40px;
+        width: 40px;
+
     }
 
-    .burger_menu {}
+    .burger_menu {
+        height: 40px;
+        width: 40px;
+        top: -48px;
+    }
 
     h1,
     h2,
