@@ -154,7 +154,7 @@
             alleUdstillinger.forEach(udstilling => {
                 console.log(udstilling.navn)
                 let klonU = udstillingsTemplate.cloneNode(true).content;
-                                klonU.querySelector("img").src = udstilling.billede.guid;
+                klonU.querySelector("img").src = udstilling.billede.guid;
                 klonU.querySelector("h2").innerHTML = udstilling.title.rendered;
 
 
@@ -215,6 +215,9 @@
         // function fjernClass() {
         // detail.classList.remove("skjul");
         // }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
