@@ -37,11 +37,11 @@
                         <div class="mylinks">
                             <a href="index.html">Forside</a>
                             <a href="galleri.html">Galleri</a>
+                            <a href="shop.html">Shop</a>
                             <a href="udstillinger.html">Udstillinger</a>
                             <a href="projekter.html">Projekter</a>
                             <a href="kunstneren.html">Kunstneren</a>
                             <a href="kontakt.html">Kontakt</a>
-                            <a href="shop.html">Shop</a>
 
                         </div>
                     </div>
@@ -156,9 +156,9 @@
                 klonP.querySelector("h2").innerHTML = projekt.navn;
                 klonP.querySelector("p").innerHTML = projekt.more;
                 containerP.appendChild(klonP);
-                  containerP.lastElementChild.addEventListener("click", () => {
-                  location.href = "single.html?id=" + projekt.id;
-                  })
+                containerP.lastElementChild.addEventListener("click", () => {
+                    location.href = "single.html?id=" + projekt.id;
+                })
             })
         }
 
