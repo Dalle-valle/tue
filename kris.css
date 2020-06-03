@@ -80,7 +80,7 @@ GALLERI
 .gallery img {
 
     min-height: 200px;
-    max-height: 700px;
+    max-height: 500px;
     width: 100%;
 }
 
@@ -122,22 +122,19 @@ Navigation
 
 .nav_wrapper {
     position: fixed;
+    top: 0;
     height: 70px;
     width: 100%;
-    top: 0;
     background-color: #F4F4F4;
     z-index: 1000;
-
-
-
 }
 
 .logo {
     position: relative;
     height: 50px;
     width: 50px;
-    left: 25px;
-    top: 25px;
+    left: 27px;
+    top: 30px;
     transform: translate(-50%, -50%);
 }
 
@@ -172,7 +169,7 @@ Burger menu
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 6vh;
+    padding-top: 70px;
     /*
     position: relative;
     top: 25px;
@@ -188,11 +185,11 @@ Burger menu
     font-weight: 400;
     font-style: normal;
     color: black;
-    padding: 15px;
     text-align: left;
     font-size: 2rem;
     text-decoration: none;
-    margin-left: 50px;
+    margin: 5px 20px;
+    font-size: 3.8rem;
 
 }
 
@@ -228,7 +225,7 @@ Banananabar
     position: relative;
     top: 70px;
     width: 94%;
-    height: 0.6vh;
+    height: 5px;
     left: 50.6%;
     transform: translate(-50%);
     background: #fff;
@@ -237,7 +234,7 @@ Banananabar
 
 .progress-bar {
     position: relative;
-    height: 0.6vh;
+    height: 5px;
     background: #EAC802;
     width: 100%;
     text-align: right;
@@ -265,11 +262,12 @@ Banananabar
 @media only screen and (min-width: 768px) {
 
     .nav_wrapper {
-        height: 70px;
+        height: 90px;
     }
 
     .progress-container {
-        top: 107px;
+        top: 90px;
+        width: 94%;
     }
 
 
@@ -277,7 +275,7 @@ Banananabar
         height: 70px;
         width: 70px;
         top: 40px;
-        left: 40px;
+        left: 50px;
     }
 
 
@@ -320,30 +318,23 @@ Banananabar
         text-align: left;
         justify-content: flex-end;
         font-size: 3rem;
-
     }
 
     .mylinks {
-
         margin-top: 0;
-
     }
 
     .top_bg {
-
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         border-top: 175px solid #f4f4f4;
-
-
     }
 
-    .bottom_bg {
 
+    .bottom_bg {
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         border-top: 175px solid black;
-
     }
 
     #gallery_intro {
@@ -379,11 +370,20 @@ Banananabar
     NAVIGATION / MENU
     ********************************/
 
+    .nav_wrapper {
+        height: 80px;
+    }
+
+    .progress-container {
+        top: 80px;
+        width: 97.5%;
+    }
+
     .logo {
-        height: 100px;
-        width: 80px;
-        top: 60px;
-        left: 60px;
+        height: 70px;
+        width: 70px;
+        top: 40px;
+        left: 50px;
     }
 
     .c_baskin {
