@@ -110,15 +110,22 @@ Burger menu
 
 
 .mylinks {
+    margin-top: -10vh;
     display: none;
     background-color: #f4f4f4;
-    width: 101vw;
+    width: 100vw;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 6vh;
+    /*
     position: relative;
-    top: 14px;
-    right: 89vw;
+    top: 25px;
+    right: -10px;
+*/
+
+
+
 }
 
 .mylinks a {
@@ -130,7 +137,7 @@ Burger menu
     text-align: left;
     font-size: 2rem;
     text-decoration: none;
-
+    margin-left: 50px;
 
 }
 
@@ -141,8 +148,16 @@ Burger menu
 
 .menu_wrapper {}
 
+
+
+
+
+.mylinks a:hover {
+    color: #EDBB00;
+}
+
 /*************************************************************************************************************************************************
-Bananabar
+Banananabar
 **************************************************************************************************************************************************/
 .bar {
     position: fixed;
@@ -192,23 +207,9 @@ Bananabar
     margin-bottom: 2vh;
 }
 
-/*************************************************************************************************************************************************
-Billeder på landing page
-**************************************************************************************************************************************************/
-
-
 
 /*************************************************************************************************************************************************
-Knapper på landing page
-**************************************************************************************************************************************************/
-
-
-
-
-
-
-/*************************************************************************************************************************************************
-Billedserie
+Billedserie på forsiden
 **************************************************************************************************************************************************/
 
 
@@ -330,6 +331,7 @@ Index
 #tuesabe .sectionwrapper {
     max-width: 1400px;
     margin: 0 auto;
+
 }
 
 
@@ -347,6 +349,7 @@ Index
     background-color: black;
     text-transform: uppercase;
     transform: translate(-50%, -50%);
+    margin-bottom: 10vh;
 
 }
 
@@ -403,8 +406,8 @@ Index
 
 }
 
-.intro_cta2:hover {
-    background-color: white;
+.intro_cta2:hover a {
+    background-color: black;
 
 }
 
@@ -422,11 +425,7 @@ Index
     background-color: black;
 }
 
-
-
-
-.content p,
-    {
+.content p {
     color: white;
     padding: 0px 20px 0px 20px;
 }
@@ -469,81 +468,52 @@ Shop
 
 }
 
+
+/**Single View**/
+
+
+
+.backbtn {
+
+    background-color: black;
+}
+
+.article_wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.shop_left {
+    background-color: aqua;
+    flex-grow: 1;
+    flex-basis: 300px;
+
+}
+
+.shop_right {
+    background-color: aquamarine;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.shopitem h1 {
+    padding: 0;
+}
+
+.shopitem p {
+    font-size: 1rem;
+    padding: 0 15px 0 15px;
+}
+
+.format,
+.kvalitet {
+    color: grey;
+}
+
 /*************************************************************************************************************************************************
 Galleri
 **************************************************************************************************************************************************/
-
-#cloner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense;
-    grid-gap: 20px;
-    background-color: black;
-    padding-top: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-#cloner img {
-    max-width: 100%;
-}
-
-
-
-.high {
-    grid-row: span 2;
-}
-
-.wide {
-    grid-column: span 2;
-}
-
-#gallery_intro {
-    /*    margin-bottom: 20vh 0 20vh 0;*/
-
-}
-
-#gallery_intro p {
-    text-align: center;
-}
-
-.gallery {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery img {
-
-    min-height: 200px;
-    max-height: 700px;
-    width: 100%;
-}
-
-
-.top_bg {
-
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
-    border-top: 100px solid #f4f4f4;
-
-
-}
-
-.bottom_bg {
-
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
-    border-top: 100px solid black;
-
-}
-
-
-
-.sectionwrapper {
-    max-width: none;
-    margin: 0 auto;
-    background-color: black;
-}
 
 
 
@@ -916,9 +886,9 @@ Mediaqueries ipad
     }
 
     .mylinks {
-        margin-top: 10vh;
-        top: -60px;
-        right: 92vw;
+
+        margin-top: 0;
+
     }
 
     .top_bg {
@@ -1159,29 +1129,49 @@ Mediaqueries laptop
     }
 
     .logo {
-        height: 50px;
-        width: 70px;
-        top: 30px;
+        height: 100px;
+        width: 100px;
+        top: 60px;
+        left: 60px;
     }
 
     .c_baskin {
 
 
         height: 40px;
-        width: 30px;
-        top: 10px;
-        left: 91%
+        width: 40px;
+        top: -20px;
+        left: 85%;
     }
 
     .burger_menu {
         height: 40px;
-        width: 30px;
-        top: -27.5px;
+        width: 40px;
+        top: -55px;
     }
 
     #submit input {
         width: 25vw;
     }
+
+    p {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 10rem;
+    }
+
+    h2 {
+        font-size: 6rem;
+    }
+
+    .mylinks {
+        margin-top: -6vh;
+        overflow: hidden;
+    }
+
+
 }
 
 /*************************************************************************************************************************************************
