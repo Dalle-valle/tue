@@ -1,4 +1,4 @@
-header {
+.galleri .header {
     margin-bottom: 15vh;
 }
 
@@ -12,23 +12,33 @@ GALLERI
     grid-auto-flow: dense;
     grid-gap: 25px;
     background-color: black;
-    padding-top: 20px;
+    padding: 60px 0 80px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 15px;
 }
 
 #cloner img {
     max-width: 100%;
 }
 
+#cloner img:hover {
+    filter: grayscale(1);
+}
 
 
 .high {
     grid-row: span 2;
 }
 
+
 .wide {
     grid-column: span 2;
+}
+
+
+#gallery_intro {
+    max-width: 43ch;
+    margin: 0 auto 0;
 }
 
 #gallery_intro h1 {
@@ -37,15 +47,35 @@ GALLERI
     padding: 0;
 }
 
+
+#gallery_intro p:nth-child(3) {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+
 #gallery_intro p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 15px;
+
 }
+
+
+.fa-quote-right {
+    float: right;
+}
+
 
 .gallery {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .gallery img {
 
@@ -54,12 +84,16 @@ GALLERI
     width: 100%;
 }
 
+.galleri .footer {
+    margin-top: 5vh;
+}
+
 
 .top_bg {
 
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
-    border-top: 70px solid #f4f4f4;
+    border-top: 30px solid #f4f4f4;
 
 }
 
@@ -67,11 +101,8 @@ GALLERI
 
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
-    border-top: 100px solid black;
-
-
+    border-top: 38px solid black;
 }
-
 
 
 .sectionwrapper {
@@ -79,3 +110,56 @@ GALLERI
     margin: 0 auto;
     background-color: black;
 }
+
+
+@media only screen and (min-width: 768px) {
+
+    #gallery_intro {
+        margin: 180px auto 0;
+        max-width: 63ch;
+    }
+
+
+    #gallery_intro p {
+        margin-top: 30px;
+    }
+
+    #gallery_intro p:nth-child(3) {
+        font-size: 1.3rem;
+        margin-top: 0;
+    }
+
+
+    .galleri .top_bg {
+        border-top: 50px solid #f4f4f4;
+    }
+
+    .galleri .bottom_bg {
+        border-top: 100px solid;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    #cloner {
+        margin: 0 auto;
+    }
+
+    #gallery_intro {
+        margin: 180px auto 0;
+        max-width: 85ch;
+    }
+
+    #gallery_intro h1 {
+        font-size: 5rem;
+    }
+
+    #gallery_intro p:nth-child(3) {
+        font-size: 1.8rem;
+
+    }
+
+    #gallery_intro p {
+        font-size: 1.2rem;
+    }
