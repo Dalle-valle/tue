@@ -22,6 +22,23 @@ footer ul a {
 }
 
 
+/******shop******/
+#shop h2 {
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+#shop h3 {
+    font-family: source-sans-pro, sans-serif;
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+}
+
 /*************************************************************************************************************************************************
 Mediaqueries ipad
 **************************************************************************************************************************************************/
@@ -48,4 +65,20 @@ Mediaqueries laptop
 /*************************************************************************************************************************************************
 Mediaqueries desktop
 **************************************************************************************************************************************************/
-@media only screen and (min-width: 1250px) {}
+@media only screen and (min-width: 1250px) {
+
+    #shop h2 {
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    #shop h3 {
+        font-family: source-sans-pro, sans-serif;
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+}
