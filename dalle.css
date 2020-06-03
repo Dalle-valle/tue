@@ -451,7 +451,6 @@ Shop
     /*    border: 1px solid #000;*/
     height: auto;
     padding: 8px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -468,31 +467,51 @@ Shop
 
 }
 
+.btnwrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0 15px 0;
+
+
+
+}
+
+.filter {
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+}
 
 /**Single View**/
 
 
 
+/*
 .backbtn {
 
     background-color: black;
-}
+}*/
 
 .article_wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
 }
 
 .shop_left {
-    background-color: aqua;
+
     flex-grow: 1;
     flex-basis: 300px;
 
 }
 
 .shop_right {
-    background-color: aquamarine;
+
     flex-grow: 1;
     flex-basis: 300px;
 }
@@ -510,6 +529,75 @@ Shop
 .kvalitet {
     color: grey;
 }
+
+/*
+.backbtn {
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    margin: 5vh;
+}
+*/
+
+.cart {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+
+
+
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+
+}
+
+.btn_container {
+    position: relative;
+    padding: 40px;
+}
+
+/************************
+BRØDKRUMMESTI START
+************************/
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: grey;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
 
 /*************************************************************************************************************************************************
 Galleri
@@ -1070,6 +1158,15 @@ Mediaqueries ipad
 
     .nav_wrapper {
         height: 14.5vh;
+    }
+
+
+
+    /**Single view shop**/
+
+    .article_wrapper {
+        flex-direction: row;
+
     }
 
 }
