@@ -115,7 +115,7 @@
             container.innerHTML = "";
             const paintingTemplate = document.querySelector("template");
             allePaintings.forEach(painting => {
-                if (filter == "alle" || filter == painting.title.rendered) {
+                if (filter == "alle" || filter == painting.kategori) {
 
                     let klon = paintingTemplate.cloneNode(true).content;
                     klon.querySelector("img").src = painting.billede.guid;
@@ -151,8 +151,5 @@
         // }
         // })
         //}
-
     </script>
-</body>
-
-</html>
+</body></html>
