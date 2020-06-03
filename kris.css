@@ -264,6 +264,83 @@ Banananabar
 
 @media only screen and (min-width: 768px) {
 
+
+    .nav_wrapper {
+        height: 14.5vh;
+    }
+
+    .logo {
+        height: 70px;
+        width: 70px;
+        top: 40px;
+        left: 40px;
+    }
+
+    .c_baskin {
+
+        left: 89%;
+        height: 40px;
+        width: 30px;
+        top: -10px;
+
+    }
+
+    .burger_menu {
+        height: 40px;
+        width: 30px;
+        top: -48px;
+        left: 95%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 3rem;
+    }
+
+    .footer_items {
+        justify-content: center;
+
+    }
+
+    .footer_items a {
+        font-size: 15px;
+    }
+
+
+    .mylinks a {
+        text-align: left;
+        justify-content: flex-end;
+        font-size: 3rem;
+
+    }
+
+    .mylinks {
+
+        margin-top: 0;
+
+    }
+
+    .top_bg {
+
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 175px solid #f4f4f4;
+
+
+    }
+
+    .bottom_bg {
+
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 175px solid black;
+
+    }
+
     #gallery_intro {
         margin: 180px auto 0;
         max-width: 63ch;
@@ -292,6 +369,47 @@ Banananabar
 
 @media only screen and (min-width: 1024px) {
 
+
+    /********************************
+    NAVIGATION / MENU
+    ********************************/
+
+    .nav_wrapper {
+        height: 14.5vh;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+        top: 60px;
+        left: 60px;
+    }
+
+    .c_baskin {
+
+
+        height: 40px;
+        width: 40px;
+        top: -20px;
+        left: 85%;
+    }
+
+    .burger_menu {
+        height: 40px;
+        width: 40px;
+        top: -55px;
+    }
+
+    .mylinks {
+        margin-top: -6vh;
+        overflow: hidden;
+    }
+
+
+    /**********************
+    GALLERI
+    **********************/
+
     #cloner {
         margin: 0 auto;
     }
@@ -313,3 +431,4 @@ Banananabar
     #gallery_intro p {
         font-size: 1.2rem;
     }
+}
