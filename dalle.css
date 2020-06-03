@@ -463,6 +463,7 @@ Shop
     grid-gap: 10px;
     max-width: 1300px;
     margin: 0 auto;
+    margin: 0 10px;
     padding-top: 15px;
 
 }
