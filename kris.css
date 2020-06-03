@@ -112,9 +112,11 @@ GALLERI
 }
 
 
+/*
 header {
     margin-bottom: 20vh;
 }
+*/
 
 /*************************************************************************************************************************************************
 Navigation
@@ -320,9 +322,6 @@ Banananabar
         font-size: 3rem;
     }
 
-    .mylinks {
-        margin-top: 0;
-    }
 
     .top_bg {
         border-left: 50vw solid transparent;
@@ -400,8 +399,9 @@ Banananabar
     }
 
     .mylinks {
-        margin-top: -6vh;
         overflow: hidden;
+        padding-left: 25px;
+        padding-top: 0;
     }
 
 
