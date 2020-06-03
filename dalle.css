@@ -425,9 +425,6 @@ Index
     background-color: black;
 }
 
-
-
-
 .content p {
     color: white;
     padding: 0px 20px 0px 20px;
@@ -469,6 +466,49 @@ Shop
     margin: 0 auto;
     padding-top: 0;
 
+}
+
+
+/**Single View**/
+
+
+
+.backbtn {
+
+    background-color: black;
+}
+
+.article_wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.shop_left {
+    background-color: aqua;
+    flex-grow: 1;
+    flex-basis: 300px;
+
+}
+
+.shop_right {
+    background-color: aquamarine;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.shopitem h1 {
+    padding: 0;
+}
+
+.shopitem p {
+    font-size: 1rem;
+    padding: 0 15px 0 15px;
+}
+
+.format,
+.kvalitet {
+    color: grey;
 }
 
 /*************************************************************************************************************************************************
@@ -716,7 +756,7 @@ footer ul {
 
 footer ul a {
     text-decoration: none;
-    padding: 0px 15px 0 15px;
+    padding: 0px 25px 0 25px;
     font-size: 12px;
     color: black;
 }
@@ -834,7 +874,7 @@ Mediaqueries ipad
     }
 
     .footer_items a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
 
