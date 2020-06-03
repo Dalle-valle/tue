@@ -786,7 +786,7 @@ footer ul {
 
 footer ul a {
     text-decoration: none;
-    padding: 0px 15px 0 15px;
+    padding: 0px 25px 0 25px;
     font-size: 12px;
     color: black;
 }
@@ -904,7 +904,7 @@ Mediaqueries ipad
     }
 
     .footer_items a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
 
