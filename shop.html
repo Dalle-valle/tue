@@ -69,10 +69,11 @@
     <p> Her finder du et begrænset udvalg af mine originale malerier, samt prints af udvalgte værker. <br>
 
         Der er gratis forsendelse på alle køb.</p>
-    <button class="filter" id="alle">Alle</button>
-    <button class="filter" id="originaler">Originaler</button>
-    <button class="filter" id="prints">Prints</button>
-
+    <div class="btnwrapper">
+        <button class="filter active" data-kategori="alle">Alle</button>
+        <button class="filter" data-kategori="original">Originaler</button>
+        <button class="filter" data-kategori="print">Prints</button>
+    </div>
     <section id="shop"></section>
     <template>
         <article class="shop_all">
@@ -99,6 +100,7 @@
 
         function start() {
             hentPaintings();
+            klikListeners();
         }
 
         async function hentPaintings() {
@@ -130,6 +132,29 @@
                 }
             })
         }
+
+        function klikListeners() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+                console.log("elm");
+
+            })
+
+
+        }
+
+        function filtrering() {
+            console.log("FILTER");
+            filter = this.dataset.kategori;
+            visPaintings();
+            //            document.querySelector("h2").textContent = this.textContent;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("active");
+
+            })
+            this.classList.add("active");
+
+        };
 
     </script>
 </body>
