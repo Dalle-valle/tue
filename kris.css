@@ -122,11 +122,12 @@ Navigation
 
 .nav_wrapper {
     position: fixed;
-    height: 7.5vh;
+    height: 70px;
     width: 100%;
     top: 0;
     background-color: #F4F4F4;
     z-index: 1000;
+
 
 
 }
@@ -225,15 +226,13 @@ Banananabar
 
 .progress-container {
     position: relative;
-    top: 7vh;
-    width: 107%;
-    height: 0.5vh;
-    left: -3.5vw;
-    background: #ccc;
-
-
+    top: 70px;
+    width: 94%;
+    height: 0.6vh;
+    left: 50.6%;
+    transform: translate(-50%);
+    background: #fff;
 }
-
 
 
 .progress-bar {
@@ -250,10 +249,11 @@ Banananabar
     content: " ";
     background-image: url(billeder/bananana.svg);
     width: 30px;
-    height: 30px;
+    height: 25px;
     position: absolute;
     right: -18px;
-    top: -10px;
+    top: -11px;
+    transform: rotate(19deg);
     background-repeat: no-repeat;
 }
 
@@ -264,10 +264,14 @@ Banananabar
 
 @media only screen and (min-width: 768px) {
 
-
     .nav_wrapper {
-        height: 14.5vh;
+        height: 70px;
     }
+
+    .progress-container {
+        top: 40px;
+    }
+
 
     .logo {
         height: 70px;
@@ -276,14 +280,14 @@ Banananabar
         left: 40px;
     }
 
-    .c_baskin {
 
+    .c_baskin {
         left: 89%;
         height: 40px;
         width: 30px;
         top: -10px;
-
     }
+
 
     .burger_menu {
         height: 40px;
@@ -291,6 +295,7 @@ Banananabar
         top: -48px;
         left: 95%;
     }
+
 
     h1,
     h2,
@@ -374,20 +379,14 @@ Banananabar
     NAVIGATION / MENU
     ********************************/
 
-    .nav_wrapper {
-        height: 14.5vh;
-    }
-
     .logo {
-        height: 100px;
+        height: 5px;
         width: 100px;
         top: 60px;
         left: 60px;
     }
 
     .c_baskin {
-
-
         height: 40px;
         width: 40px;
         top: -20px;
