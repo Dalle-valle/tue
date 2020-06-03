@@ -428,8 +428,7 @@ Index
 
 
 
-.content p,
-    {
+.content p {
     color: white;
     padding: 0px 20px 0px 20px;
 }
