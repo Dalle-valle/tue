@@ -21,6 +21,10 @@ GALLERI
     max-width: 100%;
 }
 
+#cloner img:hover {
+    filter: grayscale(1);
+}
+
 
 .high {
     grid-row: span 2;
