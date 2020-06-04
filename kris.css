@@ -189,26 +189,25 @@ BRØDKRUMMESTI
 }
 
 ul.breadcrumb {
-    padding: 10px 16px;
+    padding: 0 15px 30px;
+    margin: 0;
+    margin-top: -10px;
     list-style: none;
-
-
     font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
+    font-weight: 100;
+    font-size: 0.8rem;
     max-width: 70ch;
 
 }
 
 ul.breadcrumb li {
     display: inline;
-    font-size: 18px;
+    font-size: 0.8rem;
 }
 
 ul.breadcrumb li + li:before {
     padding: 8px;
-    color: black;
+    color: grey;
     content: "/\00a0";
 }
 
@@ -218,8 +217,8 @@ ul.breadcrumb li a {
 }
 
 ul.breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+    color: #EDBB00;
+    text-decoration: none;
 }
 
 
@@ -535,7 +534,7 @@ GALLERI SINGLEVIEW
     display: flex;
     flex-direction: column;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 15px;
     background-color: black;
 }
 
@@ -543,30 +542,18 @@ GALLERI SINGLEVIEW
     background-color: black;
 }
 
+.galleri_text_wrapper button {
+    top: -15px;
+}
+
+.galleri_beskrivelse {
+    padding-top: 25px;
+    margin-bottom: 50px;
+}
+
 .galleri_text_wrapper p {
     color: white;
 }
-
-.se_shop {
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    background-color: white;
-    color: black;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
-    max-width: 70ch;
-}
-
-.wrapz {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 
 /*****************************
 SHOP
@@ -847,6 +834,15 @@ IPAD MEDIA
         right: 30px;
     }
 
+    /*************************
+    BRØDKRUMMESTI
+    *************************/
+
+    ul.breadcrumb {
+        margin-top: -20px;
+        margin-left: 15px;
+    }
+
 
     /**********************
     FOOTER
@@ -981,6 +977,18 @@ IPAD MEDIA
         border-top: 50px solid;
     }
 
+    /***************************
+GALLERI SINGLEVIEW
+***************************/
+
+    .gallery_article_wrapper {
+        margin: 10px 150px 0;
+    }
+
+    .galleri_beskrivelse {
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
 
     /****************************
     SHOP
@@ -1089,6 +1097,19 @@ DESKTOP MEDIA
         right: 35px;
     }
 
+
+    /************************
+    BRØDKRUMMESTI
+    ************************/
+
+    ul.breadcrumb {
+        margin-top: -30px;
+        padding: 0 0 60px 12px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 1rem;
+    }
 
     /***********************
     FORSIDE
@@ -1200,6 +1221,14 @@ DESKTOP MEDIA
         width: 25vw;
     }
 
+    /***************************
+GALLERI SINGLEVIEW
+***************************/
+
+    .gallery_article_wrapper {
+        margin: -30px 450px 0;
+    }
+
     /************************
     SHOP
     *************************/
@@ -1238,12 +1267,13 @@ DESKTOP MEDIA
         max-height: 90vh;
     }
 
-    .cart {
+    .btn_container .cart {
         width: 200px;
         height: 50px;
         text-align: center;
         background-color: black;
         color: white;
+        font-size: 1.2rem;
 
 
 
