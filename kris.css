@@ -1,20 +1,17 @@
-/*************************************************************************************************************************************************
-Generelt
-**************************************************************************************************************************************************/
+/**************************
+GENERELT
+***************************/
+
 body {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    background-color: #F4F4F4;
 }
+
 
 header {
     padding-bottom: 100px;
-}
-
-.univers,
-.shop,
-.galleri {
-    background-color: #F4F4F4;
 }
 
 
@@ -63,9 +60,9 @@ h2 {
     margin: 0;
 }
 
-/******************
+/*************************
 MENU
-*******************/
+*************************/
 
 .nav_wrapper {
     position: fixed;
@@ -730,12 +727,31 @@ UDSTILLINGER & PROJEKTER
 .project_container {
     display: flex;
     flex-direction: column-reverse;
+}
 
+.line_top {
+    position: relative;
+    top: -100px;
+    border-right: 2px solid black;
+    height: 70px;
+    border-left: none;
+    align-self: center;
+
+}
+
+.single_project:nth-of-type(even) .project_container .line_top {
+    position: relative;
+    top: -100px;
+    align-self: center;
+    border-right: none;
+    height: 70px;
+    border-left: 2px solid black;
 }
 
 .childwrapper {
     text-align: center;
 }
+
 
 .childwrapper p {
     text-align: left;

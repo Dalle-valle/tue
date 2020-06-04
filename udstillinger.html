@@ -87,7 +87,6 @@
                     <div class="childwrapper">
                         <h2></h2>
                         <p></p>
-                        <button class="intro_cta"><a href=#>Læs mere</a></button>
                         <hr class="lined animate__animated animate__backInUp">
                     </div>
                 </div>
@@ -165,6 +164,7 @@
                 let klonU = udstillingsTemplate.cloneNode(true).content;
                 klonU.querySelector("img").src = udstilling.billede.guid;
                 klonU.querySelector("h2").innerHTML = udstilling.title.rendered;
+                klonU.querySelector("p").innerHTML = udstilling.title.rendered;
 
 
                 containerU.appendChild(klonU);
