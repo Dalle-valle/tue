@@ -7,6 +7,10 @@ body {
     scroll-behavior: smooth;
 }
 
+header {
+    padding-bottom: 100px;
+}
+
 .univers,
 .shop,
 .galleri {
@@ -20,16 +24,17 @@ img {
 }
 
 
-
 p {
-
     color: black;
     padding: 15px;
     font-family: source-sans-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    max-width: 70ch;
+    margin: 10px auto;
 }
+
 
 h1,
 h2,
@@ -43,23 +48,36 @@ h6 {
     color: black;
     padding: 15px;
     text-align: center;
-    font-size: 2.8rem;
 }
 
 
+h1 {
+    font-size: 3rem;
+}
 
 
+h2 {
+    font-size: 2.5rem;
+    padding: 0;
+}
 
 
+/************************
+INDEX
+************************/
 
+.black_bg p,
+.black_bg h2 {
+    color: white;
+}
 
+.black_bg img {
+    height: 250px;
+}
 
-/*************************************************************************************************************************************************
-Index
-**************************************************************************************************************************************************/
 #tuesabe {
     background-color: black;
-    padding-bottom: 10vh;
+    padding-bottom: 100px;
 }
 
 #tuesabe .sectionwrapper {
@@ -71,17 +89,12 @@ Index
 #intro h1 {
     margin: 0;
     padding: 10px 0 0;
-    font-size: 3rem;
 }
 
 
-.intro_tekst {
-    /*    text-align: center;*/
-    max-width: 70ch;
-    /*    margin: 40px auto;*/
-    margin: 10px auto;
-
-}
+/************************
+FORSIDE KNAPPER
+************************/
 
 .intro_cta {
     position: relative;
@@ -93,8 +106,8 @@ Index
     text-transform: uppercase;
     transform: translate(-50%, -50%);
     margin-bottom: 10vh;
-
 }
+
 
 .intro_cta a {
     text-decoration: none;
@@ -104,39 +117,30 @@ Index
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-
 }
+
 
 .intro_cta:hover {
     background-color: #F4F4F4;
 }
 
+
 .intro_cta a:hover {
     color: black;
 }
 
-.abe_content {
-    max-width: 1400px;
-    margin: 0 auto;
-    background-color: black;
-}
-
-
-#hero .sectionwrapper {
-    background-color: #f4f4f4;
-}
 
 .intro_cta2 {
     position: relative;
     left: 50%;
-    top: 10vh;
+    top: 30px;
     height: 40px;
     width: 250px;
-    background-color: black;
+    background-color: white;
     text-transform: uppercase;
     transform: translate(-50%, -50%);
-
 }
+
 
 .intro_cta2 a {
     text-decoration: none;
@@ -146,21 +150,29 @@ Index
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-
 }
 
-.intro_cta2:hover a {
+
+.intro_cta2:hover {
     background-color: black;
-
 }
 
-.intro_cta2:hover a {
-    color: black;
 
-}
-
-.intro_cta2 a {
+.intro_cta2 a:hover {
     color: white;
+}
+
+
+/*
+.abe_content {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+
+#hero .sectionwrapper {
+    background-color: #f4f4f4;
 }
 
 
@@ -178,31 +190,25 @@ Index
 }
 
 .abe_content img {
-
     min-height: 200px;
     max-height: 700px;
     width: 100%;
-
 }
+*/
 
 
 /******************************
 GALLERI
 ******************************/
-.galleri .header {
-    margin-bottom: 15vh;
-}
-
 
 #cloner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-flow: dense;
-    grid-gap: 25px;
+    grid-gap: 15px;
     background-color: black;
-    padding: 60px 0 80px;
-    max-width: 1000px;
-    margin: 0 15px;
+    padding: 60px 15px 80px;
+    margin: 0 auto;
 }
 
 #cloner img {
@@ -242,6 +248,7 @@ GALLERI
     font-size: 1.3rem;
     padding: 0;
     margin-bottom: 0;
+    text-align: center;
 }
 
 
@@ -250,6 +257,7 @@ GALLERI
     font-size: 1rem;
     margin: 0;
     margin-bottom: 15px;
+    text-align: left;
 
 }
 
@@ -278,17 +286,15 @@ GALLERI
 
 
 .top_bg {
-
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
+    border-left: 50vw solid black;
+    border-right: 50vw solid black;
     border-top: 30px solid #f4f4f4;
 
 }
 
 .bottom_bg {
-
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
+    border-left: 50vw solid #f4f4f4;
+    border-right: 50vw solid #f4f4f4;
     border-top: 38px solid black;
 }
 
@@ -296,19 +302,12 @@ GALLERI
 .sectionwrapper {
     max-width: none;
     margin: 0 auto;
-    background-color: black;
 }
 
 
-/*
-header {
-    margin-bottom: 20vh;
-}
-*/
-
-/*************************************************************************************************************************************************
-Navigation
-**************************************************************************************************************************************************/
+/******************
+NAVIGATION
+*******************/
 
 .nav_wrapper {
     position: fixed;
@@ -337,9 +336,10 @@ Navigation
     transform: translate(-50%, -50%);
 }
 
-/*************************************************************************************************************************************************
-Burger menu
-**************************************************************************************************************************************************/
+/***********************
+BURGER MENU
+************************/
+
 .burger_menu {
     position: relative;
     height: 30px;
@@ -360,14 +360,6 @@ Burger menu
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 70px;
-    /*
-    position: relative;
-    top: 25px;
-    right: -10px;
-*/
-
-
-
 }
 
 .mylinks a {
@@ -380,27 +372,19 @@ Burger menu
     text-decoration: none;
     margin: 5px 20px;
     font-size: 3.8rem;
-
-}
-
-.mylinks .active {
-    color: #EDBB00;
 }
 
 
-.menu_wrapper {}
-
-
-
-
-
+.mylinks .active,
 .mylinks a:hover {
     color: #EDBB00;
 }
 
-/*************************************************************************************************************************************************
-Banananabar
-**************************************************************************************************************************************************/
+
+/*************************
+BANAN SCROLL-BAR
+*************************/
+
 .bar {
     position: fixed;
     top: 0;
@@ -408,7 +392,6 @@ Banananabar
     width: 98%;
     left: 0.5vw;
     background-color: rgba(28, 16, 16, 0);
-
 }
 
 .progress-container {
@@ -421,15 +404,12 @@ Banananabar
     background: #fff;
 }
 
-
 .progress-bar {
     position: relative;
     height: 5px;
     background: #EAC802;
     width: 100%;
     text-align: right;
-
-
 }
 
 .progress-bar::after {
@@ -449,11 +429,35 @@ Banananabar
 }
 
 
+/******************
+IPAD MEDIA
+******************/
+
 @media only screen and (min-width: 768px) {
+
+    /*****************
+    GENERELT
+    *****************/
+
+    header {
+        padding-bottom: 130px;
+    }
+
+    /*****************
+    MENU
+    ******************/
 
     .nav_wrapper {
         height: 90px;
     }
+
+
+    .mylinks a {
+        text-align: left;
+        justify-content: flex-end;
+        font-size: 3rem;
+    }
+
 
     .progress-container {
         top: 90px;
@@ -485,47 +489,24 @@ Banananabar
     }
 
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-size: 3rem;
-    }
+    /**********************
+    FOOTER
+    **********************/
 
     .footer_items {
         justify-content: center;
-
     }
 
     .footer_items a {
         font-size: 15px;
     }
 
-
-    .mylinks a {
-        text-align: left;
-        justify-content: flex-end;
-        font-size: 3rem;
-    }
-
-
-    .top_bg {
-        border-left: 50vw solid transparent;
-        border-right: 50vw solid transparent;
-        border-top: 175px solid #f4f4f4;
-    }
-
-
-    .bottom_bg {
-        border-left: 50vw solid transparent;
-        border-right: 50vw solid transparent;
-        border-top: 175px solid black;
-    }
+    /*********************
+    GALLERI
+    *********************/
 
     #gallery_intro {
-        margin: 180px auto 0;
+        margin: 0 auto;
         max-width: 63ch;
     }
 
@@ -534,23 +515,33 @@ Banananabar
         margin-top: 30px;
     }
 
+
     #gallery_intro p:nth-child(3) {
         font-size: 1.3rem;
         margin-top: 0;
     }
 
+    #cloner {
+        padding: 50px 100px;
+    }
 
-    .galleri .top_bg {
+    .top_bg {
         border-top: 50px solid #f4f4f4;
     }
 
-    .galleri .bottom_bg {
-        border-top: 100px solid;
+    .bottom_bg {
+        border-top: 50px solid;
     }
 }
 
-
+/**********************
+DESKTOP MEDIA
+**********************/
 @media only screen and (min-width: 1024px) {
+
+    /*****************
+    GENERELT
+    *****************/
 
     p {
         font-size: 2rem;
@@ -568,7 +559,7 @@ Banananabar
 
 
     /********************************
-    NAVIGATION / MENU
+    MENU
     ********************************/
 
     .nav_wrapper {
@@ -611,11 +602,11 @@ Banananabar
     **********************/
 
     #cloner {
+        padding: 50px 300px;
         margin: 0 auto;
     }
 
     #gallery_intro {
-        margin: 180px auto 0;
         max-width: 85ch;
     }
 
