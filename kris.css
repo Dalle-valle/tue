@@ -62,6 +62,130 @@ h2 {
     margin: 0;
 }
 
+/******************
+NAVIGATION
+*******************/
+
+.nav_wrapper {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    background-color: #F4F4F4;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    left: 27px;
+    top: 30px;
+    transform: translate(-50%, -50%);
+}
+
+.c_baskin {
+    position: relative;
+    height: 30px;
+    width: 25px;
+    left: 83%;
+    top: -14px;
+    transform: translate(-50%, -50%);
+}
+
+/***********************
+BURGER MENU
+************************/
+
+.burger_menu {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    left: 93%;
+    top: -44px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+
+.mylinks {
+    margin-top: -40px;
+    display: none;
+    background-color: #f4f4f4;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mylinks a {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-align: left;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 5px 20px;
+    font-size: 3.8rem;
+}
+
+
+.mylinks .active,
+.mylinks a:hover {
+    color: #EDBB00;
+    background-color: transparent;
+}
+
+
+/*************************
+BANAN SCROLL-BAR
+*************************/
+
+.bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 98%;
+    left: 0.5vw;
+    background-color: rgba(28, 16, 16, 0);
+}
+
+.progress-container {
+    position: relative;
+    top: 70px;
+    width: 94%;
+    height: 5px;
+    left: 50.6%;
+    transform: translate(-50%);
+    background: #fff;
+}
+
+.progress-bar {
+    position: relative;
+    height: 5px;
+    background: #EAC802;
+    width: 100%;
+    text-align: right;
+}
+
+.progress-bar::after {
+    content: " ";
+    background-image: url(billeder/bananana.svg);
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: -18px;
+    top: -11px;
+    transform: rotate(19deg);
+    background-repeat: no-repeat;
+}
+
+#progress {
+    margin-bottom: 2vh;
+}
+
+
 
 /************************
 INDEX
@@ -70,6 +194,9 @@ INDEX
 .black_bg p,
 .black_bg h2 {
     color: white;
+}
+
+.black_bg h2 {
     padding: 40px 0 20px;
 }
 
@@ -260,6 +387,7 @@ GALLERI
     margin: 0;
     margin-bottom: 15px;
     text-align: left;
+    padding: 25px 15px 20px;
 
 }
 
@@ -304,131 +432,6 @@ GALLERI
 .sectionwrapper {
     max-width: none;
     margin: 0 auto;
-}
-
-
-/******************
-NAVIGATION
-*******************/
-
-.nav_wrapper {
-    position: fixed;
-    top: 0;
-    height: 70px;
-    width: 100%;
-    background-color: #F4F4F4;
-    z-index: 1000;
-}
-
-.logo {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    left: 27px;
-    top: 30px;
-    transform: translate(-50%, -50%);
-}
-
-.c_baskin {
-    position: relative;
-    height: 30px;
-    width: 25px;
-    left: 83%;
-    top: -14px;
-    transform: translate(-50%, -50%);
-}
-
-/***********************
-BURGER MENU
-************************/
-
-.burger_menu {
-    position: relative;
-    height: 30px;
-    width: 30px;
-    left: 93%;
-    top: -44px;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-
-.mylinks {
-    margin-top: -10vh;
-    display: none;
-    background-color: #f4f4f4;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 70px;
-}
-
-.mylinks a {
-    font-family: bebas-neue, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: black;
-    text-align: left;
-    font-size: 2rem;
-    text-decoration: none;
-    margin: 5px 20px;
-    font-size: 3.8rem;
-}
-
-
-.mylinks .active,
-.mylinks a:hover {
-    color: #EDBB00;
-    background-color: transparent;
-}
-
-
-/*************************
-BANAN SCROLL-BAR
-*************************/
-
-.bar {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 98%;
-    left: 0.5vw;
-    background-color: rgba(28, 16, 16, 0);
-}
-
-.progress-container {
-    position: relative;
-    top: 70px;
-    width: 94%;
-    height: 5px;
-    left: 50.6%;
-    transform: translate(-50%);
-    background: #fff;
-}
-
-.progress-bar {
-    position: relative;
-    height: 5px;
-    background: #EAC802;
-    width: 100%;
-    text-align: right;
-}
-
-.progress-bar::after {
-    content: " ";
-    background-image: url(billeder/bananana.svg);
-    width: 30px;
-    height: 25px;
-    position: absolute;
-    right: -18px;
-    top: -11px;
-    transform: rotate(19deg);
-    background-repeat: no-repeat;
-}
-
-#progress {
-    margin-bottom: 2vh;
 }
 
 
@@ -530,12 +533,6 @@ IPAD MEDIA
         margin: 0 auto;
         max-width: 63ch;
     }
-
-
-    #gallery_intro p {
-        margin-top: 30px;
-    }
-
 
     #gallery_intro p:nth-child(3) {
         font-size: 1.3rem;
@@ -653,5 +650,6 @@ DESKTOP MEDIA
 
     #gallery_intro p {
         font-size: 1.2rem;
+        padding-top: 30px;
     }
 }
