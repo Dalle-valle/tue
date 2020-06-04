@@ -171,6 +171,13 @@ ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
 
+
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    max-width: 70ch;
+
 }
 
 ul.breadcrumb li {
@@ -310,6 +317,34 @@ Projekter
     height: 80vh;
     padding: 5vh 0 5vh 0;
 
+}
+
+/**Projekt Singleview**/
+
+.projekt {
+    padding-top: 10vh;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+
+}
+
+
+.projekt .wp_content img {
+
+    max-width: 1400px;
+    max-height: 600px;
+    margin: auto;
+
+
+
+}
+
+.projekt p {
+    font-size: 1.2rem;
 }
 
 /*************************************************************************************************************************************************
@@ -503,6 +538,15 @@ Mediaqueries ipad
 
     }
 
+    .projekt p {
+        font-size: 1.5rem;
+    }
+
+    .projekt h1 {
+        padding-bottom: 5vh;
+    }
+
+
     /*
 .childwrapper {
     position: relative;
@@ -516,7 +560,7 @@ Mediaqueries ipad
     .childwrapper {
         position: relative;
         top: 8vh;
-        left: 50%;
+        left: 40%;
         width: 70%;
 
 
