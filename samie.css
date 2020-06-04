@@ -5,6 +5,7 @@
     font-size: 4rem;
     margin-top: 0px;
     margin-bottom: 0;
+
 }
 
 #kontakt p {
@@ -25,6 +26,7 @@ Mediaqueries ipad
         text-align: left;
         font-size: 4rem;
         margin-top: 15px;
+        margin-left: 15px;
     }
 
     #kontakt p {
