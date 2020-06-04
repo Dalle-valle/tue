@@ -157,12 +157,12 @@
 
             console.log(shops);
             //                        document.querySelector(".backbtn").addEventListener("click", lukDetail);
-            document.querySelector(".navn").textContent = shops.title.rendered;
+            document.querySelector(".navn").innerHTML = shops.title.rendered;
             document.querySelector(".billede").src = shops.billede.guid;
             document.querySelector(".billede").alt = shops.title.rendered;
             document.querySelector(".beskrivelse").innerHTML = shops.beskrivelse;
-            document.querySelector(".kvalitet").textContent = "Høj kvalitet print i A3 format";
-            document.querySelector(".format").textContent = `Måler ${shops.hoejde} i højden og ${shops.bredde}
+            document.querySelector(".kvalitet").innerHTML = "Høj kvalitet print i A3 format";
+            document.querySelector(".format").innerHTML = `Måler ${shops.hoejde} i højden og ${shops.bredde}
             i bredden`;
             document.querySelector(".pris").textContent = `${shops.pris} kr`;
             document.querySelector(".currentbread").textContent = shops.title.rendered
@@ -172,9 +172,6 @@
         // function lukDetail() {
         // history.back();
         // }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
