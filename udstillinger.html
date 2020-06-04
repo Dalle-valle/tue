@@ -163,8 +163,8 @@
                 console.log(udstilling.navn)
                 let klonU = udstillingsTemplate.cloneNode(true).content;
                 klonU.querySelector("img").src = udstilling.billede.guid;
-                klonU.querySelector("h2").innerHTML = udstilling.title.rendered;
-                klonU.querySelector("p").innerHTML = udstilling.title.rendered;
+                klonU.querySelector("h2").innerHTML = udstilling.year;
+                klonU.querySelector("p").innerHTML = udstilling.beskrivelse;
 
 
                 containerU.appendChild(klonU);
