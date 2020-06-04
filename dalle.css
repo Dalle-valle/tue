@@ -1,66 +1,4 @@
 /*************************************************************************************************************************************************
-Generelt
-**************************************************************************************************************************************************/
-body {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-.univers {
-    background-color: #F4F4F4;
-
-}
-
-.shop {
-    background-color: #F4F4F4;
-}
-
-.galleri {
-    background-color: #F4F4F4;
-}
-
-img {
-    width: 100%;
-    object-fit: cover;
-}
-
-
-
-p {
-
-    color: black;
-    padding: 15px;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.25rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: bebas-neue, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: black;
-    padding: 15px;
-    text-align: center;
-    font-size: 2.8rem;
-}
-
-
-
-
-
-
-
-
-
-/*************************************************************************************************************************************************
 Billedserie på forsiden
 **************************************************************************************************************************************************/
 
@@ -110,13 +48,7 @@ Billedserie på forsiden
 #hero_img7 {
     flex-grow: 1;
     flex-basis: 200px;
-
-
-
     /*    background-attachment: fixed;*/
-
-
-
 }
 
 
@@ -167,140 +99,6 @@ Billedserie på forsiden
 
 #hero_img7 {
     margin: 4px;
-}
-
-
-
-
-/*************************************************************************************************************************************************
-Index
-**************************************************************************************************************************************************/
-#tuesabe {
-    background-color: black;
-    padding-bottom: 10vh;
-}
-
-#tuesabe .sectionwrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-
-}
-
-#intro h1 {
-    margin: 0;
-    padding: 10px 0 0;
-    font-size: 3rem;
-}
-
-
-.intro_tekst {
-    /*    text-align: center;*/
-    max-width: 70ch;
-    /*    margin: 40px auto;*/
-    margin: 10px auto;
-
-}
-
-.intro_cta {
-    position: relative;
-    left: 50%;
-    top: 40px;
-    height: 40px;
-    width: 250px;
-    background-color: black;
-    text-transform: uppercase;
-    transform: translate(-50%, -50%);
-    margin-bottom: 10vh;
-
-}
-
-.intro_cta a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-
-}
-
-.intro_cta:hover {
-    background-color: #F4F4F4;
-}
-
-.intro_cta a:hover {
-    color: black;
-}
-
-.abe_content {
-    max-width: 1400px;
-    margin: 0 auto;
-    background-color: black;
-}
-
-
-#hero .sectionwrapper {
-    background-color: #f4f4f4;
-}
-
-.intro_cta2 {
-    position: relative;
-    left: 50%;
-    top: 10vh;
-    height: 40px;
-    width: 250px;
-    background-color: black;
-    text-transform: uppercase;
-    transform: translate(-50%, -50%);
-
-}
-
-.intro_cta2 a {
-    text-decoration: none;
-    color: black;
-    padding: 15px;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-
-}
-
-.intro_cta2:hover a {
-    background-color: black;
-
-}
-
-.intro_cta2:hover a {
-    color: black;
-
-}
-
-.intro_cta2 a {
-    color: white;
-}
-
-
-.bg_wrapper {
-    background-color: black;
-}
-
-.content p {
-    color: white;
-    padding: 0px 20px 0px 20px;
-}
-
-.abe_content a {
-    color: black;
-}
-
-.abe_content img {
-
-    min-height: 200px;
-    max-height: 700px;
-    width: 100%;
-
 }
 
 
@@ -1020,21 +818,6 @@ Mediaqueries laptop
     #submit input {
         width: 25vw;
     }
-
-    p {
-        font-size: 2rem;
-    }
-
-    h1 {
-        font-size: 5rem;
-        margin: -30px;
-        padding: 0;
-    }
-
-    h2 {
-        font-size: 6rem;
-    }
-
 
 }
 
