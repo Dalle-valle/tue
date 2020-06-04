@@ -69,7 +69,7 @@ Billedserie på forsiden
     display: flex;
     justify-content: center;
     /*    flex-direction: row;*/
-    margin-top: 25vh;
+    margin-top: 120px;
 
 }
 
@@ -127,37 +127,37 @@ Billedserie på forsiden
 }
 
 #hero_img1 {
-    margin: 40px 4px 4px 0px;
-    background-position: 40% 90%;
+    margin: 40px 40px 4px 0px;
+    background-position: 42% 90%;
     background-image: url(billeder/forside_1.jpg);
 
 
 }
 
 #hero_img2 {
-    margin: 20px 4px 4px 4px;
-    background-position: 40% 90%;
+    margin: 20px 20px 4px -25px;
+    background-position: 50% 90%;
     background-image: url(billeder/forside_2.jpg);
 
 
 }
 
 #hero_img3 {
-    margin: 4px 4px 4px 4px;
+    margin: 10px -5px 4px -5px;
     background-position: 70% 90%;
     background-image: url(billeder/forside_3.jpg);
 
 }
 
 #hero_img4 {
-    margin: 20px 4px 20px 4px;
-    background-position: 75% 90%;
+    margin: 20px -25px 20px 20px;
+    background-position: 80% 90%;
     background-image: url(billeder/forside_4.jpg);
 }
 
 #hero_img5 {
-    margin: 40px 0px 5px 4px;
-    background-position: 30% 90%;
+    margin: 40px 0px 5px 40px;
+    background-position: 41% 90%;
     background-image: url(billeder/forside_5.jpg);
 }
 
@@ -186,16 +186,25 @@ Index
 
 }
 
+#intro h1 {
+    margin: 0;
+    padding: 10px 0 0;
+    font-size: 3rem;
+}
 
 
 .intro_tekst {
-    text-align: center;
+    /*    text-align: center;*/
+    max-width: 70ch;
+    /*    margin: 40px auto;*/
+    margin: 10px auto;
+
 }
 
 .intro_cta {
     position: relative;
     left: 50%;
-    top: 10vh;
+    top: 40px;
     height: 40px;
     width: 250px;
     background-color: black;
@@ -737,6 +746,10 @@ Mediaqueries ipad
         height: 45vh;
     }
 
+    .imgwrapper {
+        margin-top: 180px;
+    }
+
     #hero_img1 {
 
         margin: 40px 4px 4px 10px;
@@ -964,31 +977,31 @@ Mediaqueries laptop
     }
 
     #hero_img1 {
-        margin: 40px 20px 4px 15px;
+        margin: 40px 40px 4px 40px;
     }
 
     #hero_img2 {
-        margin: 10px 20px 4px 4px;
+        margin: 10px 40px 4px 20px;
     }
 
     #hero_img3 {
-        margin: -30px 20px 4px 4px;
+        margin: -30px 40px 4px 20px;
     }
 
     #hero_img4 {
-        margin: -60px 20px 4px 4px;
+        margin: -60px 40px 4px 20px;
     }
 
     #hero_img5 {
-        margin: -30px 20px 4px 4px;
+        margin: -30px 40px 4px 20px;
     }
 
     #hero_img6 {
-        margin: 10px 20px 4px 4px;
+        margin: 10px 40px 4px 20px;
     }
 
     #hero_img7 {
-        margin: 40px 15px 4px 4px;
+        margin: 40px 40px 4px 20px;
     }
 
 
@@ -1013,7 +1026,9 @@ Mediaqueries laptop
     }
 
     h1 {
-        font-size: 10rem;
+        font-size: 5rem;
+        margin: -30px;
+        padding: 0;
     }
 
     h2 {
