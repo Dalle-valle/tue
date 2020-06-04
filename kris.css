@@ -534,7 +534,7 @@ Footer
 .so_me img {
     height: 5vh;
     width: 5vh;
-    margin: 15px;
+    margin: 15px 15px 5px;
 }
 
 .footer_items {
@@ -546,6 +546,7 @@ Footer
 footer ul {
     display: flex;
     list-style-type: none;
+    padding: 0;
 
 }
 
@@ -555,7 +556,7 @@ footer ul a {
     text-decoration: none;
     color: black;
     font-size: 12px;
-    padding: 0px 25px 0 25px;
+    padding: 0px 10px;
 }
 
 footer li:nth-child(1) {
@@ -638,6 +639,10 @@ IPAD MEDIA
 
     .footer_items a {
         font-size: 15px;
+    }
+
+    footer ul a {
+        padding: 0px 25px;
     }
 
     /*********************
