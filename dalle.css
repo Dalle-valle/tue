@@ -118,11 +118,10 @@ Shop
 
 #shop {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-gap: 10px;
     max-width: 1300px;
     margin: 0 auto;
-    margin: 0 10px;
     padding-top: 15px;
 
 }
@@ -150,6 +149,11 @@ Shop
     font-family: source-sans-pro, sans-serif;
     font-style: normal;
     text-transform: uppercase;
+}
+
+.active {
+    background-color: black;
+    color: white;
 }
 
 /**Single View**/
@@ -826,6 +830,9 @@ Mediaqueries laptop
         width: 25vw;
     }
 
+    #shop {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /*************************************************************************************************************************************************
