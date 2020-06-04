@@ -20,8 +20,10 @@
     <meta name="msapplication-config" content="ikoner/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.typekit.net/kda4gwa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 </head>
+
 
 <body class="Udstillinger">
 
@@ -66,7 +68,7 @@
 
     </header>
 
-    <section id="project_intro">
+    <section id="project_intro" data-scroll>
         <div class="udstilling_flex_box">
             <div class="udstilling_flex1">
                 <h1>Udstillinger</h1>
@@ -78,7 +80,7 @@
                 </p>
             </div>
             <div class="udstilling_flex2">
-                <a href="kontakt.html"> <button class="cart"><span>Send en email til mig</span></button></a>
+                <a href="kontakt.html"> <button class="cart animate__animated animate__backInDown"><span>Send en email til mig</span></button></a>
             </div>
         </div>
     </section>
@@ -130,6 +132,10 @@
 
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script>
+        ScrollOut();
+    </script>
 
 
     <script>
@@ -171,9 +177,6 @@
                 containerU.appendChild(klonU);
             })
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
