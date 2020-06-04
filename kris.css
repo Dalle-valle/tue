@@ -522,6 +522,41 @@ GALLERI
 Shop
 **************************************************************************************************************************************************/
 
+
+#shop h2 {
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+#shop h3 {
+    font-family: source-sans-pro, sans-serif;
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.shop_intro {
+    margin: 110px auto 0;
+    max-width: 100ch;
+}
+
+.shop button {
+    border: none;
+    width: 120px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+#shop img {
+    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+
 #shop article {
     /*    border: 1px solid #000;*/
     height: auto;
@@ -907,7 +942,15 @@ IPAD MEDIA
         border-top: 50px solid;
     }
 
+
+    /****************************
+    SHOP
+    ****************************/
+
+
     /**Single view shop**/
+
+
 
     .article_wrapper {
         padding-top: 10vh;
@@ -1131,7 +1174,34 @@ DESKTOP MEDIA
 
     }
 
+    /************************
+    SHOP
+    *************************/
 
+    #shop h2 {
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    #shop h3 {
+        font-family: source-sans-pro, sans-serif;
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+
+    .shop_intro {
+        margin: 170px auto 0;
+        max-width: 100ch;
+    }
+
+    .shop p {
+        font-size: 1.25rem;
+        text-align: left;
+    }
 
 
     .shop_right h1 {
