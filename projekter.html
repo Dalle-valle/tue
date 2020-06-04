@@ -21,6 +21,7 @@
     <meta name="msapplication-config" content="ikoner/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.typekit.net/kda4gwa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 </head>
 
@@ -67,9 +68,9 @@
 
     </header>
 
-    <section id="project_intro">
-        <h1 data-scroll>Projekter</h1>
-        <p data-scroll>Her kan du læse om mine projekter og om hvordan jeg skaber unik kunst. Her kan du bl.a. læse om min kommende børnebog "Tues A.b.e" og andre spændende projekter som f.eks. abekunst med københavnerstang. </p>
+    <section id="project_intro" data-scroll>
+        <h1>Projekter</h1>
+        <p>Her kan du læse om mine projekter og om hvordan jeg skaber unik kunst. Her kan du bl.a. læse om min kommende børnebog "Tues A.b.e" og andre spændende projekter som f.eks. abekunst med københavnerstang. </p>
     </section>
     <section id="projects"></section>
     <template>
@@ -99,7 +100,7 @@
 
 
 
-    <footer class="footer">
+    <footer class="footer" data-scroll>
         <div class="so_me">
             <img src="billeder/some1.svg" alt="Instagram">
             <img src="billeder/some2.svg" alt="Youtube">
@@ -116,6 +117,10 @@
 
 
     </footer>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script>
+        ScrollOut();
+    </script>
     <script src="script.js"></script>
 
 
@@ -234,9 +239,6 @@
         // function fjernClass() {
         // detail.classList.remove("skjul");
         // }
-
     </script>
 
-</body>
-
-</html>
+</body></html>

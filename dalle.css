@@ -9,7 +9,7 @@
 
 [data-scroll="out"] {
     opacity: 0;
-    transform: translateY(-200px);
+    transform: translateX(-70px);
 }
 
 
