@@ -118,11 +118,10 @@ Shop
 
 #shop {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-gap: 10px;
     max-width: 1300px;
     margin: 0 auto;
-    margin: 0 10px;
     padding-top: 15px;
 
 }
@@ -152,6 +151,11 @@ Shop
     text-transform: uppercase;
 }
 
+.active {
+    background-color: black;
+    color: white;
+}
+
 /**Single View**/
 
 
@@ -169,16 +173,23 @@ Shop
 }
 
 .shop_left {
-
+    margin: 30px 30px;
     flex-grow: 1;
     flex-basis: 300px;
+}
 
+.shop_left img {
+    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.1);
 }
 
 .shop_right {
 
     flex-grow: 1;
     flex-basis: 300px;
+}
+
+.shop_right h1 {
+    margin-top: 0;
 }
 
 .shopitem h1 {
@@ -819,6 +830,9 @@ Mediaqueries laptop
         width: 25vw;
     }
 
+    #shop {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /*************************************************************************************************************************************************
