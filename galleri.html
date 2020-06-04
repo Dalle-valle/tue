@@ -172,8 +172,11 @@
                 } else if (painting.format === "bredformat") {
                     klonp.querySelector("article").classList.add("wide");
                 }
-                //                 klon.querySelector("article").addEventListener("click", () => visDetail(painting))
-                // klon.querySelector("article").addEventListener("click", fjernClass);
+                container.appendChild(klonp);
+                container.lastElementChild.addEventListener("click", () => {
+                    location.href = "single-galleri.html?id=" + painting.id;
+                })
+
                 container.appendChild(klonp);
             })
         }

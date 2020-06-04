@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Tue Volder</title>
+    <link rel="stylesheet" href="kris.css">
+    <link rel="stylesheet" href="samie.css">
+    <link rel="stylesheet" href="becca.css">
+    <link rel="stylesheet" href="jonas.css">
+    <link rel="stylesheet" href="dalle.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="ikoner/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ikoner/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ikoner/favicon-16x16.png">
+    <link rel="manifest" href="ikoner/site.webmanifest">
+    <link rel="mask-icon" href="ikoner/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="ikoner/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="ikoner/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.typekit.net/kda4gwa.css">
+</head>
+
+<body class="univers">
+
+
+    <header class="header">
+        <div class="nav_wrapper">
+            <nav>
+                <a href="index.html">
+                    <div class="logo"><img src="billeder/logo_black.png"></div>
+                </a>
+                <div class="c_baskin"><img src="billeder/c_baskin.svg"></div>
+                <div class="burger_menu"><img src="billeder/burger.svg"> </div>
+                <div class="menu_wrapper">
+                    <div class="mylinks">
+                        <a href="index.html">Forside</a>
+                        <a class="active" href="galleri.html">Galleri</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="udstillinger.html">Udstillinger</a>
+                        <a href="projekter.html">Projekter</a>
+                        <a href="kunstneren.html">Kunstneren</a>
+                        <a href="kontakt.html">Kontakt</a>
+
+                    </div>
+                </div>
+
+                <div id="progress">
+
+                    <div class="bar">
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar" id="myBar">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <section id="singlegalleri" class="skjul">
+
+        <article class="galleriitem">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="galleri.html">Galleri</a></li>
+                <li class="currentbread">
+
+                </li>
+
+
+            </ul>
+            <!--            <button class="backbtn">&lt</button>-->
+
+            <div class="gallery_article_wrapper">
+                <img class="galleri_img" src="" alt="">
+
+
+
+            </div>
+            <h1 class="galleri_navn"></h1>
+            <div class="galleri_text_wrapper">
+                <div class="top_bg"></div>
+                <p class="galleri_beskrivelse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="shop.html"><button class="se_shop">Se i shoppen</button></a>
+                <div class="bottom_bg"></div>
+            </div>
+
+        </article>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="so_me">
+            <img src="billeder/some1.svg" alt="Instagram">
+            <img src="billeder/some2.svg" alt="Youtube">
+            <img src="billeder/some3.svg" alt="Facebook">
+            <img src="billeder/some4.svg" alt="Twitter">
+        </div>
+        <div class="footer_items">
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Cookie og handelsbetingelser</a></li>
+                <li><a href="kontakt.html">kontakt</a></li>
+            </ul>
+        </div>
+
+
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const urlParameter = new URLSearchParams(window.location.search);
+
+        const galleriId = urlParameter.get("id");
+
+        const galleriUrl = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/galleri/" + galleriId;
+
+
+
+        let galleri;
+        detail = document.querySelector("#singlegalleri");
+
+
+
+        document.addEventListener("DOMContentLoaded", hentGalleri);
+
+
+
+        function hentGalleri() {
+            hentGalleriData();
+        }
+
+        async function hentGalleriData() {
+            const responseG = await fetch(galleriUrl);
+            console.log(responseG);
+            galleri = await responseG.json();
+
+            visGalleri();
+        }
+
+
+
+        function visGalleri() {
+
+
+            console.log(galleri);
+            //                        document.querySelector(".backbtn").addEventListener("click", lukDetail);
+
+
+            document.querySelector(".currentbread").textContent = galleri.navn;
+            document.querySelector(".galleri_img").src = galleri.billede.guid;
+            document.querySelector(".galleri_img").alt = galleri.navn;
+            document.querySelector(".galleri_navn").textContent = galleri.navn;
+
+        }
+
+        // function lukDetail() {
+        // history.back();
+        // }
+    </script>
+
+</body></html>
