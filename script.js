@@ -27,12 +27,20 @@ function burger() {
 
 
 
+
+
+
     } else {
         bmenu.style.display = "flex";
         document.querySelector(".burger_menu img").src = "billeder/kryds.svg";
         document.querySelector(".c_baskin").style.visibility = "hidden";
         document.querySelector("#progress").style.visibility = "hidden";
         document.querySelector(".logo").style.visibility = "hidden";
+
+
+
+
+
 
     }
 }
