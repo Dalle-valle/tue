@@ -88,7 +88,11 @@ ul.breadcrumb li a:hover {
     max-width: 70ch;
 }
 
-
+.wrapz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*************************************************************************************************************************************************
 Kunstneren
