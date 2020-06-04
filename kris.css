@@ -723,6 +723,35 @@ SHOP SINGLEVIEW
     color: white;
 }
 
+/*******************************
+UDSTILLINGER
+********************************/
+
+.lined {
+    display: none;
+}
+
+
+
+.udstilling_flex_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.udstilling_flex1 {
+    flex-grow: 1;
+    flex-basis: 30px;
+}
+
+.udstilling_flex2 {
+    flex-grow: 1;
+    flex-basis: 30px;
+}
+
 
 /*******************
 Footer
@@ -1034,6 +1063,24 @@ GALLERI SINGLEVIEW
     .btn_container .cart {
         margin-right: 40px;
         margin-left: 17px;
+    }
+
+    /***************************
+    UDSTILLINGER
+    ***************************/
+
+    #project_intro span {
+        color: white;
+
+        font-family: source-sans-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+
+
+    .lined {
+        display: block;
     }
 }
 
