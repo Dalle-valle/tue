@@ -150,6 +150,42 @@ textarea {
 
 }
 
+/**Animation**/
+.fadein {
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadein {
+    0% {
+        transform: translateX(100%);
+    }
+
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.fadeout {
+    animation-name: fadeout;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeout {
+    0% {
+        transform: translateX(0%);
+    }
+
+
+    100% {
+        transform: translateX(100%);
+    }
+}
 
 /*************************************************************************************************************************************************
 Mediaqueries ipad
