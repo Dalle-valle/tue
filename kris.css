@@ -558,7 +558,7 @@ SHOP
 
 #shop {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 15px;
     max-width: 1300px;
     margin: 0 auto;
@@ -727,65 +727,48 @@ UDSTILLINGER & PROJEKTER
 .project_container {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 80px;
+    margin-bottom: -40px;
 }
 
 .line_top {
     position: relative;
-    top: -100px;
-    border-right: 2px solid black;
+    top: 10px;
     height: 70px;
+    border-right: 2px solid grey;
     border-left: none;
     align-self: center;
-
 }
 
 .single_project:nth-of-type(even) .project_container .line_top {
     position: relative;
-    top: -100px;
+    height: 70px;
+    top: 10px;
     align-self: center;
     border-right: none;
-    height: 70px;
-    border-left: 2px solid black;
+    border-left: 2px solid grey;
 }
+
+/*
 
 .childwrapper {
     text-align: center;
 }
+*/
+
+.childwrapper h2 {
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 .childwrapper p {
-    text-align: left;
-    margin: 15px;
-    padding: 30px;
-}
-
-
-
-
-.childwrapper h2 {
     text-align: center;
+    margin: 10px 15px;
+    font-size: 1.1rem;
+    padding: 0;
 }
 
-.childwrapper h2 {
-    font-size: 1.5rem;
-    position: relative;
-    top: 40px;
-    left: 0;
-}
-
-.childwrapper button {
-    border: 2px solid black;
-    background-color: black;
-    color: white;
-    position: relative;
-    top: -20px;
-    left: 15px;
-    text-align: center;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.2rem;
-}
 
 .childwrapper a {
     color: white;
@@ -796,16 +779,6 @@ UDSTILLINGER & PROJEKTER
     font-size: 1.2rem;
 }
 
-.childwrapper span {
-    margin-left: 15px;
-}
-
-.single_project {
-    /*    border: 6px solid aquamarine;*/
-    height: 80vh;
-    padding: 5vh 0 5vh 0;
-
-}
 
 /**Projekt Singleview**/
 
@@ -1181,67 +1154,122 @@ GALLERI SINGLEVIEW
         max-width: 1400px;
         margin: 0 auto;
         flex-direction: row;
-
     }
 
     .single_project:nth-of-type(even) .project_container {
         flex-direction: row-reverse;
-
     }
+
 
     .project_child1 {
-
-        /*    background-color: aqua;*/
         padding: 15px;
         flex-grow: 1;
         flex-basis: 50%;
-
     }
+
 
     .project_child2 {
-
-        /*    background-color: beige;*/
-        padding: 15px;
         flex-grow: 1;
         flex-basis: 50%;
     }
 
 
-    .project_child2 img {
-        width: 100%;
-
+    .line_top {
+        top: -240px;
+        left: 50%;
+        height: 110px;
     }
+
 
     .framed {
         position: relative;
-        top: 5vh;
-        left: 15px;
-        padding: 15px;
+        top: 10px;
+        left: 0;
     }
 
-    .line_top {
-        position: relative;
-        top: -10vh;
-        left: 50%;
-        border-right: 2px solid black;
-        height: 25vh;
-        border-left: none;
+
+    .single_project img {
+        width: 340px;
     }
+
+
+    .project_container h2 {
+        font-size: 1.5rem;
+        position: relative;
+        top: 65px;
+        left: -167px;
+    }
+
+
+    .project_container p {
+        text-align: left;
+        position: relative;
+        top: 50px;
+        left: -35px;
+        max-width: 40ch;
+    }
+
+
+    .lined {
+        display: block;
+        position: relative;
+        top: 55px;
+        left: -130px;
+        width: 150px;
+    }
+
+
+    .single_project:nth-of-type(1) .project_container .line_top {
+        height: 130px;
+        top: -240px;
+    }
+
 
     .single_project:nth-of-type(even) .project_container .line_top {
-        position: relative;
-        top: -10vh;
+        top: -240px;
         left: -50%;
-
         border-right: none;
-        height: 25vh;
-        border-left: 2px solid black;
+        height: 110px;
     }
+
+    .single_project:nth-of-type(odd) .framed {
+        position: relative;
+        top: 10px;
+    }
+
+    .single_project:nth-of-type(odd) img {
+        margin-left: 30px;
+    }
+
+
+    .single_project:nth-of-type(odd) .project_container h2 {
+        font-size: 1.5rem;
+        position: relative;
+        top: 75px;
+        left: 169px;
+    }
+
+    .single_project:nth-of-type(odd) .project_container p {
+        text-align: left;
+        position: relative;
+        top: 60px;
+        left: 50px;
+        max-width: 40ch;
+    }
+
+
+    .single_project:nth-of-type(odd) .lined {
+        display: block;
+        position: relative;
+        top: 55px;
+        left: 135px;
+    }
+
 
     .single_project {
-        height: 50vh;
-
+        height: 250px;
     }
+
 
     .projekt p {
         font-size: 1.5rem;
@@ -1252,37 +1280,15 @@ GALLERI SINGLEVIEW
     }
 
 
+
     /*
 .childwrapper {
     position: relative;
     top: 8vh;
-    left: 31vw;
-    width: 35%;
+    left: 25%;
+    width: 70%;
+}*/
 
-}
-*/
-
-    .childwrapper {
-        position: relative;
-        top: 8vh;
-        left: 25%;
-        width: 70%;
-
-
-    }
-
-
-    .childwrapper p,
-        {
-        text-align: left;
-    }
-
-    .childwrapper h2 {
-        font-size: 1.5rem;
-        position: relative;
-        top: 40px;
-        left: 0;
-    }
 
     .childwrapper button {
         border: 2px solid black;
@@ -1298,22 +1304,6 @@ GALLERI SINGLEVIEW
     }
 
 
-
-
-    .single_project:nth-of-type(even) .project_container {
-
-
-        flex-direction: row-reverse;
-
-    }
-
-
-
-    .single_project:nth-of-type(even) .project_container .childwrapper {
-        left: 0;
-    }
-
-
     #project_intro span {
         color: white;
 
@@ -1321,11 +1311,6 @@ GALLERI SINGLEVIEW
         font-weight: 300;
         font-style: normal;
         font-size: 1.2rem;
-    }
-
-
-    .lined {
-        display: block;
     }
 }
 
