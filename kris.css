@@ -178,6 +178,49 @@ BANAN SCROLL-BAR
     margin-bottom: 2vh;
 }
 
+/************************
+BRØDKRUMMESTI
+************************/
+
+#thanks {
+    padding-top: 20vh;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+
+
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    max-width: 70ch;
+
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: grey;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
 
 
 /************************
@@ -381,41 +424,6 @@ FORSIDE KNAPPER
     color: white;
 }
 
-
-/*
-.abe_content {
-    max-width: 1400px;
-    margin: 0 auto;
-    background-color: black;
-}
-
-
-#hero .sectionwrapper {
-    background-color: #f4f4f4;
-}
-
-
-.bg_wrapper {
-    background-color: black;
-}
-
-.content p {
-    color: white;
-    padding: 0px 20px 0px 20px;
-}
-
-.abe_content a {
-    color: black;
-}
-
-.abe_content img {
-    min-height: 200px;
-    max-height: 700px;
-    width: 100%;
-}
-*/
-
-
 /******************************
 GALLERI
 ******************************/
@@ -517,6 +525,47 @@ GALLERI
     max-width: none;
     margin: 0 auto;
 }
+
+
+/***************************
+GALLERI SINGLEVIEW
+***************************/
+
+.gallery_article_wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.galleri_text_wrapper {
+    background-color: black;
+}
+
+.galleri_text_wrapper p {
+    color: white;
+}
+
+.se_shop {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    max-width: 70ch;
+}
+
+.wrapz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /*****************************
