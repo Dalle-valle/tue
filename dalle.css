@@ -12,109 +12,6 @@
     transform: translateX(-70px);
 }
 
-/*************************************************************************************************************************************************
-Billedserie på forsiden
-**************************************************************************************************************************************************/
-
-
-.imgwrapper {
-    display: flex;
-    justify-content: center;
-    /*    flex-direction: row;*/
-    margin-top: 120px;
-
-}
-
-.image {
-    height: 40vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
-
-
-
-
-}
-
-.img_frame {
-    flex-grow: 1;
-    flex-basis: 200px;
-    /*    overflow: hidden;*/
-}
-
-
-
-.img_frame:nth-child(6) {
-    display: none;
-}
-
-.img_frame:nth-child(7) {
-    display: none;
-}
-
-#hero_img1,
-#hero_img2,
-#hero_img3,
-#hero_img4,
-#hero_img5,
-#hero_img6,
-#hero_img7 {
-    flex-grow: 1;
-    flex-basis: 200px;
-    /*    background-attachment: fixed;*/
-}
-
-
-
-#hero_img6,
-#hero_img7 {
-    display: none;
-}
-
-#hero_img1 {
-    margin: 40px 40px 4px 0px;
-    background-position: 42% 90%;
-    background-image: url(billeder/forside_1.jpg);
-
-
-}
-
-#hero_img2 {
-    margin: 20px 20px 4px -25px;
-    background-position: 50% 90%;
-    background-image: url(billeder/forside_2.jpg);
-
-
-}
-
-#hero_img3 {
-    margin: 10px -5px 4px -5px;
-    background-position: 70% 90%;
-    background-image: url(billeder/forside_3.jpg);
-
-}
-
-#hero_img4 {
-    margin: 20px -25px 20px 20px;
-    background-position: 80% 90%;
-    background-image: url(billeder/forside_4.jpg);
-}
-
-#hero_img5 {
-    margin: 40px 0px 5px 40px;
-    background-position: 41% 90%;
-    background-image: url(billeder/forside_5.jpg);
-}
-
-#hero_img6 {
-    margin: 4px;
-}
-
-#hero_img7 {
-    margin: 4px;
-}
-
 
 /*************************************************************************************************************************************************
 Shop
@@ -296,13 +193,6 @@ ul.breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
 }
-
-
-/*************************************************************************************************************************************************
-Galleri
-**************************************************************************************************************************************************/
-
-
 
 /*************************************************************************************************************************************************
 Kunstneren
@@ -521,121 +411,12 @@ textarea {
 
 }
 
-/*************************************************************************************************************************************************
-Footer
-**************************************************************************************************************************************************/
-
-.footer {
-    margin-top: 10vh;
-}
-
-.so_me {
-    display: flex;
-    justify-content: center;
-}
-
-.so_me img {
-    height: 5vh;
-    width: 5vh;
-    margin: 15px;
-}
-
-.footer_items {
-    display: flex;
-    justify-content: center;
-
-}
-
-footer ul {
-    display: flex;
-    list-style-type: none;
-
-}
-
-footer ul a {
-    text-decoration: none;
-    padding: 0px 25px 0 25px;
-    font-size: 12px;
-    color: black;
-}
-
-footer li:nth-child(1) {
-    border-right: 2px solid black;
-
-}
-
-footer li:nth-child(2) {
-    border-right: 2px solid black;
-}
 
 /*************************************************************************************************************************************************
 Mediaqueries ipad
 **************************************************************************************************************************************************/
 
 @media only screen and (min-width: 768px) {
-
-    .image {
-        height: 45vh;
-    }
-
-    .imgwrapper {
-        margin-top: 180px;
-    }
-
-    #hero_img1 {
-
-        margin: 40px 4px 4px 10px;
-        background-image: url(billeder/forside_6.jpg);
-        background-position: 52% 90%;
-    }
-
-    #hero_img2 {
-        margin: 20px 4px 4px 4px;
-        background-image: url(billeder/forside_1.jpg);
-        background-position: 30% 90%;
-    }
-
-    #hero_img3 {
-        margin: -20px 4px 4px 4px;
-        background-image: url(billeder/forside_2.jpg);
-        background-position: 52% 90%;
-    }
-
-    #hero_img4 {
-        margin: -50px 4px 20px 4px;
-        background-image: url(billeder/forside_3.jpg);
-    }
-
-    #hero_img5 {
-        margin: -20px 4px 4px 4px;
-        background-image: url(billeder/forside_4.jpg);
-        background-position: 82% 90%;
-    }
-
-    #hero_img6 {
-        display: block;
-        margin: 20px 4px 4px 4px;
-        background-image: url(billeder/forside_5.jpg);
-        background-position: 52% 90%;
-    }
-
-    #hero_img7 {
-        display: block;
-        margin: 40px 10px 4px 4px;
-        background-image: url(billeder/forside_7.jpg);
-        background-position: 25% 90%;
-    }
-
-
-
-
-    .img_frame:nth-child(6) {
-        display: block;
-    }
-
-    .img_frame:nth-child(7) {
-        display: block;
-    }
 
     /*Projekter*/
 
@@ -838,51 +619,6 @@ Mediaqueries ipad
 Mediaqueries laptop
 **************************************************************************************************************************************************/
 @media only screen and (min-width: 1024px) {
-
-    .image {
-        height: 45vh;
-    }
-
-    #hero_img1 {
-        margin: 40px 40px 4px 40px;
-    }
-
-    #hero_img2 {
-        margin: 10px 40px 4px 20px;
-    }
-
-    #hero_img3 {
-        margin: -30px 40px 4px 20px;
-    }
-
-    #hero_img4 {
-        margin: -60px 40px 4px 20px;
-    }
-
-    #hero_img5 {
-        margin: -30px 40px 4px 20px;
-    }
-
-    #hero_img6 {
-        margin: 10px 40px 4px 20px;
-    }
-
-    #hero_img7 {
-        margin: 40px 40px 4px 20px;
-    }
-
-
-    #hero_img1,
-    #hero_img2,
-    #hero_img3,
-    #hero_img4,
-    #hero_img5,
-    #hero_img6,
-    #hero_img7 {
-        flex-grow: 1;
-        flex-basis: 200px;
-
-    }
 
     #submit input {
         width: 25vw;
