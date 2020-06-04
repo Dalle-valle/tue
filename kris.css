@@ -63,7 +63,7 @@ h2 {
 }
 
 /******************
-NAVIGATION
+MENU
 *******************/
 
 .nav_wrapper {
@@ -85,37 +85,29 @@ NAVIGATION
 }
 
 .c_baskin {
-    position: relative;
-    height: 30px;
-    width: 25px;
-    left: 83%;
-    top: -14px;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 29px;
+    right: 75px;
+    top: 25px;
 }
 
-/***********************
-BURGER MENU
-************************/
-
 .burger_menu {
-    position: relative;
-    height: 30px;
-    width: 30px;
-    left: 93%;
-    top: -44px;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 35px;
+    top: 25px;
+    right: 20px;
     cursor: pointer;
 }
 
 
 .mylinks {
-    margin-top: -40px;
     display: none;
     background-color: #f4f4f4;
     width: 100vw;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 25px;
 }
 
 .mylinks a {
@@ -191,6 +183,10 @@ BANAN SCROLL-BAR
 FORSIDE
 ************************/
 
+#intro {
+    padding-bottom: 65px;
+}
+
 .black_bg p,
 .black_bg h2 {
     color: white;
@@ -221,37 +217,27 @@ FORSIDE
 }
 
 /*************************
-Billedserie på forsiden
+BILLEDESERIE PÅ FORSIDE
 *************************/
-
 
 .imgwrapper {
     display: flex;
     justify-content: center;
-    /*    flex-direction: row;*/
-    margin-top: 120px;
-
 }
+
 
 .image {
     height: 40vh;
     background-size: cover;
     background-repeat: no-repeat;
-
-
-
-
-
-
 }
+
 
 .img_frame {
     flex-grow: 1;
     flex-basis: 200px;
     /*    overflow: hidden;*/
 }
-
-
 
 .img_frame:nth-child(6) {
     display: none;
@@ -274,34 +260,32 @@ Billedserie på forsiden
 }
 
 
-
 #hero_img6,
 #hero_img7 {
     display: none;
 }
 
+
 #hero_img1 {
     margin: 40px 40px 4px 0px;
     background-position: 42% 90%;
     background-image: url(billeder/forside_1.jpg);
-
-
 }
+
 
 #hero_img2 {
     margin: 20px 20px 4px -25px;
     background-position: 50% 90%;
     background-image: url(billeder/forside_2.jpg);
-
-
 }
+
 
 #hero_img3 {
     margin: 10px -5px 4px -5px;
     background-position: 70% 90%;
     background-image: url(billeder/forside_3.jpg);
-
 }
+
 
 #hero_img4 {
     margin: 20px -25px 20px 20px;
@@ -309,20 +293,22 @@ Billedserie på forsiden
     background-image: url(billeder/forside_4.jpg);
 }
 
+
 #hero_img5 {
     margin: 40px 0px 5px 40px;
     background-position: 41% 90%;
     background-image: url(billeder/forside_5.jpg);
 }
 
+
 #hero_img6 {
     margin: 4px;
 }
 
+
 #hero_img7 {
     margin: 4px;
 }
-
 
 
 /************************
@@ -330,9 +316,10 @@ FORSIDE KNAPPER
 ************************/
 
 .intro_cta {
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 40px;
+    top: 720px;
+    z-index: 400;
     height: 40px;
     width: 250px;
     background-color: black;
@@ -352,17 +339,6 @@ FORSIDE KNAPPER
     font-size: 1rem;
 }
 
-
-.intro_cta:hover {
-    background-color: #F4F4F4;
-}
-
-
-.intro_cta a:hover {
-    color: black;
-}
-
-
 .intro_cta2 {
     position: relative;
     left: 50%;
@@ -373,7 +349,6 @@ FORSIDE KNAPPER
     text-transform: uppercase;
     transform: translate(-50%, -50%);
 }
-
 
 .intro_cta2 a {
     text-decoration: none;
@@ -386,12 +361,22 @@ FORSIDE KNAPPER
 }
 
 
+
+.intro_cta:hover {
+    background-color: #F4F4F4;
+}
+
+.intro_cta:hover a {
+    color: black;
+}
+
+
 .intro_cta2:hover {
     background-color: black;
 }
 
 
-.intro_cta2 a:hover {
+.intro_cta2:hover a {
     color: white;
 }
 
@@ -468,12 +453,6 @@ GALLERI
     margin: 0 auto 0;
 }
 
-#gallery_intro h1 {
-    font-size: 3rem;
-    margin: 0;
-    padding: 0;
-}
-
 
 #gallery_intro p:nth-child(3) {
     font-family: bebas-neue, sans-serif;
@@ -539,9 +518,9 @@ GALLERI
 }
 
 
-/*************************************************************************************************************************************************
+/*******************
 Footer
-**************************************************************************************************************************************************/
+********************/
 
 .footer {
     margin-top: 10vh;
@@ -571,10 +550,12 @@ footer ul {
 }
 
 footer ul a {
+    font-family: source-sans-pro, sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
-    padding: 0px 25px 0 25px;
-    font-size: 12px;
     color: black;
+    font-size: 12px;
+    padding: 0px 25px 0 25px;
 }
 
 footer li:nth-child(1) {
@@ -587,9 +568,9 @@ footer li:nth-child(2) {
 }
 
 
-/******************
+/*******************************************
 IPAD MEDIA
-******************/
+********************************************/
 
 @media only screen and (min-width: 768px) {
 
@@ -612,8 +593,6 @@ IPAD MEDIA
     .mylinks {
         overflow: scroll;
         padding-left: 25px;
-        padding-top: 0px;
-        margin-top: -80px;
     }
 
     .mylinks a {
@@ -638,18 +617,14 @@ IPAD MEDIA
 
 
     .c_baskin {
-        left: 89%;
-        height: 40px;
-        width: 30px;
-        top: -10px;
+        top: 40px;
+        right: 85px;
     }
 
 
     .burger_menu {
-        height: 40px;
-        width: 30px;
-        top: -48px;
-        left: 95%;
+        top: 40px;
+        right: 30px;
     }
 
 
@@ -669,6 +644,10 @@ IPAD MEDIA
     FORSIDE
     *********************/
 
+    #intro {
+        padding-bottom: 100px;
+    }
+
     .black_bg img {
         display: block;
         width: 65%;
@@ -676,20 +655,28 @@ IPAD MEDIA
         margin: 0 auto;
     }
 
+    .intro_cta {
+        top: 860px;
+    }
+
+    /***************************
+    BILLEDESERIE PÅ FORSIDE
+    ***************************/
+
     .image {
-        height: 45vh;
+        height: 416px;
     }
 
     .imgwrapper {
-        margin-top: 180px;
+        padding-top: 40px;
     }
 
     #hero_img1 {
-
         margin: 40px 4px 4px 10px;
         background-image: url(billeder/forside_6.jpg);
         background-position: 52% 90%;
     }
+
 
     #hero_img2 {
         margin: 20px 4px 4px 4px;
@@ -697,22 +684,26 @@ IPAD MEDIA
         background-position: 30% 90%;
     }
 
+
     #hero_img3 {
         margin: -20px 4px 4px 4px;
         background-image: url(billeder/forside_2.jpg);
         background-position: 52% 90%;
     }
 
+
     #hero_img4 {
         margin: -50px 4px 20px 4px;
         background-image: url(billeder/forside_3.jpg);
     }
+
 
     #hero_img5 {
         margin: -20px 4px 4px 4px;
         background-image: url(billeder/forside_4.jpg);
         background-position: 82% 90%;
     }
+
 
     #hero_img6 {
         display: block;
@@ -721,6 +712,7 @@ IPAD MEDIA
         background-position: 52% 90%;
     }
 
+
     #hero_img7 {
         display: block;
         margin: 40px 10px 4px 4px;
@@ -728,14 +720,15 @@ IPAD MEDIA
         background-position: 25% 90%;
     }
 
+
     .img_frame:nth-child(6) {
         display: block;
     }
 
+
     .img_frame:nth-child(7) {
         display: block;
     }
-
 
 
     /*********************
@@ -780,8 +773,8 @@ DESKTOP MEDIA
 
     h1 {
         font-size: 5rem;
-        margin: -30px;
         padding: 0;
+        margin: 0;
     }
 
     h2 {
@@ -798,7 +791,7 @@ DESKTOP MEDIA
     }
 
     .mylinks {
-        margin-top: -120px;
+        margin-top: -70px;
     }
 
     .progress-container {
@@ -814,21 +807,34 @@ DESKTOP MEDIA
     }
 
     .c_baskin {
-        height: 40px;
-        width: 40px;
-        top: -20px;
+        width: 35px;
+        top: 35px;
+        right: 110px;
     }
 
     .burger_menu {
-        height: 40px;
-        width: 40px;
-        top: -55px;
+        width: 45px;
+        top: 35px;
+        right: 35px;
     }
 
 
     /***********************
     FORSIDE
     ***********************/
+
+    #intro {
+        padding-bottom: 3px;
+    }
+
+    #intro h1 {
+        margin: -70px 0 0px;
+    }
+
+    #intro p {
+        margin-top: 0;
+        padding-top: 10px;
+    }
 
     .black_bg h2 {
         padding-top: 80px;
@@ -839,36 +845,48 @@ DESKTOP MEDIA
         width: 50%;
     }
 
+    .intro_cta {
+        top: 685px;
+    }
+
+    /*************************
+    BILLEDESERIE PÅ FORSIDE
+    *************************/
+
+    .imgwrapper {
+        padding-top: 35px;
+    }
+
     .image {
-        height: 45vh;
+        height: 300px;
     }
 
     #hero_img1 {
-        margin: 40px 40px 4px 40px;
+        margin: 40px -50px 4px 120px;
     }
 
     #hero_img2 {
-        margin: 10px 40px 4px 20px;
+        margin: -10px -20px 4px 100px;
     }
 
     #hero_img3 {
-        margin: -30px 40px 4px 20px;
+        margin: -40px 15px 4px 60px;
     }
 
     #hero_img4 {
-        margin: -60px 40px 4px 20px;
+        margin: -60px 50px 4px 30px;
     }
 
     #hero_img5 {
-        margin: -30px 40px 4px 20px;
+        margin: -40px 80px 4px -5px;
     }
 
     #hero_img6 {
-        margin: 10px 40px 4px 20px;
+        margin: -10px 100px 4px -30px;
     }
 
     #hero_img7 {
-        margin: 40px 40px 4px 20px;
+        margin: 40px 120px 4px -50px;
     }
 
 
@@ -881,7 +899,6 @@ DESKTOP MEDIA
     #hero_img7 {
         flex-grow: 1;
         flex-basis: 200px;
-
     }
 
 
@@ -896,10 +913,6 @@ DESKTOP MEDIA
 
     #gallery_intro {
         max-width: 85ch;
-    }
-
-    #gallery_intro h1 {
-        font-size: 5rem;
     }
 
     #gallery_intro p:nth-child(3) {
