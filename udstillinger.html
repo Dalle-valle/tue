@@ -20,8 +20,10 @@
     <meta name="msapplication-config" content="ikoner/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.typekit.net/kda4gwa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 </head>
+
 
 <body class="Udstillinger">
 
@@ -66,14 +68,23 @@
 
     </header>
 
-    <section id="project_intro">
-        <h1>Udstillinger</h1>
-        <p>Velkommen. Her kan du få et indtryk af, hvordan en udstilling med mine værker kan tage sig ud. <br>
+    <section id="project_intro" data-scroll>
+        <div class="udstilling_flex_box">
+            <div class="udstilling_flex1">
+                <h1>Udstillinger</h1>
 
-            Er du en del af en kunstforening der ønsker at arrangere en udstilling, vil jeg glæde mig til at høre fra jer.
+                <p>Velkommen. Her kan du få et indtryk af, hvordan en udstilling med mine værker kan tage sig ud. <br>
 
-        </p>
+                    Er du en del af en kunstforening der ønsker at arrangere en udstilling, vil jeg glæde mig til at høre fra jer.
+
+                </p>
+            </div>
+            <div class="udstilling_flex2">
+                <a href="kontakt.html"> <button class="cart animate__animated animate__backInUp"><span>Send en email til mig</span></button></a>
+            </div>
+        </div>
     </section>
+
     <section id="projects"></section>
     <template>
         <section class="single_project">
@@ -84,6 +95,7 @@
                         <h2></h2>
                         <p></p>
                         <a href=#><button>Læs mere <span>&gt</span></button></a>
+                        <hr class="lined animate__animated animate__backInUp">
                     </div>
                 </div>
 
@@ -120,6 +132,10 @@
 
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script>
+        ScrollOut();
+    </script>
 
 
     <script>
@@ -161,63 +177,6 @@
                 containerU.appendChild(klonU);
             })
         }
-
-
-
-
-
-        //
-        // function visRetter() {
-        // const container = document.querySelector("#index");
-        // container.innerHTML = "";
-        // const retterTemplate = document.querySelector("template");
-        // alleRetter.forEach(ret => {
-        // if (filter == "alle" || filter == ret.content.rendered) {
-        // let klon = retterTemplate.cloneNode(true).content;
-        // klon.querySelector("img").src = ret.billede.guid;
-        // klon.querySelector("h2").textContent = ret.title.rendered;
-        // klon.querySelector("p").textContent += ret.content.rendered;
-        // // klon.querySelector("p + p").textContent += `Pris: ${ret.gsx$pris.$t},-`;
-        // klon.querySelector("article").addEventListener("click", () => visDetail(ret))
-        // klon.querySelector("article").addEventListener("click", fjernClass);
-        //
-        // container.appendChild(klon);
-        //
-        // container.lastElementChild.addEventListener("click", () => {
-        // location.href = "single.html?id=" + ret.id;
-        // })
-        // }
-        // })
-        // }
-        //
-        // function klikListeners() {
-        // document.querySelectorAll(".filter").forEach(elm => {
-        // elm.addEventListener("click", filtrering);
-        //
-        // })
-        //
-        //
-        // }
-        //
-        // function filtrering() {
-        // console.log("FILTER");
-        // filter = this.dataset.kategorier;
-        // visRetter();
-        // document.querySelector("h2").textContent = this.textContent;
-        // document.querySelectorAll(".filter").forEach(elm => {
-        // elm.classList.remove("valgt");
-        //
-        // })
-        // this.classList.add("valgt");
-        //
-        // };
-        //
-        // function fjernClass() {
-        // detail.classList.remove("skjul");
-        // }
-
     </script>
 
-</body>
-
-</html>
+</body></html>

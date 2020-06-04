@@ -36,8 +36,8 @@
                 <div class="menu_wrapper">
                     <div class="mylinks">
                         <a href="index.html">Forside</a>
-                        <a href="galleri.html">Galleri</a>
-                        <a class="active" href="shop.html">Shop</a>
+                        <a class="active" href="galleri.html">Galleri</a>
+                        <a href="shop.html">Shop</a>
                         <a href="udstillinger.html">Udstillinger</a>
                         <a href="projekter.html">Projekter</a>
                         <a href="kunstneren.html">Kunstneren</a>
@@ -64,12 +64,12 @@
         </div>
 
     </header>
-    <section id="singleshop" class="skjul">
+    <section id="singlegalleri" class="skjul">
 
-        <article class="shopitem">
+        <article class="galleriitem">
             <ul class="breadcrumb">
                 <li><a href="index.html">Forside</a></li>
-                <li><a href="shop.html">Shop</a></li>
+                <li><a href="galleri.html">Galleri</a></li>
                 <li class="currentbread">
 
                 </li>
@@ -77,27 +77,23 @@
 
             </ul>
             <!--            <button class="backbtn">&lt</button>-->
-            <div class="article_wrapper">
-                <div class="shop_left">
 
-                    <img class="billede" src="" alt="">
-
-                </div>
-                <div class="shop_right">
-                    <h1 class="navn"></h1>
-                    <h2 class="pris"></h2>
-                    <div class="btn_container">
-                        <a href="thankkyou.html"><button class="cart">Tilføj til kurv</button></a>
-                    </div>
-                    <p class="beskrivelse"></p>
-                    <p class="kvalitet"></p>
-                    <p class="format"></p>
+            <div class="gallery_article_wrapper">
+                <img class="galleri_img" src="" alt="">
 
 
 
-                </div>
             </div>
-            <img class="shop_img" src="billeder/tue_kunst_mockup.png" alt="tue kunst mock up">
+            <h1 class="galleri_navn"></h1>
+            <div class="galleri_text_wrapper">
+                <div class="top_bg"></div>
+                <p class="galleri_beskrivelse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="wrapz">
+                    <a href="shop.html"><button class="se_shop">Se i shoppen</button></a>
+                </div>
+                <div class="bottom_bg"></div>
+            </div>
+
         </article>
     </section>
 
@@ -124,49 +120,46 @@
     <script>
         const urlParameter = new URLSearchParams(window.location.search);
 
-        const shopId = urlParameter.get("id");
+        const galleriId = urlParameter.get("id");
 
-        const shopItems = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/shop/" + shopId;
-
-
-
-        let shops;
-        detail = document.querySelector("#singleshop");
+        const galleriUrl = "http://ddalby.dk/kea/tue_volder/wordpress/wp-json/wp/v2/galleri/" + galleriId;
 
 
 
-        document.addEventListener("DOMContentLoaded", hentSingle);
+        let galleri;
+        detail = document.querySelector("#singlegalleri");
 
 
 
-        function hentSingle() {
-            hentSingleData();
+        document.addEventListener("DOMContentLoaded", hentGalleri);
+
+
+
+        function hentGalleri() {
+            hentGalleriData();
         }
 
-        async function hentSingleData() {
-            const responseS = await fetch(shopItems);
-            console.log(responseS);
-            shops = await responseS.json();
+        async function hentGalleriData() {
+            const responseG = await fetch(galleriUrl);
+            console.log(responseG);
+            galleri = await responseG.json();
 
-            visShop();
+            visGalleri();
         }
 
 
 
-        function visShop() {
+        function visGalleri() {
 
 
-            console.log(shops);
+            console.log(galleri);
             //                        document.querySelector(".backbtn").addEventListener("click", lukDetail);
-            document.querySelector(".navn").innerHTML = shops.title.rendered;
-            document.querySelector(".billede").src = shops.billede.guid;
-            document.querySelector(".billede").alt = shops.title.rendered;
-            document.querySelector(".beskrivelse").innerHTML = shops.beskrivelse;
-            document.querySelector(".kvalitet").innerHTML = "Høj kvalitet print i A3 format";
-            document.querySelector(".format").innerHTML = `Måler ${shops.hoejde} i højden og ${shops.bredde}
-            i bredden`;
-            document.querySelector(".pris").textContent = `${shops.pris} kr`;
-            document.querySelector(".currentbread").textContent = shops.title.rendered
+
+
+            document.querySelector(".currentbread").textContent = galleri.navn;
+            document.querySelector(".galleri_img").src = galleri.billede.guid;
+            document.querySelector(".galleri_img").alt = galleri.navn;
+            document.querySelector(".galleri_navn").textContent = galleri.navn;
 
         }
 

@@ -55,6 +55,41 @@ ul.breadcrumb li a:hover {
     text-decoration: underline;
 }
 
+
+
+/**Galleri Single View**/
+
+.gallery_article_wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.galleri_text_wrapper {
+    background-color: black;
+}
+
+.galleri_text_wrapper p {
+    color: white;
+}
+
+.se_shop {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    max-width: 70ch;
+}
+
+
+
 /*************************************************************************************************************************************************
 Kunstneren
 **************************************************************************************************************************************************/
@@ -201,17 +236,35 @@ Projekter
     font-size: 1.2rem;
 }
 
+
+
 /*************************************************************************************************************************************************
 Udstillinger
 **************************************************************************************************************************************************/
 
-.line_straight {
-    position: relative;
-    top: -10vh;
-    left: 50%;
-    border-top: 2px solid black;
-    height: 25vh;
-    border-left: none;
+.lined {
+    display: none;
+}
+
+
+
+.udstilling_flex_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.udstilling_flex1 {
+    flex-grow: 1;
+    flex-basis: 30px;
+}
+
+.udstilling_flex2 {
+    flex-grow: 1;
+    flex-basis: 30px;
 }
 
 /*************************************************************************************************************************************************
@@ -414,7 +467,7 @@ Mediaqueries ipad
     .childwrapper {
         position: relative;
         top: 8vh;
-        left: 40%;
+        left: 25%;
         width: 70%;
 
 
@@ -470,15 +523,27 @@ Mediaqueries ipad
 
 
 
-
     /**Udstillinger**/
+    #project_intro span {
+        color: white;
 
+        font-family: source-sans-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.2rem;
+    }
 }
 
 /*************************************************************************************************************************************************
 Mediaqueries laptop
 **************************************************************************************************************************************************/
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+
+
+    .lined {
+        display: block;
+    }
+}
 
 /*************************************************************************************************************************************************
 Mediaqueries desktop
