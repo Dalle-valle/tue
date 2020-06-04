@@ -59,6 +59,7 @@ h1 {
 h2 {
     font-size: 2.5rem;
     padding: 0;
+    margin: 0;
 }
 
 
@@ -69,6 +70,7 @@ INDEX
 .black_bg p,
 .black_bg h2 {
     color: white;
+    padding: 40px 0 20px;
 }
 
 .black_bg img {
@@ -378,6 +380,7 @@ BURGER MENU
 .mylinks .active,
 .mylinks a:hover {
     color: #EDBB00;
+    background-color: transparent;
 }
 
 
@@ -451,11 +454,17 @@ IPAD MEDIA
         height: 90px;
     }
 
+    .mylinks {
+        overflow: scroll;
+        padding-left: 25px;
+        padding-top: 0px;
+        margin-top: -80px;
+    }
 
     .mylinks a {
         text-align: left;
         justify-content: flex-end;
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
 
@@ -502,6 +511,18 @@ IPAD MEDIA
     }
 
     /*********************
+    FORSIDE
+    *********************/
+
+    .black_bg img {
+        display: block;
+        width: 65%;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+
+    /*********************
     GALLERI
     *********************/
 
@@ -544,7 +565,7 @@ DESKTOP MEDIA
     *****************/
 
     p {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     h1 {
@@ -564,6 +585,10 @@ DESKTOP MEDIA
 
     .nav_wrapper {
         height: 80px;
+    }
+
+    .mylinks {
+        margin-top: -120px;
     }
 
     .progress-container {
@@ -590,12 +615,19 @@ DESKTOP MEDIA
         top: -55px;
     }
 
-    .mylinks {
-        overflow: hidden;
-        padding-left: 25px;
-        padding-top: 0;
+
+    /***********************
+    FORSIDE
+    ***********************/
+
+    .black_bg h2 {
+        padding-top: 80px;
     }
 
+    .black_bg img {
+        height: 400px;
+        width: 50%;
+    }
 
     /**********************
     GALLERI
