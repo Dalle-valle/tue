@@ -63,7 +63,7 @@ h2 {
 }
 
 /******************
-NAVIGATION
+MENU
 *******************/
 
 .nav_wrapper {
@@ -85,37 +85,29 @@ NAVIGATION
 }
 
 .c_baskin {
-    position: relative;
-    height: 30px;
-    width: 25px;
-    left: 83%;
-    top: -14px;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 29px;
+    right: 75px;
+    top: 25px;
 }
 
-/***********************
-BURGER MENU
-************************/
-
 .burger_menu {
-    position: relative;
-    height: 30px;
-    width: 30px;
-    left: 93%;
-    top: -44px;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 35px;
+    top: 25px;
+    right: 20px;
     cursor: pointer;
 }
 
 
 .mylinks {
-    margin-top: -40px;
     display: none;
     background-color: #f4f4f4;
     width: 100vw;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 25px;
 }
 
 .mylinks a {
@@ -347,17 +339,6 @@ FORSIDE KNAPPER
     font-size: 1rem;
 }
 
-
-.intro_cta:hover {
-    background-color: #F4F4F4;
-}
-
-
-.intro_cta a:hover {
-    color: black;
-}
-
-
 .intro_cta2 {
     position: relative;
     left: 50%;
@@ -368,7 +349,6 @@ FORSIDE KNAPPER
     text-transform: uppercase;
     transform: translate(-50%, -50%);
 }
-
 
 .intro_cta2 a {
     text-decoration: none;
@@ -381,12 +361,22 @@ FORSIDE KNAPPER
 }
 
 
+
+.intro_cta:hover {
+    background-color: #F4F4F4;
+}
+
+.intro_cta:hover a {
+    color: black;
+}
+
+
 .intro_cta2:hover {
     background-color: black;
 }
 
 
-.intro_cta2 a:hover {
+.intro_cta2:hover a {
     color: white;
 }
 
@@ -528,9 +518,9 @@ GALLERI
 }
 
 
-/*************************************************************************************************************************************************
+/*******************
 Footer
-**************************************************************************************************************************************************/
+********************/
 
 .footer {
     margin-top: 10vh;
@@ -560,10 +550,12 @@ footer ul {
 }
 
 footer ul a {
+    font-family: source-sans-pro, sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
-    padding: 0px 25px 0 25px;
-    font-size: 12px;
     color: black;
+    font-size: 12px;
+    padding: 0px 25px 0 25px;
 }
 
 footer li:nth-child(1) {
@@ -576,9 +568,9 @@ footer li:nth-child(2) {
 }
 
 
-/******************
+/*******************************************
 IPAD MEDIA
-******************/
+********************************************/
 
 @media only screen and (min-width: 768px) {
 
@@ -601,8 +593,6 @@ IPAD MEDIA
     .mylinks {
         overflow: scroll;
         padding-left: 25px;
-        padding-top: 0px;
-        margin-top: -80px;
     }
 
     .mylinks a {
@@ -627,18 +617,14 @@ IPAD MEDIA
 
 
     .c_baskin {
-        left: 89%;
-        height: 40px;
-        width: 30px;
-        top: -10px;
+        top: 40px;
+        right: 85px;
     }
 
 
     .burger_menu {
-        height: 40px;
-        width: 30px;
-        top: -48px;
-        left: 95%;
+        top: 40px;
+        right: 30px;
     }
 
 
@@ -805,7 +791,7 @@ DESKTOP MEDIA
     }
 
     .mylinks {
-        margin-top: -120px;
+        margin-top: -70px;
     }
 
     .progress-container {
@@ -821,15 +807,15 @@ DESKTOP MEDIA
     }
 
     .c_baskin {
-        height: 40px;
-        width: 40px;
-        top: -20px;
+        width: 35px;
+        top: 35px;
+        right: 110px;
     }
 
     .burger_menu {
-        height: 40px;
-        width: 40px;
-        top: -55px;
+        width: 45px;
+        top: 35px;
+        right: 35px;
     }
 
 
@@ -876,31 +862,31 @@ DESKTOP MEDIA
     }
 
     #hero_img1 {
-        margin: 40px 40px 4px 80px;
+        margin: 40px -50px 4px 120px;
     }
 
     #hero_img2 {
-        margin: 10px 40px 4px 20px;
+        margin: -10px -20px 4px 100px;
     }
 
     #hero_img3 {
-        margin: -40px 40px 4px 20px;
+        margin: -40px 15px 4px 60px;
     }
 
     #hero_img4 {
-        margin: -60px 40px 4px 20px;
+        margin: -60px 50px 4px 30px;
     }
 
     #hero_img5 {
-        margin: -40px 40px 4px 20px;
+        margin: -40px 80px 4px -5px;
     }
 
     #hero_img6 {
-        margin: -10px 40px 4px 20px;
+        margin: -10px 100px 4px -30px;
     }
 
     #hero_img7 {
-        margin: 40px 80px 4px 20px;
+        margin: 40px 120px 4px -50px;
     }
 
 
