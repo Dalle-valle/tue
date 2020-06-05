@@ -378,6 +378,7 @@ FORSIDE KNAPPER
 
     transition: all 0.5s;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 
@@ -401,6 +402,7 @@ FORSIDE KNAPPER
     text-transform: uppercase;
     transform: translate(-50%, -50%);
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .intro_cta2 a {
@@ -638,6 +640,19 @@ SHOP
     cursor: pointer;
 }
 
+.zoom {
+    overflow: hidden;
+}
+
+.zoom img {
+    transition: transform .5s ease;
+}
+
+.zoom:hover img {
+    transform-origin: center;
+    transform: scale(1.04);
+}
+
 
 #shop h2 {
     font-size: 1.25rem;
@@ -679,6 +694,7 @@ SHOP FILTRERING
     font-weight: 500;
     box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1);
     outline: none;
+    cursor: pointer;
 }
 
 
