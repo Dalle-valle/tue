@@ -637,7 +637,7 @@ SHOP
 .zoom:hover img {
     transform-origin: center;
     transform: scale(1.04);
-/*    opacity: 0.3;*/
+    /*    opacity: 0.3;*/
 }
 
 
@@ -961,6 +961,7 @@ Footer
     height: 5vh;
     width: 5vh;
     margin: 15px 15px 5px;
+    cursor: pointer;
 }
 
 .footer_items {
