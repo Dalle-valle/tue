@@ -416,25 +416,6 @@ FORSIDE KNAPPER
 }
 
 
-
-.intro_cta:hover {
-    background-color: #F4F4F4;
-}
-
-.intro_cta:hover a {
-    color: black;
-}
-
-
-.intro_cta2:hover {
-    background-color: black;
-}
-
-
-.intro_cta2:hover a {
-    color: white;
-}
-
 .intro_cta span,
 .intro_cta2 span {
     cursor: pointer;
@@ -495,7 +476,7 @@ GALLERI
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: #777777;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .overlay_container:hover .overlay {
@@ -503,13 +484,16 @@ GALLERI
 }
 
 .overlay_text {
-    color: white;
     font-size: 1.2rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.overlay_text h2 {
+    color: #f4f4f4;
 }
 
 .high {
@@ -653,7 +637,7 @@ SHOP
 .zoom:hover img {
     transform-origin: center;
     transform: scale(1.04);
-    opacity: 0.3;
+/*    opacity: 0.3;*/
 }
 
 
@@ -805,6 +789,38 @@ SHOP SINGLEVIEW
     width: 170px;
     background-color: black;
     color: white;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.cart span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.cart span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -5px;
+    right: -10px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.cart:hover span {
+    padding-right: 18px;
+}
+
+.cart:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn_container .cart:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*******************************
