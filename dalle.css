@@ -17,21 +17,27 @@
 Kontakt
 **************************************************************************************************************************************************/
 #kontakt {
-    margin: 0 auto;
+    margin: 50px auto;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-/*#kontakt p {
-    margin: 15px;
-    padding: 15px;
-    text-align: left;
-}*/
+#kontakt_intro {
+    flex-grow: 1;
+    flex: 400px;
+}
 
 .contact_container {
+    flex-grow: 1;
+    flex-basis: 300px;
     width: 100%;
+}
+
+#kontakt p {
+    padding-top: 30px;
+    max-width: 50ch;
 }
 
 .navn_wrap {
@@ -150,6 +156,5 @@ Mediaqueries ipad
 @media only screen and (min-width: 1024px) {
     #kontakt {
         flex-wrap: nowrap;
-        padding: 0 150px;
     }
 }
