@@ -34,11 +34,7 @@ p {
 
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     font-family: bebas-neue, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -58,6 +54,17 @@ h2 {
     font-size: 2.5rem;
     padding: 0;
     margin: 0;
+}
+
+h3 {
+    color: black;
+    padding: 0 15px;
+    margin: 0;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    max-width: 70ch;
 }
 
 /*************************
@@ -367,6 +374,7 @@ FORSIDE KNAPPER
     text-transform: uppercase;
     transform: translate(-50%, -50%);
     margin-bottom: 10vh;
+    border: 1px solid black;
 }
 
 
@@ -439,10 +447,34 @@ GALLERI
     max-width: 100%;
 }
 
-#cloner img:hover {
-    filter: grayscale(1);
+.overlay_container {
+    position: relative;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 99.5%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #777777;
+}
+
+.overlay_container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay_text {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 .high {
     grid-row: span 2;
@@ -797,9 +829,37 @@ PROJEKTER
     margin-bottom: -70px;
 }
 
-.project_container .intro_cta {
+.projekter .project_container .intro_cta {
     position: relative;
     top: 30px;
+    transition: all 0.5s;
+    vertical-align: middle;
+}
+
+.projekter .project_container .intro_cta span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.projekter .project_container .intro_cta span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -8px;
+    right: -10px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.projekter .project_container .intro_cta:hover span {
+    padding-right: 18px;
+}
+
+.projekter .project_container .intro_cta:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .projekter .line_top {
@@ -819,7 +879,7 @@ PROJEKTER
 PROJEKTER SINGLEVIEW
 **************************/
 
-.wp-block-image {
+.univers .wp-block-image {
     margin: 15px;
 }
 
@@ -827,14 +887,19 @@ PROJEKTER SINGLEVIEW
 KUNSTEREN
 **************************/
 
-
 #kunstner .sectionwrapper {
     background-color: #f4f4f4;
     margin: 0 auto;
-    max-width: 1400px;
-
 }
 
+#kunstner .wp-block-column p {
+    margin: 0 0 40px;
+    padding: 5px 15px;
+}
+
+#kunstner .intro_cta {
+    top: 2300px;
+}
 
 
 /*******************
@@ -1349,24 +1414,44 @@ GALLERI SINGLEVIEW
         top: -180px;
     }
 
+
     /***************************
     PROJEKT SINGLE
     ***************************/
 
-    .projekt {
+    .univers .projekt {
         padding: 0 100px;
     }
 
-    .wp-block-columns {
+    .univers .wp-block-columns {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .wp-block-column {
+    .univers .wp-block-column {
         flex-grow: 1;
         flex-basis: 200px;
     }
+
+    /**************************
+    KUNSTNEREN
+    **************************/
+
+    #kunstner .sectionwrapper {
+        padding: 0 50px;
+    }
+
+    #kunstner img {
+        height: 500px;
+    }
+
+    #kunstner .intro_cta {
+        top: 1480px;
+        left: 550px;
+        width: 230px;
+    }
+
 }
 
 /**********************
@@ -1761,8 +1846,29 @@ GALLERI SINGLEVIEW
     PROJEKTER SINGLEVIEW
     *****************************/
 
-    .projekt {
+    .univers .projekt {
         padding: 0 350px;
     }
 
+    /**************************
+    KUNSTNEREN
+    **************************/
+
+    #kunstner .sectionwrapper {
+        padding: 60px 200px;
+    }
+
+    #kunstner h3 {
+        font-size: 1.4rem;
+    }
+
+    #kunstner img {
+        height: 650px;
+    }
+
+
+    #kunstner .intro_cta {
+        top: 1710px;
+        left: 950px;
+    }
 }

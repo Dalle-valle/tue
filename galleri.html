@@ -92,8 +92,14 @@
         <section id="cloner"></section>
         <template>
             <article class="gallery">
-
-                <img src="" alt="">
+                <div class="overlay_container">
+                    <img src="" alt="">
+                    <div class="overlay">
+                        <div class="overlay_text">
+                            <h2>Klik for at læse mere</h2>
+                        </div>
+                    </div>
+                </div>
 
             </article>
         </template>
@@ -169,6 +175,8 @@
                 console.log(painting.format)
                 let klonp = paintTemplate.cloneNode(true).content;
                 klonp.querySelector("img").src = painting.billede.guid;
+                //                klonp.querySelector(".overlay_text").textContent = galleri.navn;
+
 
                 if (painting.format === "højformat") {
                     klonp.querySelector("article").classList.add("high");
