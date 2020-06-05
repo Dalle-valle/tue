@@ -17,11 +17,11 @@
 Kontakt
 **************************************************************************************************************************************************/
 #kontakt {
-    max-width: 1000px;
     margin: 0 auto;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /*#kontakt p {
@@ -72,31 +72,28 @@ textarea {
     font-weight: 300;
     font-style: normal;
     font-size: 1.2rem;
-    outline-color: #FEEF3D;
+    outline-color: none;
 }
 
 
 #submit {
     border: 2px solid black;
-    width: 35vw;
-    align-self: flex-end;
+    width: 344px;
     background-color: black;
+    align-self: flex-end;
 }
 
 #submit {
     color: white;
     padding: 15px;
     font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
-}
-
-#submit:hover {
-    background-color: white;
-    color: black;
+    text-transform: uppercase;
 
 }
+
 
 /**Animation**/
 .fadein {
@@ -146,5 +143,13 @@ Mediaqueries ipad
 
     #kontakt {
         flex-direction: row;
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #kontakt {
+        flex-wrap: nowrap;
+        padding: 0 150px;
     }
 }
