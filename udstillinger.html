@@ -68,7 +68,7 @@
 
     </header>
 
-    <section id="project_intro" data-scroll>
+    <section id="udstilling_intro" data-scroll>
         <h1>Udstillinger</h1>
         <p>Velkommen. Her kan du få et indtryk af, hvordan en udstilling med mine værker kan tage sig ud.
             <br>Er du en del af en kunstforening der ønsker at arrangere en udstilling, vil jeg glæde mig til at høre fra jer.
@@ -78,7 +78,7 @@
 
     </section>
 
-    <section id="projects"></section>
+    <section id="udstilling"></section>
     <template>
         <section class="single_project">
             <div class="project_container">
@@ -159,7 +159,7 @@
         }
 
         function visUdstillinger() {
-            const containerU = document.querySelector("#projects");
+            const containerU = document.querySelector("#udstilling");
             containerU.innerHTML = "";
             const udstillingsTemplate = document.querySelector("template");
             alleUdstillinger.forEach(udstilling => {

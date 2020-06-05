@@ -793,7 +793,7 @@ UDSTILLINGER & PROJEKTER
     display: none;
 }
 
-#project_intro .intro_cta {
+#udstilling_intro .intro_cta {
     top: 240px;
 }
 
@@ -803,19 +803,25 @@ PROJEKTER
 
 .projekter .project_container {
     margin-top: 30px;
-    margin-bottom: 80px;
+    margin-bottom: -70px;
 }
 
 .project_container .intro_cta {
-    top: 760px;
+    position: relative;
+    top: 30px;
 }
 
 .projekter .line_top {
-    top: 60px;
+    top: -60px;
 }
 
 .projekter .single_project:nth-of-type(even) .project_container .line_top {
-    top: 60px;
+    top: -60px;
+}
+
+
+.projekter .single_project:nth-of-type(even) .project_container .intro_cta {
+    top: 30px;
 }
 
 
@@ -1142,21 +1148,25 @@ GALLERI SINGLEVIEW
     }
 */
 
-    #project_intro {
-        max-width: 1400px;
+    #udstilling_intro {
         margin: 0 auto;
-        padding-bottom: 10vh;
         flex-direction: row;
-
+        padding-bottom: 110px;
     }
 
     .project_container {
-        height: 50vh;
+        height: 500px;
         width: 100vw;
         display: flex;
         margin: 0 auto;
         flex-direction: row;
     }
+
+
+    #udstilling .single_project {
+        height: 270px;
+    }
+
 
     .single_project:nth-of-type(even) .project_container {
         flex-direction: row-reverse;
@@ -1179,7 +1189,7 @@ GALLERI SINGLEVIEW
     .line_top {
         top: -240px;
         left: 50%;
-        height: 110px;
+        height: 130px;
     }
 
 
@@ -1198,16 +1208,16 @@ GALLERI SINGLEVIEW
     .project_container h2 {
         font-size: 1.5rem;
         position: relative;
-        top: 65px;
-        left: -167px;
+        top: 70px;
+        left: -166px;
     }
 
 
     .project_container p {
         text-align: left;
         position: relative;
-        top: 50px;
-        left: -35px;
+        top: 65px;
+        left: -18px;
         max-width: 40ch;
     }
 
@@ -1215,7 +1225,7 @@ GALLERI SINGLEVIEW
     .lined {
         display: block;
         position: relative;
-        top: 55px;
+        top: 70px;
         left: -130px;
         width: 150px;
     }
@@ -1228,10 +1238,10 @@ GALLERI SINGLEVIEW
 
 
     .single_project:nth-of-type(even) .project_container .line_top {
-        top: -240px;
+        top: -230px;
         left: -50%;
         border-right: none;
-        height: 110px;
+        height: 130px;
     }
 
     .single_project:nth-of-type(odd) .framed {
@@ -1247,7 +1257,7 @@ GALLERI SINGLEVIEW
     .single_project:nth-of-type(odd) .project_container h2 {
         font-size: 1.5rem;
         position: relative;
-        top: 75px;
+        top: 65px;
         left: 169px;
     }
 
@@ -1255,7 +1265,7 @@ GALLERI SINGLEVIEW
         text-align: left;
         position: relative;
         top: 60px;
-        left: 50px;
+        left: 40px;
         max-width: 40ch;
     }
 
@@ -1263,13 +1273,8 @@ GALLERI SINGLEVIEW
     .single_project:nth-of-type(odd) .lined {
         display: block;
         position: relative;
-        top: 55px;
+        top: 75px;
         left: 135px;
-    }
-
-
-    .single_project {
-        height: 250px;
     }
 
 
@@ -1282,6 +1287,24 @@ GALLERI SINGLEVIEW
     }
 
 
+    /**********************
+    PROJEKTER
+    **********************/
+
+    #project_intro {
+        margin: 0 auto;
+        flex-direction: row;
+        padding-bottom: 20px;
+    }
+
+
+    .projekter .single_project:nth-of-type(odd) .project_container h2 {
+        left: 100px;
+    }
+
+    .projekter .single_project:nth-of-type(odd) .project_container p {
+        top: 70px;
+    }
 
     /*
 .childwrapper {
@@ -1291,6 +1314,7 @@ GALLERI SINGLEVIEW
     width: 70%;
 }*/
 
+    /*
 
     .childwrapper button {
         border: 2px solid black;
@@ -1314,6 +1338,7 @@ GALLERI SINGLEVIEW
         font-style: normal;
         font-size: 1.2rem;
     }
+*/
 }
 
 /**********************
@@ -1559,12 +1584,12 @@ GALLERI SINGLEVIEW
     UDSTILLINGER & PROJEKTER
     ***************************/
 
-    .single_project {
+    #udstilling .single_project {
         height: 450px;
     }
 
     .line_top {
-        top: -610px;
+        top: -700px;
         left: 50%;
         height: 250px;
     }
@@ -1585,7 +1610,7 @@ GALLERI SINGLEVIEW
     .project_container h2 {
         font-size: 2.5rem;
         position: relative;
-        top: 145px;
+        top: 120px;
         left: -320px;
     }
 
@@ -1593,8 +1618,8 @@ GALLERI SINGLEVIEW
     .project_container p {
         text-align: left;
         position: relative;
-        top: 130px;
-        left: -155px;
+        top: 120px;
+        left: -15px;
         max-width: 40ch;
     }
 
@@ -1609,11 +1634,11 @@ GALLERI SINGLEVIEW
 
     .single_project:nth-of-type(1) .project_container .line_top {
         height: 200px;
-        top: -135px;
+        top: -240px;
     }
 
     .single_project:nth-of-type(even) .project_container .line_top {
-        top: 280px;
+        top: 185px;
         left: -50%;
         border-right: none;
         height: 250px;
@@ -1632,7 +1657,7 @@ GALLERI SINGLEVIEW
 
     .single_project:nth-of-type(odd) .project_container h2 {
         position: relative;
-        top: 150px;
+        top: 100px;
         left: 456px;
         font-size: 2.5rem;
     }
@@ -1640,8 +1665,8 @@ GALLERI SINGLEVIEW
     .single_project:nth-of-type(odd) .project_container p {
         text-align: left;
         position: relative;
-        top: 130px;
-        left: 312px;
+        top: 100px;
+        left: 375px;
         max-width: 40ch;
     }
 
