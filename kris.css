@@ -728,13 +728,13 @@ UDSTILLINGER & PROJEKTER
 .project_container {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: -40px;
 }
 
 .line_top {
     position: relative;
-    top: 10px;
+    top: 0px;
     height: 70px;
     border-right: 2px solid grey;
     border-left: none;
@@ -744,40 +744,23 @@ UDSTILLINGER & PROJEKTER
 .single_project:nth-of-type(even) .project_container .line_top {
     position: relative;
     height: 70px;
-    top: 10px;
+    top: 0px;
     align-self: center;
     border-right: none;
     border-left: 2px solid grey;
 }
 
-/*
-
-.childwrapper {
+.single_project h2 {
     text-align: center;
-}
-*/
-
-.childwrapper h2 {
-    text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 
-.childwrapper p {
+.single_project p {
     text-align: center;
     margin: 10px 15px;
     font-size: 1.1rem;
     padding: 0;
-}
-
-
-.childwrapper a {
-    color: white;
-    padding: 15px;
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.2rem;
 }
 
 
@@ -800,9 +783,6 @@ UDSTILLINGER & PROJEKTER
     max-width: 1400px;
     max-height: 600px;
     margin: auto;
-
-
-
 }
 
 .projekt p {
@@ -815,6 +795,27 @@ UDSTILLINGER & PROJEKTER
 
 #project_intro .intro_cta {
     top: 240px;
+}
+
+/**********************
+PROJEKTER
+**********************/
+
+.projekter .project_container {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.project_container .intro_cta {
+    top: 760px;
+}
+
+.projekter .line_top {
+    top: 60px;
+}
+
+.projekter .single_project:nth-of-type(even) .project_container .line_top {
+    top: 60px;
 }
 
 
@@ -1152,9 +1153,7 @@ GALLERI SINGLEVIEW
     .project_container {
         height: 50vh;
         width: 100vw;
-        /*    background-color: aquamarine;*/
         display: flex;
-        max-width: 1400px;
         margin: 0 auto;
         flex-direction: row;
     }
@@ -1554,9 +1553,104 @@ GALLERI SINGLEVIEW
         background-color: black;
         color: white;
         font-size: 1.2rem;
+    }
+
+    /***************************
+    UDSTILLINGER & PROJEKTER
+    ***************************/
+
+    .single_project {
+        height: 450px;
+    }
+
+    .line_top {
+        top: -610px;
+        left: 50%;
+        height: 250px;
+    }
 
 
+    .framed {
+        position: relative;
+        top: 0px;
+        left: 0;
+    }
 
+
+    .single_project img {
+        width: 600px;
+    }
+
+
+    .project_container h2 {
+        font-size: 2.5rem;
+        position: relative;
+        top: 145px;
+        left: -320px;
+    }
+
+
+    .project_container p {
+        text-align: left;
+        position: relative;
+        top: 130px;
+        left: -155px;
+        max-width: 40ch;
+    }
+
+    .lined {
+        display: block;
+        position: relative;
+        top: 140px;
+        left: -295px;
+        width: 300px;
+    }
+
+
+    .single_project:nth-of-type(1) .project_container .line_top {
+        height: 200px;
+        top: -135px;
+    }
+
+    .single_project:nth-of-type(even) .project_container .line_top {
+        top: 280px;
+        left: -50%;
+        border-right: none;
+        height: 250px;
+    }
+
+    .single_project:nth-of-type(odd) .framed {
+        position: relative;
+        top: 10px;
+    }
+
+    .single_project:nth-of-type(odd) img {
+        margin-left: 370px;
+        width: 600px;
+    }
+
+
+    .single_project:nth-of-type(odd) .project_container h2 {
+        position: relative;
+        top: 150px;
+        left: 456px;
+        font-size: 2.5rem;
+    }
+
+    .single_project:nth-of-type(odd) .project_container p {
+        text-align: left;
+        position: relative;
+        top: 130px;
+        left: 312px;
+        max-width: 40ch;
+    }
+
+
+    .single_project:nth-of-type(odd) .lined {
+        display: block;
+        position: relative;
+        top: 150px;
+        left: 430px;
     }
 
 }
