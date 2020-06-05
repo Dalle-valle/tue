@@ -646,21 +646,6 @@ SHOP
     cursor: pointer;
 }
 
-.shop_overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 99.8%;
-    width: 100%;
-    opacity: 0;
-    transition: .3s ease;
-    background-color: #fff;
-}
-
-.zoom:hover .shop_overlay {
-    opacity: 0.5;
-}
-
 .zoom img {
     transition: .5s ease;
 }
@@ -668,6 +653,7 @@ SHOP
 .zoom:hover img {
     transform-origin: center;
     transform: scale(1.04);
+    opacity: 0.3;
 }
 
 
