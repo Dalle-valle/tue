@@ -1297,14 +1297,51 @@ GALLERI SINGLEVIEW
         padding-bottom: 20px;
     }
 
+    .projekter .project_container {
+        height: 330px;
+    }
+
+    .projekter .project_container h2 {
+        top: 35px;
+        left: -90px;
+    }
+
+    .projekter .project_container p {
+        top: 35px;
+        left: -10px;
+    }
+
+    .projekter .single_project:nth-of-type(even) .project_container .intro_cta {
+        width: 130px;
+        top: 55px;
+        left: 70px;
+    }
+
+
+    .projekter .single_project:nth-of-type(odd) .project_container .line_top {
+        top: -170px;
+        height: 120px;
+    }
 
     .projekter .single_project:nth-of-type(odd) .project_container h2 {
+        top: 35px;
         left: 100px;
     }
 
     .projekter .single_project:nth-of-type(odd) .project_container p {
-        top: 70px;
+        top: 30px;
     }
+
+    .projekter .single_project:nth-of-type(odd) .project_container .intro_cta {
+        top: 50px;
+        left: 120px;
+        width: 130px;
+    }
+
+    .projekter .single_project:nth-of-type(even) .project_container .line_top {
+        top: -180px;
+    }
+
 
     /*
 .childwrapper {
@@ -1678,4 +1715,59 @@ GALLERI SINGLEVIEW
         left: 430px;
     }
 
+    /***********************
+    PROJEKTER
+    ***********************/
+
+    .projekter .single_project {
+        height: 450px;
+    }
+
+    .projekter .project_container h2 {
+        top: 60px;
+        left: -200px;
+    }
+
+    .projekter .project_container p {
+        top: 65px;
+    }
+
+    .projekter .single_project:nth-of-type(even) .project_container .intro_cta {
+        top: 90px;
+    }
+
+    .projekter .single_project:nth-of-type(odd) .project_container .line_top {
+        height: 290px;
+        top: -220px;
+    }
+
+    .projekter .single_project:nth-of-type(1) .project_container .line_top {
+        height: 150px;
+        top: -150px;
+    }
+
+    .projekter .single_project:nth-of-type(odd) .project_container h2 {
+        top: 80px;
+        left: 343px;
+    }
+
+    .projekter .single_project:nth-of-type(4) .project_container h2 {
+        top: 60px;
+        left: -150px;
+    }
+
+    .projekter .single_project:nth-of-type(odd) .project_container p {
+        top: 90px;
+        left: 402px;
+        max-width: 30ch;
+    }
+
+    .projekter .single_project:nth-of-type(odd) .project_container .intro_cta {
+        top: 120px;
+        left: 480px;
+    }
+
+    .projekter .single_project:nth-of-type(even) .project_container .line_top {
+        top: -220px;
+    }
 }
