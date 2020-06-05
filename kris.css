@@ -823,6 +823,19 @@ PROJEKTER SINGLEVIEW
     margin: 15px;
 }
 
+/**************************
+KUNSTEREN
+**************************/
+
+
+#kunstner .sectionwrapper {
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    max-width: 1400px;
+
+}
+
+
 
 /*******************
 Footer
