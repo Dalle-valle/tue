@@ -764,29 +764,19 @@ UDSTILLINGER & PROJEKTER
 }
 
 
-/**Projekt Singleview**/
+/***************************
+PROJEKT SINGLEVIEW
+***************************/
 
 .projekt {
-    padding-top: 10vh;
-    display: flex;
     margin: 0 auto;
-    max-width: 1400px;
-    flex-direction: column;
-
-    flex-wrap: wrap;
-
 }
 
 
 .projekt .wp_content img {
-
     max-width: 1400px;
     max-height: 600px;
     margin: auto;
-}
-
-.projekt p {
-    font-size: 1.2rem;
 }
 
 .lined {
@@ -822,6 +812,14 @@ PROJEKTER
 
 .projekter .single_project:nth-of-type(even) .project_container .intro_cta {
     top: 30px;
+}
+
+/**************************
+PROJEKTER SINGLEVIEW
+**************************/
+
+.wp-block-image {
+    margin: 15px;
 }
 
 
@@ -1277,16 +1275,6 @@ GALLERI SINGLEVIEW
         left: 135px;
     }
 
-
-    .projekt p {
-        font-size: 1.5rem;
-    }
-
-    .projekt h1 {
-        padding-bottom: 5vh;
-    }
-
-
     /**********************
     PROJEKTER
     **********************/
@@ -1304,6 +1292,11 @@ GALLERI SINGLEVIEW
     .projekter .project_container h2 {
         top: 35px;
         left: -90px;
+    }
+
+    .projekter .single_project:nth-of-type(4) .project_container h2 {
+        top: 35px;
+        left: -60px;
     }
 
     .projekter .project_container p {
@@ -1340,6 +1333,25 @@ GALLERI SINGLEVIEW
 
     .projekter .single_project:nth-of-type(even) .project_container .line_top {
         top: -180px;
+    }
+
+    /***************************
+    PROJEKT SINGLE
+    ***************************/
+
+    .projekt {
+        padding: 0 100px;
+    }
+
+    .wp-block-columns {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .wp-block-column {
+        flex-grow: 1;
+        flex-basis: 200px;
     }
 
 

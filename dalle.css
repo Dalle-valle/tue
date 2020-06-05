@@ -25,45 +25,6 @@ Kunstneren
 }
 
 
-.wp-block-columns {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.wp-block-column {
-
-    color: black;
-    flex-grow: 1;
-    margin: 10px;
-    flex-basis: 600px;
-
-}
-
-.wide_img {
-    flex-grow: 2;
-
-}
-
-.wp-block-column h2,
-p {
-
-    text-align: left;
-}
-
-
-
-
-.wp-block-image {
-    flex-grow: 1;
-    margin: 10px;
-    flex-basis: 600px;
-
-
-
-}
-
-
-
 
 /*************************************************************************************************************************************************
 Kontakt
